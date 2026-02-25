@@ -1,0 +1,27 @@
+.tdm-delete-theme {
+    color: #b32d2e !important;
+    margin-left: 10px !important;
+}
+
+.tdm-delete-theme:hover {
+    color: #d63638 !important;
+    text-decoration: none !important;
+}
+
+.tdm-delete-theme:focus {
+    box-shadow: 0 0 0 1px #d63638 !important;
+}
+
+.theme-actions {
+    margin-top: 10px;
+}
+
+.theme-actions .button {
+    margin-right: 5px;
+}
+
+/* 删除按钮禁用状态 */
+.tdm-delete-theme:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

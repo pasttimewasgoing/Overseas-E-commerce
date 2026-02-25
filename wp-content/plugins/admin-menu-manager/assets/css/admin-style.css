@@ -1,0 +1,32 @@
+.wrap h1 {
+    margin-bottom: 15px;
+}
+
+.wrap > p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.wp-list-table input[type="checkbox"] {
+    margin: 0;
+}
+
+.wp-list-table code {
+    background: #f0f0f1;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.wp-list-table td {
+    vertical-align: middle;
+}
+
+.submit {
+    margin-top: 20px;
+}
+
+#amm-select-all,
+#amm-deselect-all {
+    margin-right: 5px;
+}
