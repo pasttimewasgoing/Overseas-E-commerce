@@ -1,7 +1,8 @@
 <?php
 /**
+
  * 主题自定义器设置
- */
+
 
 function techvision_customize_register($wp_customize) {
     
@@ -77,6 +78,7 @@ function techvision_customize_register($wp_customize) {
         'section' => 'techvision_homepage',
         'type' => 'checkbox',
     ));
+<<<<<<< HEAD
     
     // 新品上线标题
     $wp_customize->add_setting('new_products_title', array(
@@ -328,3 +330,7 @@ function adjustBrightness($hex, $steps) {
     
     return '#' . str_pad(dechex($r), 2, '0', STR_PAD_LEFT) . str_pad(dechex($g), 2, '0', STR_PAD_LEFT) . str_pad(dechex($b), 2, '0', STR_PAD_LEFT);
 }
+=======
+}
+add_action('customize_register', 'techvision_customize_register');
+>>>>>>> 45062407 (init wordpress project)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- 页脚 -->
 <footer class="footer">
     <div class="container">
@@ -80,6 +81,12 @@
         <div class="footer-bottom">
             <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. <?php _e('All rights reserved.', 'techvision'); ?></p>
         </div>
+=======
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
+>>>>>>> 45062407 (init wordpress project)
     </div>
 </footer>
 
