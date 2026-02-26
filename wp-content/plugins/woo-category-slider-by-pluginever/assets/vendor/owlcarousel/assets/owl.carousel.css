@@ -1,0 +1,186 @@
+/**
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+/*
+ *  Owl Carousel - Core
+ */
+.wc-category-slider {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
+  z-index: 1; }
+  .wc-category-slider .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+    touch-action: manipulation;
+    -moz-backface-visibility: hidden;
+    /* fix firefox animation glitch */ }
+  .wc-category-slider .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0; }
+  .wc-category-slider .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px); }
+  .wc-category-slider .owl-wrapper,
+  .wc-category-slider .owl-item {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0); }
+  .wc-category-slider .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none; }
+  .wc-category-slider .owl-item img {
+    display: block;
+    width: 100%; }
+  .wc-category-slider .owl-nav.disabled,
+  .wc-category-slider .owl-dots.disabled {
+    display: none; }
+  .wc-category-slider .owl-nav .owl-prev,
+  .wc-category-slider .owl-nav .owl-next,
+  .wc-category-slider .owl-dot {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  .wc-category-slider .owl-nav button.owl-prev,
+  .wc-category-slider .owl-nav button.owl-next,
+  .wc-category-slider button.owl-dot {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0 !important;
+    font: inherit; }
+  .wc-category-slider.owl-loaded {
+    display: block; }
+  .wc-category-slider.owl-loading {
+    opacity: 0;
+    display: block; }
+  .wc-category-slider.owl-hidden {
+    opacity: 0; }
+  .wc-category-slider.owl-refresh .owl-item {
+    visibility: hidden; }
+  .wc-category-slider.owl-drag .owl-item {
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  .wc-category-slider.owl-grab {
+    cursor: move;
+    cursor: grab; }
+  .wc-category-slider.owl-rtl {
+    direction: rtl; }
+  .wc-category-slider.owl-rtl .owl-item {
+    float: right; }
+
+/* No Js */
+.no-js .wc-category-slider {
+  display: block; }
+
+/*
+ *  Owl Carousel - Animate Plugin
+ */
+.wc-category-slider .animated {
+  animation-duration: 1000ms;
+  animation-fill-mode: both; }
+
+.wc-category-slider .owl-animated-in {
+  z-index: 0; }
+
+.wc-category-slider .owl-animated-out {
+  z-index: 1; }
+
+.wc-category-slider .fadeOut {
+  animation-name: fadeOut; }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+/*
+ * 	Owl Carousel - Auto Height Plugin
+ */
+.owl-height {
+  transition: height 500ms ease-in-out; }
+
+/*
+ * 	Owl Carousel - Lazy Load Plugin
+ */
+.wc-category-slider .owl-item {
+  /**
+			This is introduced due to a bug in IE11 where lazy loading combined with autoheight plugin causes a wrong
+			calculation of the height of the owl-item that breaks page layouts
+		 */ }
+  .wc-category-slider .owl-item .owl-lazy {
+    opacity: 0;
+    transition: opacity 400ms ease; }
+  .wc-category-slider .owl-item .owl-lazy[src^=""], .wc-category-slider .owl-item .owl-lazy:not([src]) {
+    max-height: 0; }
+  .wc-category-slider .owl-item img.owl-lazy {
+    transform-style: preserve-3d; }
+
+/*
+ * 	Owl Carousel - Video Plugin
+ */
+.wc-category-slider .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000; }
+
+.wc-category-slider .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url("owl.video.play.png") no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  transition: transform 100ms ease; }
+
+.wc-category-slider .owl-video-play-icon:hover {
+  -ms-transform: scale(1.3, 1.3);
+      transform: scale(1.3, 1.3); }
+
+.wc-category-slider .owl-video-playing .owl-video-tn,
+.wc-category-slider .owl-video-playing .owl-video-play-icon {
+  display: none; }
+
+.wc-category-slider .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: opacity 400ms ease; }
+
+.wc-category-slider .owl-video-frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%; }
