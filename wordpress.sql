@@ -28,7 +28,7 @@
  Date: 26/02/2026 09:51:22
 >>>>>>> 45062407 (init wordpress project)
 */
-
+SET sql_mode='';
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
