@@ -1,34 +1,48 @@
 /*
 <<<<<<< HEAD
+<<<<<<< HEAD
  Navicat Premium Data Transfer
 
  Source Server         : localhost
  Source Server Type    : MySQL
  Source Server Version : 80012
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
  Navicat Premium Dump SQL
 
  Source Server         : localhost_3306
  Source Server Type    : MySQL
  Source Server Version : 80042 (8.0.42)
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
  Source Host           : localhost:3306
  Source Schema         : wordpress
 
  Target Server Type    : MySQL
 <<<<<<< HEAD
+<<<<<<< HEAD
  Target Server Version : 80012
  File Encoding         : 65001
 
  Date: 25/02/2026 22:59:52
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
  Target Server Version : 80042 (8.0.42)
  File Encoding         : 65001
 
  Date: 26/02/2026 09:51:22
+<<<<<<< HEAD
 >>>>>>> 45062407 (init wordpress project)
 */
 SET sql_mode='';
+=======
+*/
+
+>>>>>>> 45062407 (init wordpress project)
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
@@ -38,7 +52,11 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `wp_actionscheduler_actions`;
 CREATE TABLE `wp_actionscheduler_actions`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `action_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+=======
+  `action_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+>>>>>>> 45062407 (init wordpress project)
 =======
   `action_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
 >>>>>>> 45062407 (init wordpress project)
@@ -46,6 +64,7 @@ CREATE TABLE `wp_actionscheduler_actions`  (
   `status` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `scheduled_date_gmt` datetime NULL DEFAULT '0000-00-00 00:00:00',
   `scheduled_date_local` datetime NULL DEFAULT '0000-00-00 00:00:00',
+<<<<<<< HEAD
 <<<<<<< HEAD
   `priority` tinyint(3) UNSIGNED NOT NULL DEFAULT 10,
   `args` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NULL DEFAULT NULL,
@@ -68,6 +87,8 @@ CREATE TABLE `wp_actionscheduler_actions`  (
   INDEX `status_claim_id`(`status`, `claim_id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 30 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `priority` tinyint UNSIGNED NOT NULL DEFAULT 10,
   `args` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NULL DEFAULT NULL,
   `schedule` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NULL,
@@ -88,11 +109,15 @@ CREATE TABLE `wp_actionscheduler_actions`  (
   INDEX `status_last_attempt_gmt`(`status` ASC, `last_attempt_gmt` ASC) USING BTREE,
   INDEX `status_claim_id`(`status` ASC, `claim_id` ASC) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 31 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
 -- Records of wp_actionscheduler_actions
 -- ----------------------------
+<<<<<<< HEAD
 <<<<<<< HEAD
 INSERT INTO `wp_actionscheduler_actions` VALUES (7, 'action_scheduler_run_recurring_actions_schedule_hook', 'complete', '2026-02-25 14:46:22', '2026-02-25 22:46:22', 20, '[]', 'O:32:\"ActionScheduler_IntervalSchedule\":5:{s:22:\"\0*\0scheduled_timestamp\";i:1772030782;s:18:\"\0*\0first_timestamp\";i:1772030782;s:13:\"\0*\0recurrence\";i:86400;s:49:\"\0ActionScheduler_IntervalSchedule\0start_timestamp\";i:1772030782;s:53:\"\0ActionScheduler_IntervalSchedule\0interval_in_seconds\";i:86400;}', 1, 1, '2026-02-25 14:46:25', '2026-02-25 22:46:25', 1, NULL);
 INSERT INTO `wp_actionscheduler_actions` VALUES (8, 'action_scheduler/migration_hook', 'complete', '2026-02-25 14:47:25', '2026-02-25 22:47:25', 10, '[]', 'O:30:\"ActionScheduler_SimpleSchedule\":2:{s:22:\"\0*\0scheduled_timestamp\";i:1772030845;s:41:\"\0ActionScheduler_SimpleSchedule\0timestamp\";i:1772030845;}', 2, 1, '2026-02-25 14:47:32', '2026-02-25 22:47:32', 5, NULL);
@@ -118,6 +143,8 @@ INSERT INTO `wp_actionscheduler_actions` VALUES (27, 'woocommerce_cleanup_person
 INSERT INTO `wp_actionscheduler_actions` VALUES (28, 'fetch_patterns', 'pending', '2026-02-26 14:47:32', '2026-02-26 22:47:32', 10, '[]', 'O:32:\"ActionScheduler_IntervalSchedule\":5:{s:22:\"\0*\0scheduled_timestamp\";i:1772117252;s:18:\"\0*\0first_timestamp\";i:1772030824;s:13:\"\0*\0recurrence\";i:86400;s:49:\"\0ActionScheduler_IntervalSchedule\0start_timestamp\";i:1772117252;s:53:\"\0ActionScheduler_IntervalSchedule\0interval_in_seconds\";i:86400;}', 3, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, NULL);
 INSERT INTO `wp_actionscheduler_actions` VALUES (29, 'woocommerce_tracker_send_event_wrapper', 'pending', '2026-02-26 14:47:32', '2026-02-26 22:47:32', 10, '[]', 'O:32:\"ActionScheduler_IntervalSchedule\":5:{s:22:\"\0*\0scheduled_timestamp\";i:1772117252;s:18:\"\0*\0first_timestamp\";i:1772030833;s:13:\"\0*\0recurrence\";i:86400;s:49:\"\0ActionScheduler_IntervalSchedule\0start_timestamp\";i:1772117252;s:53:\"\0ActionScheduler_IntervalSchedule\0interval_in_seconds\";i:86400;}', 3, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, NULL);
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
 INSERT INTO `wp_actionscheduler_actions` VALUES (8, 'action_scheduler_run_recurring_actions_schedule_hook', 'complete', '2026-02-26 01:49:10', '2026-02-26 09:49:10', 20, '[]', 'O:32:\"ActionScheduler_IntervalSchedule\":5:{s:22:\"\0*\0scheduled_timestamp\";i:1772070550;s:18:\"\0*\0first_timestamp\";i:1772070550;s:13:\"\0*\0recurrence\";i:86400;s:49:\"\0ActionScheduler_IntervalSchedule\0start_timestamp\";i:1772070550;s:53:\"\0ActionScheduler_IntervalSchedule\0interval_in_seconds\";i:86400;}', 1, 1, '2026-02-26 01:49:14', '2026-02-26 09:49:14', 1, NULL);
 INSERT INTO `wp_actionscheduler_actions` VALUES (9, 'action_scheduler/migration_hook', 'complete', '2026-02-26 01:50:14', '2026-02-26 09:50:14', 10, '[]', 'O:30:\"ActionScheduler_SimpleSchedule\":2:{s:22:\"\0*\0scheduled_timestamp\";i:1772070614;s:41:\"\0ActionScheduler_SimpleSchedule\0timestamp\";i:1772070614;}', 2, 1, '2026-02-26 01:50:25', '2026-02-26 09:50:25', 5, NULL);
 INSERT INTO `wp_actionscheduler_actions` VALUES (10, 'woocommerce_scheduled_sales', 'pending', '2026-02-26 16:00:00', '2026-02-27 00:00:00', 10, '[]', 'O:32:\"ActionScheduler_IntervalSchedule\":5:{s:22:\"\0*\0scheduled_timestamp\";i:1772121600;s:18:\"\0*\0first_timestamp\";i:1772121600;s:13:\"\0*\0recurrence\";i:86400;s:49:\"\0ActionScheduler_IntervalSchedule\0start_timestamp\";i:1772121600;s:53:\"\0ActionScheduler_IntervalSchedule\0interval_in_seconds\";i:86400;}', 3, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, NULL);
@@ -141,6 +168,9 @@ INSERT INTO `wp_actionscheduler_actions` VALUES (27, 'fetch_patterns', 'complete
 INSERT INTO `wp_actionscheduler_actions` VALUES (28, 'woocommerce_cleanup_personal_data', 'pending', '2026-02-27 01:50:24', '2026-02-27 09:50:24', 10, '[]', 'O:32:\"ActionScheduler_IntervalSchedule\":5:{s:22:\"\0*\0scheduled_timestamp\";i:1772157024;s:18:\"\0*\0first_timestamp\";i:1772070564;s:13:\"\0*\0recurrence\";i:86400;s:49:\"\0ActionScheduler_IntervalSchedule\0start_timestamp\";i:1772157024;s:53:\"\0ActionScheduler_IntervalSchedule\0interval_in_seconds\";i:86400;}', 3, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, NULL);
 INSERT INTO `wp_actionscheduler_actions` VALUES (29, 'fetch_patterns', 'pending', '2026-02-27 01:50:25', '2026-02-27 09:50:25', 10, '[]', 'O:32:\"ActionScheduler_IntervalSchedule\":5:{s:22:\"\0*\0scheduled_timestamp\";i:1772157025;s:18:\"\0*\0first_timestamp\";i:1772070566;s:13:\"\0*\0recurrence\";i:86400;s:49:\"\0ActionScheduler_IntervalSchedule\0start_timestamp\";i:1772157025;s:53:\"\0ActionScheduler_IntervalSchedule\0interval_in_seconds\";i:86400;}', 3, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, NULL);
 INSERT INTO `wp_actionscheduler_actions` VALUES (30, 'woocommerce_tracker_send_event_wrapper', 'pending', '2026-02-27 01:50:25', '2026-02-27 09:50:25', 10, '[]', 'O:32:\"ActionScheduler_IntervalSchedule\":5:{s:22:\"\0*\0scheduled_timestamp\";i:1772157025;s:18:\"\0*\0first_timestamp\";i:1772070576;s:13:\"\0*\0recurrence\";i:86400;s:49:\"\0ActionScheduler_IntervalSchedule\0start_timestamp\";i:1772157025;s:53:\"\0ActionScheduler_IntervalSchedule\0interval_in_seconds\";i:86400;}', 3, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, NULL);
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -149,17 +179,23 @@ INSERT INTO `wp_actionscheduler_actions` VALUES (30, 'woocommerce_tracker_send_e
 DROP TABLE IF EXISTS `wp_actionscheduler_claims`;
 CREATE TABLE `wp_actionscheduler_claims`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `claim_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `date_created_gmt` datetime NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`claim_id`) USING BTREE,
   INDEX `date_created_gmt`(`date_created_gmt`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 18 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Fixed;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `claim_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `date_created_gmt` datetime NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`claim_id`) USING BTREE,
   INDEX `date_created_gmt`(`date_created_gmt` ASC) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -172,17 +208,23 @@ CREATE TABLE `wp_actionscheduler_claims`  (
 DROP TABLE IF EXISTS `wp_actionscheduler_groups`;
 CREATE TABLE `wp_actionscheduler_groups`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `group_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
   PRIMARY KEY (`group_id`) USING BTREE,
   INDEX `slug`(`slug`(191)) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `group_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
   PRIMARY KEY (`group_id`) USING BTREE,
   INDEX `slug`(`slug`(191) ASC) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -201,8 +243,13 @@ INSERT INTO `wp_actionscheduler_groups` VALUES (6, '');
 DROP TABLE IF EXISTS `wp_actionscheduler_logs`;
 CREATE TABLE `wp_actionscheduler_logs`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `log_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `action_id` bigint(20) UNSIGNED NOT NULL,
+=======
+  `log_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `action_id` bigint UNSIGNED NOT NULL,
+>>>>>>> 45062407 (init wordpress project)
 =======
   `log_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `action_id` bigint UNSIGNED NOT NULL,
@@ -212,9 +259,15 @@ CREATE TABLE `wp_actionscheduler_logs`  (
   `log_date_local` datetime NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`log_id`) USING BTREE,
 <<<<<<< HEAD
+<<<<<<< HEAD
   INDEX `action_id`(`action_id`) USING BTREE,
   INDEX `log_date_gmt`(`log_date_gmt`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 42 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+=======
+  INDEX `action_id`(`action_id` ASC) USING BTREE,
+  INDEX `log_date_gmt`(`log_date_gmt` ASC) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 42 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+>>>>>>> 45062407 (init wordpress project)
 =======
   INDEX `action_id`(`action_id` ASC) USING BTREE,
   INDEX `log_date_gmt`(`log_date_gmt` ASC) USING BTREE
@@ -224,6 +277,7 @@ CREATE TABLE `wp_actionscheduler_logs`  (
 -- ----------------------------
 -- Records of wp_actionscheduler_logs
 -- ----------------------------
+<<<<<<< HEAD
 <<<<<<< HEAD
 INSERT INTO `wp_actionscheduler_logs` VALUES (1, 7, 'action created', '2026-02-25 14:46:22', '2026-02-25 22:46:22');
 INSERT INTO `wp_actionscheduler_logs` VALUES (2, 8, 'action created', '2026-02-25 14:46:25', '2026-02-25 22:46:25');
@@ -267,6 +321,8 @@ INSERT INTO `wp_actionscheduler_logs` VALUES (39, 29, 'action created', '2026-02
 INSERT INTO `wp_actionscheduler_logs` VALUES (40, 8, 'action started via Async Request', '2026-02-25 14:47:32', '2026-02-25 22:47:32');
 INSERT INTO `wp_actionscheduler_logs` VALUES (41, 8, 'action complete via Async Request', '2026-02-25 14:47:32', '2026-02-25 22:47:32');
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
 INSERT INTO `wp_actionscheduler_logs` VALUES (1, 8, '操作已创建', '2026-02-26 01:49:10', '2026-02-26 09:49:10');
 INSERT INTO `wp_actionscheduler_logs` VALUES (2, 9, '操作已创建', '2026-02-26 01:49:14', '2026-02-26 09:49:14');
 INSERT INTO `wp_actionscheduler_logs` VALUES (3, 8, '通过WP Cron开始的操作', '2026-02-26 01:49:14', '2026-02-26 09:49:14');
@@ -308,6 +364,9 @@ INSERT INTO `wp_actionscheduler_logs` VALUES (38, 26, '通过Async Request完成
 INSERT INTO `wp_actionscheduler_logs` VALUES (39, 30, '操作已创建', '2026-02-26 01:50:25', '2026-02-26 09:50:25');
 INSERT INTO `wp_actionscheduler_logs` VALUES (40, 9, '通过Async Request开始的操作', '2026-02-26 01:50:25', '2026-02-26 09:50:25');
 INSERT INTO `wp_actionscheduler_logs` VALUES (41, 9, '通过Async Request完成的操作', '2026-02-26 01:50:25', '2026-02-26 09:50:25');
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -315,6 +374,7 @@ INSERT INTO `wp_actionscheduler_logs` VALUES (41, 9, '通过Async Request完成�
 -- ----------------------------
 DROP TABLE IF EXISTS `wp_commentmeta`;
 CREATE TABLE `wp_commentmeta`  (
+<<<<<<< HEAD
 <<<<<<< HEAD
   `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `comment_id` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
@@ -325,6 +385,8 @@ CREATE TABLE `wp_commentmeta`  (
   INDEX `meta_key`(`meta_key`(191)) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `meta_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `comment_id` bigint UNSIGNED NOT NULL DEFAULT 0,
   `meta_key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NULL DEFAULT NULL,
@@ -333,6 +395,9 @@ CREATE TABLE `wp_commentmeta`  (
   INDEX `comment_id`(`comment_id` ASC) USING BTREE,
   INDEX `meta_key`(`meta_key`(191) ASC) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -345,8 +410,13 @@ CREATE TABLE `wp_commentmeta`  (
 DROP TABLE IF EXISTS `wp_comments`;
 CREATE TABLE `wp_comments`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `comment_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `comment_post_ID` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
+=======
+  `comment_ID` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `comment_post_ID` bigint UNSIGNED NOT NULL DEFAULT 0,
+>>>>>>> 45062407 (init wordpress project)
 =======
   `comment_ID` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `comment_post_ID` bigint UNSIGNED NOT NULL DEFAULT 0,
@@ -358,6 +428,7 @@ CREATE TABLE `wp_comments`  (
   `comment_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `comment_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `comment_content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
+<<<<<<< HEAD
 <<<<<<< HEAD
   `comment_karma` int(11) NOT NULL DEFAULT 0,
   `comment_approved` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '1',
@@ -375,6 +446,8 @@ CREATE TABLE `wp_comments`  (
   INDEX `woo_idx_comment_date_type`(`comment_date_gmt`, `comment_type`, `comment_approved`, `comment_post_ID`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `comment_karma` int NOT NULL DEFAULT 0,
   `comment_approved` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '1',
   `comment_agent` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
@@ -390,13 +463,20 @@ CREATE TABLE `wp_comments`  (
   INDEX `woo_idx_comment_type`(`comment_type` ASC) USING BTREE,
   INDEX `woo_idx_comment_date_type`(`comment_date_gmt` ASC, `comment_type` ASC, `comment_approved` ASC, `comment_post_ID` ASC) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
 -- Records of wp_comments
 -- ----------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 INSERT INTO `wp_comments` VALUES (1, 1, '一位 WordPress 评论者', 'wapuu@wordpress.example', 'https://cn.wordpress.org/', '', '2026-02-25 22:41:49', '2026-02-25 14:41:49', '您好，这是一条评论。若需要审核、编辑或删除评论，请访问仪表盘的评论界面。评论者头像来自 <a href=\"https://cn.gravatar.com/\">Gravatar</a>。', 0, '1', '', 'comment', 0, 0);
+=======
+INSERT INTO `wp_comments` VALUES (1, 1, '一位 WordPress 评论者', 'wapuu@wordpress.example', 'https://cn.wordpress.org/', '', '2026-02-26 09:42:25', '2026-02-26 01:42:25', '您好，这是一条评论。若需要审核、编辑或删除评论，请访问仪表盘的评论界面。评论者头像来自 <a href=\"https://cn.gravatar.com/\">Gravatar</a>。', 0, '1', '', 'comment', 0, 0);
+>>>>>>> 45062407 (init wordpress project)
 =======
 INSERT INTO `wp_comments` VALUES (1, 1, '一位 WordPress 评论者', 'wapuu@wordpress.example', 'https://cn.wordpress.org/', '', '2026-02-26 09:42:25', '2026-02-26 01:42:25', '您好，这是一条评论。若需要审核、编辑或删除评论，请访问仪表盘的评论界面。评论者头像来自 <a href=\"https://cn.gravatar.com/\">Gravatar</a>。', 0, '1', '', 'comment', 0, 0);
 >>>>>>> 45062407 (init wordpress project)
@@ -407,7 +487,11 @@ INSERT INTO `wp_comments` VALUES (1, 1, '一位 WordPress 评论者', 'wapuu@wor
 DROP TABLE IF EXISTS `wp_links`;
 CREATE TABLE `wp_links`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `link_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+=======
+  `link_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+>>>>>>> 45062407 (init wordpress project)
 =======
   `link_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
 >>>>>>> 45062407 (init wordpress project)
@@ -418,8 +502,13 @@ CREATE TABLE `wp_links`  (
   `link_description` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
   `link_visible` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'Y',
 <<<<<<< HEAD
+<<<<<<< HEAD
   `link_owner` bigint(20) UNSIGNED NOT NULL DEFAULT 1,
   `link_rating` int(11) NOT NULL DEFAULT 0,
+=======
+  `link_owner` bigint UNSIGNED NOT NULL DEFAULT 1,
+  `link_rating` int NOT NULL DEFAULT 0,
+>>>>>>> 45062407 (init wordpress project)
 =======
   `link_owner` bigint UNSIGNED NOT NULL DEFAULT 1,
   `link_rating` int NOT NULL DEFAULT 0,
@@ -430,8 +519,13 @@ CREATE TABLE `wp_links`  (
   `link_rss` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`link_id`) USING BTREE,
 <<<<<<< HEAD
+<<<<<<< HEAD
   INDEX `link_visible`(`link_visible`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+=======
+  INDEX `link_visible`(`link_visible` ASC) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+>>>>>>> 45062407 (init wordpress project)
 =======
   INDEX `link_visible`(`link_visible` ASC) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
@@ -447,7 +541,11 @@ CREATE TABLE `wp_links`  (
 DROP TABLE IF EXISTS `wp_options`;
 CREATE TABLE `wp_options`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+=======
+  `option_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+>>>>>>> 45062407 (init wordpress project)
 =======
   `option_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
 >>>>>>> 45062407 (init wordpress project)
@@ -456,9 +554,15 @@ CREATE TABLE `wp_options`  (
   `autoload` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`) USING BTREE,
 <<<<<<< HEAD
+<<<<<<< HEAD
   UNIQUE INDEX `option_name`(`option_name`) USING BTREE,
   INDEX `autoload`(`autoload`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 151 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+=======
+  UNIQUE INDEX `option_name`(`option_name` ASC) USING BTREE,
+  INDEX `autoload`(`autoload` ASC) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 461 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+>>>>>>> 45062407 (init wordpress project)
 =======
   UNIQUE INDEX `option_name`(`option_name` ASC) USING BTREE,
   INDEX `autoload`(`autoload` ASC) USING BTREE
@@ -469,6 +573,7 @@ CREATE TABLE `wp_options`  (
 -- Records of wp_options
 -- ----------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 INSERT INTO `wp_options` VALUES (1, 'cron', 'a:19:{i:1772031562;a:1:{s:26:\"action_scheduler_run_queue\";a:1:{s:32:\"0d04ed39571b55704c122d726248bbac\";a:3:{s:8:\"schedule\";s:12:\"every_minute\";s:4:\"args\";a:1:{i:0;s:7:\"WP Cron\";}s:8:\"interval\";i:60;}}}i:1772034109;a:1:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1772034110;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1772034385;a:2:{s:20:\"jetpack_clean_nonces\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}s:33:\"wc_admin_process_orders_milestone\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1772034392;a:1:{s:29:\"wc_admin_unsnooze_admin_notes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1772035909;a:1:{s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1772037709;a:1:{s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1772037950;a:1:{s:26:\"upgrader_scheduled_cleanup\";a:1:{s:32:\"686c8315be36c96dc00d0d7ed3656b43\";a:2:{s:8:\"schedule\";b:0;s:4:\"args\";a:1:{i:0;i:6;}}}}i:1772038120;a:1:{s:26:\"upgrader_scheduled_cleanup\";a:1:{s:32:\"9009088b2ab6f9f0dd1e36df2da38ce7\";a:2:{s:8:\"schedule\";b:0;s:4:\"args\";a:1:{i:0;i:13;}}}}i:1772038145;a:1:{s:26:\"upgrader_scheduled_cleanup\";a:1:{s:32:\"78525e41f5c2848ff7e1a2337fb96361\";a:2:{s:8:\"schedule\";b:0;s:4:\"args\";a:1:{i:0;i:14;}}}}i:1772038497;a:1:{s:26:\"upgrader_scheduled_cleanup\";a:1:{s:32:\"64fe7e19c11c6aa5ae4105b856a866cd\";a:2:{s:8:\"schedule\";b:0;s:4:\"args\";a:1:{i:0;i:15;}}}}i:1772073726;a:1:{s:21:\"wp_update_user_counts\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1772073986;a:1:{s:45:\"woocommerce_marketplace_cron_fetch_promotions\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1772116910;a:2:{s:30:\"wp_site_health_scheduled_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}s:32:\"recovery_mode_clean_expired_keys\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1772116926;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1772116932;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1772117185;a:1:{s:20:\"jetpack_v2_heartbeat\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1772635550;a:1:{s:30:\"wp_delete_temp_updater_backups\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}}s:7:\"version\";i:2;}', 'on');
 INSERT INTO `wp_options` VALUES (2, 'siteurl', 'http://localhost', 'on');
 INSERT INTO `wp_options` VALUES (3, 'home', 'http://localhost', 'on');
@@ -477,6 +582,8 @@ INSERT INTO `wp_options` VALUES (5, 'blogdescription', '', 'on');
 INSERT INTO `wp_options` VALUES (6, 'users_can_register', '0', 'on');
 INSERT INTO `wp_options` VALUES (7, 'admin_email', 'test@qq.com', 'on');
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
 INSERT INTO `wp_options` VALUES (1, 'cron', 'a:20:{i:1772070670;a:1:{s:26:\"action_scheduler_run_queue\";a:1:{s:32:\"0d04ed39571b55704c122d726248bbac\";a:3:{s:8:\"schedule\";s:12:\"every_minute\";s:4:\"args\";a:1:{i:0;s:7:\"WP Cron\";}s:8:\"interval\";i:60;}}}i:1772073744;a:1:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1772073746;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1772074153;a:1:{s:20:\"jetpack_clean_nonces\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1772074154;a:1:{s:33:\"wc_admin_process_orders_milestone\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1772074161;a:1:{s:29:\"wc_admin_unsnooze_admin_notes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1772075544;a:1:{s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1772077344;a:1:{s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1772077413;a:1:{s:26:\"upgrader_scheduled_cleanup\";a:1:{s:32:\"d63aca0b7e6237c7964320bd7fc95644\";a:2:{s:8:\"schedule\";b:0;s:4:\"args\";a:1:{i:0;i:7;}}}}i:1772077693;a:1:{s:26:\"upgrader_scheduled_cleanup\";a:1:{s:32:\"60fda3b54003017dc64a0c492471bbfe\";a:2:{s:8:\"schedule\";b:0;s:4:\"args\";a:1:{i:0;i:8;}}}}i:1772077819;a:1:{s:26:\"upgrader_scheduled_cleanup\";a:1:{s:32:\"dd07e4db14c3f5ea561b3bed7428c6ab\";a:2:{s:8:\"schedule\";b:0;s:4:\"args\";a:1:{i:0;i:16;}}}}i:1772077853;a:1:{s:26:\"upgrader_scheduled_cleanup\";a:1:{s:32:\"8ed56e6c25286330953b4891a51c25d9\";a:2:{s:8:\"schedule\";b:0;s:4:\"args\";a:1:{i:0;i:17;}}}}i:1772113356;a:1:{s:21:\"wp_update_user_counts\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1772113754;a:1:{s:45:\"woocommerce_marketplace_cron_fetch_promotions\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1772156545;a:2:{s:30:\"wp_site_health_scheduled_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}s:32:\"recovery_mode_clean_expired_keys\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1772156556;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1772156565;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1772156953;a:1:{s:20:\"jetpack_v2_heartbeat\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1772675013;a:1:{s:30:\"wp_delete_temp_updater_backups\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}}s:7:\"version\";i:2;}', 'on');
 INSERT INTO `wp_options` VALUES (2, 'siteurl', 'http://localhost', 'on');
 INSERT INTO `wp_options` VALUES (3, 'home', 'http://localhost', 'on');
@@ -484,6 +591,9 @@ INSERT INTO `wp_options` VALUES (4, 'blogname', 'XSRUPB', 'on');
 INSERT INTO `wp_options` VALUES (5, 'blogdescription', '', 'on');
 INSERT INTO `wp_options` VALUES (6, 'users_can_register', '0', 'on');
 INSERT INTO `wp_options` VALUES (7, 'admin_email', '2711398045@qq.com', 'on');
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 INSERT INTO `wp_options` VALUES (8, 'start_of_week', '1', 'on');
 INSERT INTO `wp_options` VALUES (9, 'use_balanceTags', '0', 'on');
@@ -507,6 +617,7 @@ INSERT INTO `wp_options` VALUES (26, 'links_updated_date_format', 'Y年n月j日 
 INSERT INTO `wp_options` VALUES (27, 'comment_moderation', '0', 'on');
 INSERT INTO `wp_options` VALUES (28, 'moderation_notify', '1', 'on');
 <<<<<<< HEAD
+<<<<<<< HEAD
 INSERT INTO `wp_options` VALUES (29, 'permalink_structure', '', 'on');
 INSERT INTO `wp_options` VALUES (30, 'rewrite_rules', '', 'on');
 INSERT INTO `wp_options` VALUES (31, 'hack_file', '0', 'on');
@@ -514,12 +625,17 @@ INSERT INTO `wp_options` VALUES (32, 'blog_charset', 'UTF-8', 'on');
 INSERT INTO `wp_options` VALUES (33, 'moderation_keys', '', 'off');
 INSERT INTO `wp_options` VALUES (34, 'active_plugins', 'a:4:{i:0;s:41:\"admin-menu-manager/admin-menu-manager.php\";i:1;s:45:\"theme-delete-manager/theme-delete-manager.php\";i:2;s:27:\"woocommerce/woocommerce.php\";i:3;s:21:\"wp-sweep/wp-sweep.php\";}', 'on');
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
 INSERT INTO `wp_options` VALUES (29, 'permalink_structure', '/index.php/%year%/%monthnum%/%day%/%postname%/', 'on');
 INSERT INTO `wp_options` VALUES (30, 'rewrite_rules', 'a:190:{s:24:\"^wc-auth/v([1]{1})/(.*)?\";s:63:\"index.php?wc-auth-version=$matches[1]&wc-auth-route=$matches[2]\";s:21:\"^wc/file/transient/?$\";s:33:\"index.php?wc-transient-file-name=\";s:24:\"^wc/file/transient/(.+)$\";s:44:\"index.php?wc-transient-file-name=$matches[1]\";s:22:\"^wc-api/v([1-3]{1})/?$\";s:51:\"index.php?wc-api-version=$matches[1]&wc-api-route=/\";s:24:\"^wc-api/v([1-3]{1})(.*)?\";s:61:\"index.php?wc-api-version=$matches[1]&wc-api-route=$matches[2]\";s:17:\"index.php/shop/?$\";s:27:\"index.php?post_type=product\";s:47:\"index.php/shop/feed/(feed|rdf|rss|rss2|atom)/?$\";s:44:\"index.php?post_type=product&feed=$matches[1]\";s:42:\"index.php/shop/(feed|rdf|rss|rss2|atom)/?$\";s:44:\"index.php?post_type=product&feed=$matches[1]\";s:34:\"index.php/shop/page/([0-9]{1,})/?$\";s:45:\"index.php?post_type=product&paged=$matches[1]\";s:11:\"^wp-json/?$\";s:22:\"index.php?rest_route=/\";s:14:\"^wp-json/(.*)?\";s:33:\"index.php?rest_route=/$matches[1]\";s:21:\"^index.php/wp-json/?$\";s:22:\"index.php?rest_route=/\";s:24:\"^index.php/wp-json/(.*)?\";s:33:\"index.php?rest_route=/$matches[1]\";s:17:\"^wp-sitemap\\.xml$\";s:23:\"index.php?sitemap=index\";s:17:\"^wp-sitemap\\.xsl$\";s:36:\"index.php?sitemap-stylesheet=sitemap\";s:23:\"^wp-sitemap-index\\.xsl$\";s:34:\"index.php?sitemap-stylesheet=index\";s:48:\"^wp-sitemap-([a-z]+?)-([a-z\\d_-]+?)-(\\d+?)\\.xml$\";s:75:\"index.php?sitemap=$matches[1]&sitemap-subtype=$matches[2]&paged=$matches[3]\";s:34:\"^wp-sitemap-([a-z]+?)-(\\d+?)\\.xml$\";s:47:\"index.php?sitemap=$matches[1]&paged=$matches[2]\";s:15:\"^checkout-link$\";s:28:\"index.php?checkout-link=true\";s:57:\"index.php/category/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:52:\"index.php?category_name=$matches[1]&feed=$matches[2]\";s:52:\"index.php/category/(.+?)/(feed|rdf|rss|rss2|atom)/?$\";s:52:\"index.php?category_name=$matches[1]&feed=$matches[2]\";s:33:\"index.php/category/(.+?)/embed/?$\";s:46:\"index.php?category_name=$matches[1]&embed=true\";s:45:\"index.php/category/(.+?)/page/?([0-9]{1,})/?$\";s:53:\"index.php?category_name=$matches[1]&paged=$matches[2]\";s:53:\"index.php/category/(.+?)/wc/file/transient(/(.*))?/?$\";s:65:\"index.php?category_name=$matches[1]&wc/file/transient=$matches[3]\";s:42:\"index.php/category/(.+?)/wc-api(/(.*))?/?$\";s:54:\"index.php?category_name=$matches[1]&wc-api=$matches[3]\";s:27:\"index.php/category/(.+?)/?$\";s:35:\"index.php?category_name=$matches[1]\";s:54:\"index.php/tag/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:42:\"index.php?tag=$matches[1]&feed=$matches[2]\";s:49:\"index.php/tag/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:42:\"index.php?tag=$matches[1]&feed=$matches[2]\";s:30:\"index.php/tag/([^/]+)/embed/?$\";s:36:\"index.php?tag=$matches[1]&embed=true\";s:42:\"index.php/tag/([^/]+)/page/?([0-9]{1,})/?$\";s:43:\"index.php?tag=$matches[1]&paged=$matches[2]\";s:50:\"index.php/tag/([^/]+)/wc/file/transient(/(.*))?/?$\";s:55:\"index.php?tag=$matches[1]&wc/file/transient=$matches[3]\";s:39:\"index.php/tag/([^/]+)/wc-api(/(.*))?/?$\";s:44:\"index.php?tag=$matches[1]&wc-api=$matches[3]\";s:24:\"index.php/tag/([^/]+)/?$\";s:25:\"index.php?tag=$matches[1]\";s:55:\"index.php/type/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:50:\"index.php?post_format=$matches[1]&feed=$matches[2]\";s:50:\"index.php/type/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:50:\"index.php?post_format=$matches[1]&feed=$matches[2]\";s:31:\"index.php/type/([^/]+)/embed/?$\";s:44:\"index.php?post_format=$matches[1]&embed=true\";s:43:\"index.php/type/([^/]+)/page/?([0-9]{1,})/?$\";s:51:\"index.php?post_format=$matches[1]&paged=$matches[2]\";s:25:\"index.php/type/([^/]+)/?$\";s:33:\"index.php?post_format=$matches[1]\";s:55:\"index.php/品牌/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:52:\"index.php?product_brand=$matches[1]&feed=$matches[2]\";s:50:\"index.php/品牌/(.+?)/(feed|rdf|rss|rss2|atom)/?$\";s:52:\"index.php?product_brand=$matches[1]&feed=$matches[2]\";s:31:\"index.php/品牌/(.+?)/embed/?$\";s:46:\"index.php?product_brand=$matches[1]&embed=true\";s:43:\"index.php/品牌/(.+?)/page/?([0-9]{1,})/?$\";s:53:\"index.php?product_brand=$matches[1]&paged=$matches[2]\";s:25:\"index.php/品牌/(.+?)/?$\";s:35:\"index.php?product_brand=$matches[1]\";s:65:\"index.php/product-category/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:50:\"index.php?product_cat=$matches[1]&feed=$matches[2]\";s:60:\"index.php/product-category/(.+?)/(feed|rdf|rss|rss2|atom)/?$\";s:50:\"index.php?product_cat=$matches[1]&feed=$matches[2]\";s:41:\"index.php/product-category/(.+?)/embed/?$\";s:44:\"index.php?product_cat=$matches[1]&embed=true\";s:53:\"index.php/product-category/(.+?)/page/?([0-9]{1,})/?$\";s:51:\"index.php?product_cat=$matches[1]&paged=$matches[2]\";s:35:\"index.php/product-category/(.+?)/?$\";s:33:\"index.php?product_cat=$matches[1]\";s:62:\"index.php/product-tag/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:50:\"index.php?product_tag=$matches[1]&feed=$matches[2]\";s:57:\"index.php/product-tag/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:50:\"index.php?product_tag=$matches[1]&feed=$matches[2]\";s:38:\"index.php/product-tag/([^/]+)/embed/?$\";s:44:\"index.php?product_tag=$matches[1]&embed=true\";s:50:\"index.php/product-tag/([^/]+)/page/?([0-9]{1,})/?$\";s:51:\"index.php?product_tag=$matches[1]&paged=$matches[2]\";s:32:\"index.php/product-tag/([^/]+)/?$\";s:33:\"index.php?product_tag=$matches[1]\";s:45:\"index.php/product/[^/]+/attachment/([^/]+)/?$\";s:32:\"index.php?attachment=$matches[1]\";s:55:\"index.php/product/[^/]+/attachment/([^/]+)/trackback/?$\";s:37:\"index.php?attachment=$matches[1]&tb=1\";s:75:\"index.php/product/[^/]+/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:70:\"index.php/product/[^/]+/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:70:\"index.php/product/[^/]+/attachment/([^/]+)/comment-page-([0-9]{1,})/?$\";s:50:\"index.php?attachment=$matches[1]&cpage=$matches[2]\";s:51:\"index.php/product/[^/]+/attachment/([^/]+)/embed/?$\";s:43:\"index.php?attachment=$matches[1]&embed=true\";s:34:\"index.php/product/([^/]+)/embed/?$\";s:40:\"index.php?product=$matches[1]&embed=true\";s:38:\"index.php/product/([^/]+)/trackback/?$\";s:34:\"index.php?product=$matches[1]&tb=1\";s:58:\"index.php/product/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:46:\"index.php?product=$matches[1]&feed=$matches[2]\";s:53:\"index.php/product/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:46:\"index.php?product=$matches[1]&feed=$matches[2]\";s:46:\"index.php/product/([^/]+)/page/?([0-9]{1,})/?$\";s:47:\"index.php?product=$matches[1]&paged=$matches[2]\";s:53:\"index.php/product/([^/]+)/comment-page-([0-9]{1,})/?$\";s:47:\"index.php?product=$matches[1]&cpage=$matches[2]\";s:54:\"index.php/product/([^/]+)/wc/file/transient(/(.*))?/?$\";s:59:\"index.php?product=$matches[1]&wc/file/transient=$matches[3]\";s:43:\"index.php/product/([^/]+)/wc-api(/(.*))?/?$\";s:48:\"index.php?product=$matches[1]&wc-api=$matches[3]\";s:60:\"index.php/product/[^/]+/([^/]+)/wc/file/transient(/(.*))?/?$\";s:62:\"index.php?attachment=$matches[1]&wc/file/transient=$matches[3]\";s:71:\"index.php/product/[^/]+/attachment/([^/]+)/wc/file/transient(/(.*))?/?$\";s:62:\"index.php?attachment=$matches[1]&wc/file/transient=$matches[3]\";s:49:\"index.php/product/[^/]+/([^/]+)/wc-api(/(.*))?/?$\";s:51:\"index.php?attachment=$matches[1]&wc-api=$matches[3]\";s:60:\"index.php/product/[^/]+/attachment/([^/]+)/wc-api(/(.*))?/?$\";s:51:\"index.php?attachment=$matches[1]&wc-api=$matches[3]\";s:42:\"index.php/product/([^/]+)(?:/([0-9]+))?/?$\";s:46:\"index.php?product=$matches[1]&page=$matches[2]\";s:34:\"index.php/product/[^/]+/([^/]+)/?$\";s:32:\"index.php?attachment=$matches[1]\";s:44:\"index.php/product/[^/]+/([^/]+)/trackback/?$\";s:37:\"index.php?attachment=$matches[1]&tb=1\";s:64:\"index.php/product/[^/]+/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:59:\"index.php/product/[^/]+/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:59:\"index.php/product/[^/]+/([^/]+)/comment-page-([0-9]{1,})/?$\";s:50:\"index.php?attachment=$matches[1]&cpage=$matches[2]\";s:40:\"index.php/product/[^/]+/([^/]+)/embed/?$\";s:43:\"index.php?attachment=$matches[1]&embed=true\";s:12:\"robots\\.txt$\";s:18:\"index.php?robots=1\";s:13:\"favicon\\.ico$\";s:19:\"index.php?favicon=1\";s:12:\"sitemap\\.xml\";s:23:\"index.php?sitemap=index\";s:48:\".*wp-(atom|rdf|rss|rss2|feed|commentsrss2)\\.php$\";s:18:\"index.php?feed=old\";s:20:\".*wp-app\\.php(/.*)?$\";s:19:\"index.php?error=403\";s:18:\".*wp-register.php$\";s:23:\"index.php?register=true\";s:42:\"index.php/feed/(feed|rdf|rss|rss2|atom)/?$\";s:27:\"index.php?&feed=$matches[1]\";s:37:\"index.php/(feed|rdf|rss|rss2|atom)/?$\";s:27:\"index.php?&feed=$matches[1]\";s:18:\"index.php/embed/?$\";s:21:\"index.php?&embed=true\";s:30:\"index.php/page/?([0-9]{1,})/?$\";s:28:\"index.php?&paged=$matches[1]\";s:38:\"index.php/wc/file/transient(/(.*))?/?$\";s:40:\"index.php?&wc/file/transient=$matches[2]\";s:27:\"index.php/wc-api(/(.*))?/?$\";s:29:\"index.php?&wc-api=$matches[2]\";s:51:\"index.php/comments/feed/(feed|rdf|rss|rss2|atom)/?$\";s:42:\"index.php?&feed=$matches[1]&withcomments=1\";s:46:\"index.php/comments/(feed|rdf|rss|rss2|atom)/?$\";s:42:\"index.php?&feed=$matches[1]&withcomments=1\";s:27:\"index.php/comments/embed/?$\";s:21:\"index.php?&embed=true\";s:47:\"index.php/comments/wc/file/transient(/(.*))?/?$\";s:40:\"index.php?&wc/file/transient=$matches[2]\";s:36:\"index.php/comments/wc-api(/(.*))?/?$\";s:29:\"index.php?&wc-api=$matches[2]\";s:54:\"index.php/search/(.+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:40:\"index.php?s=$matches[1]&feed=$matches[2]\";s:49:\"index.php/search/(.+)/(feed|rdf|rss|rss2|atom)/?$\";s:40:\"index.php?s=$matches[1]&feed=$matches[2]\";s:30:\"index.php/search/(.+)/embed/?$\";s:34:\"index.php?s=$matches[1]&embed=true\";s:42:\"index.php/search/(.+)/page/?([0-9]{1,})/?$\";s:41:\"index.php?s=$matches[1]&paged=$matches[2]\";s:50:\"index.php/search/(.+)/wc/file/transient(/(.*))?/?$\";s:53:\"index.php?s=$matches[1]&wc/file/transient=$matches[3]\";s:39:\"index.php/search/(.+)/wc-api(/(.*))?/?$\";s:42:\"index.php?s=$matches[1]&wc-api=$matches[3]\";s:24:\"index.php/search/(.+)/?$\";s:23:\"index.php?s=$matches[1]\";s:57:\"index.php/author/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:50:\"index.php?author_name=$matches[1]&feed=$matches[2]\";s:52:\"index.php/author/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:50:\"index.php?author_name=$matches[1]&feed=$matches[2]\";s:33:\"index.php/author/([^/]+)/embed/?$\";s:44:\"index.php?author_name=$matches[1]&embed=true\";s:45:\"index.php/author/([^/]+)/page/?([0-9]{1,})/?$\";s:51:\"index.php?author_name=$matches[1]&paged=$matches[2]\";s:53:\"index.php/author/([^/]+)/wc/file/transient(/(.*))?/?$\";s:63:\"index.php?author_name=$matches[1]&wc/file/transient=$matches[3]\";s:42:\"index.php/author/([^/]+)/wc-api(/(.*))?/?$\";s:52:\"index.php?author_name=$matches[1]&wc-api=$matches[3]\";s:27:\"index.php/author/([^/]+)/?$\";s:33:\"index.php?author_name=$matches[1]\";s:79:\"index.php/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/feed/(feed|rdf|rss|rss2|atom)/?$\";s:80:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&feed=$matches[4]\";s:74:\"index.php/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/(feed|rdf|rss|rss2|atom)/?$\";s:80:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&feed=$matches[4]\";s:55:\"index.php/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/embed/?$\";s:74:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&embed=true\";s:67:\"index.php/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/page/?([0-9]{1,})/?$\";s:81:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&paged=$matches[4]\";s:75:\"index.php/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/wc/file/transient(/(.*))?/?$\";s:93:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&wc/file/transient=$matches[5]\";s:64:\"index.php/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/wc-api(/(.*))?/?$\";s:82:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&wc-api=$matches[5]\";s:49:\"index.php/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/?$\";s:63:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]\";s:66:\"index.php/([0-9]{4})/([0-9]{1,2})/feed/(feed|rdf|rss|rss2|atom)/?$\";s:64:\"index.php?year=$matches[1]&monthnum=$matches[2]&feed=$matches[3]\";s:61:\"index.php/([0-9]{4})/([0-9]{1,2})/(feed|rdf|rss|rss2|atom)/?$\";s:64:\"index.php?year=$matches[1]&monthnum=$matches[2]&feed=$matches[3]\";s:42:\"index.php/([0-9]{4})/([0-9]{1,2})/embed/?$\";s:58:\"index.php?year=$matches[1]&monthnum=$matches[2]&embed=true\";s:54:\"index.php/([0-9]{4})/([0-9]{1,2})/page/?([0-9]{1,})/?$\";s:65:\"index.php?year=$matches[1]&monthnum=$matches[2]&paged=$matches[3]\";s:62:\"index.php/([0-9]{4})/([0-9]{1,2})/wc/file/transient(/(.*))?/?$\";s:77:\"index.php?year=$matches[1]&monthnum=$matches[2]&wc/file/transient=$matches[4]\";s:51:\"index.php/([0-9]{4})/([0-9]{1,2})/wc-api(/(.*))?/?$\";s:66:\"index.php?year=$matches[1]&monthnum=$matches[2]&wc-api=$matches[4]\";s:36:\"index.php/([0-9]{4})/([0-9]{1,2})/?$\";s:47:\"index.php?year=$matches[1]&monthnum=$matches[2]\";s:53:\"index.php/([0-9]{4})/feed/(feed|rdf|rss|rss2|atom)/?$\";s:43:\"index.php?year=$matches[1]&feed=$matches[2]\";s:48:\"index.php/([0-9]{4})/(feed|rdf|rss|rss2|atom)/?$\";s:43:\"index.php?year=$matches[1]&feed=$matches[2]\";s:29:\"index.php/([0-9]{4})/embed/?$\";s:37:\"index.php?year=$matches[1]&embed=true\";s:41:\"index.php/([0-9]{4})/page/?([0-9]{1,})/?$\";s:44:\"index.php?year=$matches[1]&paged=$matches[2]\";s:49:\"index.php/([0-9]{4})/wc/file/transient(/(.*))?/?$\";s:56:\"index.php?year=$matches[1]&wc/file/transient=$matches[3]\";s:38:\"index.php/([0-9]{4})/wc-api(/(.*))?/?$\";s:45:\"index.php?year=$matches[1]&wc-api=$matches[3]\";s:23:\"index.php/([0-9]{4})/?$\";s:26:\"index.php?year=$matches[1]\";s:68:\"index.php/[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/attachment/([^/]+)/?$\";s:32:\"index.php?attachment=$matches[1]\";s:78:\"index.php/[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/attachment/([^/]+)/trackback/?$\";s:37:\"index.php?attachment=$matches[1]&tb=1\";s:98:\"index.php/[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:93:\"index.php/[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:93:\"index.php/[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/attachment/([^/]+)/comment-page-([0-9]{1,})/?$\";s:50:\"index.php?attachment=$matches[1]&cpage=$matches[2]\";s:74:\"index.php/[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/attachment/([^/]+)/embed/?$\";s:43:\"index.php?attachment=$matches[1]&embed=true\";s:63:\"index.php/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/([^/]+)/embed/?$\";s:91:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&name=$matches[4]&embed=true\";s:67:\"index.php/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/([^/]+)/trackback/?$\";s:85:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&name=$matches[4]&tb=1\";s:87:\"index.php/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:97:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&name=$matches[4]&feed=$matches[5]\";s:82:\"index.php/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:97:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&name=$matches[4]&feed=$matches[5]\";s:75:\"index.php/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/([^/]+)/page/?([0-9]{1,})/?$\";s:98:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&name=$matches[4]&paged=$matches[5]\";s:82:\"index.php/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/([^/]+)/comment-page-([0-9]{1,})/?$\";s:98:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&name=$matches[4]&cpage=$matches[5]\";s:83:\"index.php/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/([^/]+)/wc/file/transient(/(.*))?/?$\";s:110:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&name=$matches[4]&wc/file/transient=$matches[6]\";s:72:\"index.php/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/([^/]+)/wc-api(/(.*))?/?$\";s:99:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&name=$matches[4]&wc-api=$matches[6]\";s:83:\"index.php/[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/([^/]+)/wc/file/transient(/(.*))?/?$\";s:62:\"index.php?attachment=$matches[1]&wc/file/transient=$matches[3]\";s:94:\"index.php/[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/attachment/([^/]+)/wc/file/transient(/(.*))?/?$\";s:62:\"index.php?attachment=$matches[1]&wc/file/transient=$matches[3]\";s:72:\"index.php/[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/([^/]+)/wc-api(/(.*))?/?$\";s:51:\"index.php?attachment=$matches[1]&wc-api=$matches[3]\";s:83:\"index.php/[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/attachment/([^/]+)/wc-api(/(.*))?/?$\";s:51:\"index.php?attachment=$matches[1]&wc-api=$matches[3]\";s:71:\"index.php/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/([^/]+)(?:/([0-9]+))?/?$\";s:97:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&name=$matches[4]&page=$matches[5]\";s:57:\"index.php/[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/([^/]+)/?$\";s:32:\"index.php?attachment=$matches[1]\";s:67:\"index.php/[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/([^/]+)/trackback/?$\";s:37:\"index.php?attachment=$matches[1]&tb=1\";s:87:\"index.php/[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:82:\"index.php/[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:82:\"index.php/[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/([^/]+)/comment-page-([0-9]{1,})/?$\";s:50:\"index.php?attachment=$matches[1]&cpage=$matches[2]\";s:63:\"index.php/[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/[^/]+/([^/]+)/embed/?$\";s:43:\"index.php?attachment=$matches[1]&embed=true\";s:74:\"index.php/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/comment-page-([0-9]{1,})/?$\";s:81:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&cpage=$matches[4]\";s:61:\"index.php/([0-9]{4})/([0-9]{1,2})/comment-page-([0-9]{1,})/?$\";s:65:\"index.php?year=$matches[1]&monthnum=$matches[2]&cpage=$matches[3]\";s:48:\"index.php/([0-9]{4})/comment-page-([0-9]{1,})/?$\";s:44:\"index.php?year=$matches[1]&cpage=$matches[2]\";s:37:\"index.php/.?.+?/attachment/([^/]+)/?$\";s:32:\"index.php?attachment=$matches[1]\";s:47:\"index.php/.?.+?/attachment/([^/]+)/trackback/?$\";s:37:\"index.php?attachment=$matches[1]&tb=1\";s:67:\"index.php/.?.+?/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:62:\"index.php/.?.+?/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:62:\"index.php/.?.+?/attachment/([^/]+)/comment-page-([0-9]{1,})/?$\";s:50:\"index.php?attachment=$matches[1]&cpage=$matches[2]\";s:43:\"index.php/.?.+?/attachment/([^/]+)/embed/?$\";s:43:\"index.php?attachment=$matches[1]&embed=true\";s:26:\"index.php/(.?.+?)/embed/?$\";s:41:\"index.php?pagename=$matches[1]&embed=true\";s:30:\"index.php/(.?.+?)/trackback/?$\";s:35:\"index.php?pagename=$matches[1]&tb=1\";s:50:\"index.php/(.?.+?)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:47:\"index.php?pagename=$matches[1]&feed=$matches[2]\";s:45:\"index.php/(.?.+?)/(feed|rdf|rss|rss2|atom)/?$\";s:47:\"index.php?pagename=$matches[1]&feed=$matches[2]\";s:38:\"index.php/(.?.+?)/page/?([0-9]{1,})/?$\";s:48:\"index.php?pagename=$matches[1]&paged=$matches[2]\";s:45:\"index.php/(.?.+?)/comment-page-([0-9]{1,})/?$\";s:48:\"index.php?pagename=$matches[1]&cpage=$matches[2]\";s:46:\"index.php/(.?.+?)/wc/file/transient(/(.*))?/?$\";s:60:\"index.php?pagename=$matches[1]&wc/file/transient=$matches[3]\";s:35:\"index.php/(.?.+?)/wc-api(/(.*))?/?$\";s:49:\"index.php?pagename=$matches[1]&wc-api=$matches[3]\";s:38:\"index.php/(.?.+?)/order-pay(/(.*))?/?$\";s:52:\"index.php?pagename=$matches[1]&order-pay=$matches[3]\";s:43:\"index.php/(.?.+?)/order-received(/(.*))?/?$\";s:57:\"index.php?pagename=$matches[1]&order-received=$matches[3]\";s:35:\"index.php/(.?.+?)/orders(/(.*))?/?$\";s:49:\"index.php?pagename=$matches[1]&orders=$matches[3]\";s:39:\"index.php/(.?.+?)/view-order(/(.*))?/?$\";s:53:\"index.php?pagename=$matches[1]&view-order=$matches[3]\";s:38:\"index.php/(.?.+?)/downloads(/(.*))?/?$\";s:52:\"index.php?pagename=$matches[1]&downloads=$matches[3]\";s:41:\"index.php/(.?.+?)/edit-account(/(.*))?/?$\";s:55:\"index.php?pagename=$matches[1]&edit-account=$matches[3]\";s:41:\"index.php/(.?.+?)/edit-address(/(.*))?/?$\";s:55:\"index.php?pagename=$matches[1]&edit-address=$matches[3]\";s:44:\"index.php/(.?.+?)/payment-methods(/(.*))?/?$\";s:58:\"index.php?pagename=$matches[1]&payment-methods=$matches[3]\";s:42:\"index.php/(.?.+?)/lost-password(/(.*))?/?$\";s:56:\"index.php?pagename=$matches[1]&lost-password=$matches[3]\";s:44:\"index.php/(.?.+?)/customer-logout(/(.*))?/?$\";s:58:\"index.php?pagename=$matches[1]&customer-logout=$matches[3]\";s:47:\"index.php/(.?.+?)/add-payment-method(/(.*))?/?$\";s:61:\"index.php?pagename=$matches[1]&add-payment-method=$matches[3]\";s:50:\"index.php/(.?.+?)/delete-payment-method(/(.*))?/?$\";s:64:\"index.php?pagename=$matches[1]&delete-payment-method=$matches[3]\";s:55:\"index.php/(.?.+?)/set-default-payment-method(/(.*))?/?$\";s:69:\"index.php?pagename=$matches[1]&set-default-payment-method=$matches[3]\";s:52:\"index.php/.?.+?/([^/]+)/wc/file/transient(/(.*))?/?$\";s:62:\"index.php?attachment=$matches[1]&wc/file/transient=$matches[3]\";s:63:\"index.php/.?.+?/attachment/([^/]+)/wc/file/transient(/(.*))?/?$\";s:62:\"index.php?attachment=$matches[1]&wc/file/transient=$matches[3]\";s:41:\"index.php/.?.+?/([^/]+)/wc-api(/(.*))?/?$\";s:51:\"index.php?attachment=$matches[1]&wc-api=$matches[3]\";s:52:\"index.php/.?.+?/attachment/([^/]+)/wc-api(/(.*))?/?$\";s:51:\"index.php?attachment=$matches[1]&wc-api=$matches[3]\";s:34:\"index.php/(.?.+?)(?:/([0-9]+))?/?$\";s:47:\"index.php?pagename=$matches[1]&page=$matches[2]\";}', 'on');
 INSERT INTO `wp_options` VALUES (31, 'hack_file', '0', 'on');
 INSERT INTO `wp_options` VALUES (32, 'blog_charset', 'UTF-8', 'on');
 INSERT INTO `wp_options` VALUES (33, 'moderation_keys', '', 'off');
 INSERT INTO `wp_options` VALUES (34, 'active_plugins', 'a:3:{i:0;s:41:\"admin-menu-manager/admin-menu-manager.php\";i:1;s:45:\"theme-delete-manager/theme-delete-manager.php\";i:2;s:27:\"woocommerce/woocommerce.php\";}', 'on');
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 INSERT INTO `wp_options` VALUES (35, 'category_base', '', 'on');
 INSERT INTO `wp_options` VALUES (36, 'ping_sites', 'https://rpc.pingomatic.com/', 'on');
@@ -528,8 +644,13 @@ INSERT INTO `wp_options` VALUES (38, 'gmt_offset', '0', 'on');
 INSERT INTO `wp_options` VALUES (39, 'default_email_category', '1', 'on');
 INSERT INTO `wp_options` VALUES (40, 'recently_edited', '', 'off');
 <<<<<<< HEAD
+<<<<<<< HEAD
 INSERT INTO `wp_options` VALUES (41, 'template', 'techvision', 'on');
 INSERT INTO `wp_options` VALUES (42, 'stylesheet', 'techvision', 'on');
+=======
+INSERT INTO `wp_options` VALUES (41, 'template', 'twentytwentyfive', 'on');
+INSERT INTO `wp_options` VALUES (42, 'stylesheet', 'twentytwentyfive', 'on');
+>>>>>>> 45062407 (init wordpress project)
 =======
 INSERT INTO `wp_options` VALUES (41, 'template', 'twentytwentyfive', 'on');
 INSERT INTO `wp_options` VALUES (42, 'stylesheet', 'twentytwentyfive', 'on');
@@ -584,7 +705,11 @@ INSERT INTO `wp_options` VALUES (89, 'medium_large_size_h', '0', 'on');
 INSERT INTO `wp_options` VALUES (90, 'wp_page_for_privacy_policy', '3', 'on');
 INSERT INTO `wp_options` VALUES (91, 'show_comments_cookies_opt_in', '1', 'on');
 <<<<<<< HEAD
+<<<<<<< HEAD
 INSERT INTO `wp_options` VALUES (92, 'admin_email_lifespan', '1787582509', 'on');
+=======
+INSERT INTO `wp_options` VALUES (92, 'admin_email_lifespan', '1787622144', 'on');
+>>>>>>> 45062407 (init wordpress project)
 =======
 INSERT INTO `wp_options` VALUES (92, 'admin_email_lifespan', '1787622144', 'on');
 >>>>>>> 45062407 (init wordpress project)
@@ -600,6 +725,7 @@ INSERT INTO `wp_options` VALUES (101, 'wp_notes_notify', '1', 'on');
 INSERT INTO `wp_options` VALUES (102, 'initial_db_version', '60717', 'on');
 INSERT INTO `wp_options` VALUES (103, 'wp_user_roles', 'a:7:{s:13:\"administrator\";a:2:{s:4:\"name\";s:13:\"Administrator\";s:12:\"capabilities\";a:115:{s:13:\"switch_themes\";b:1;s:11:\"edit_themes\";b:1;s:16:\"activate_plugins\";b:1;s:12:\"edit_plugins\";b:1;s:10:\"edit_users\";b:1;s:10:\"edit_files\";b:1;s:14:\"manage_options\";b:1;s:17:\"moderate_comments\";b:1;s:17:\"manage_categories\";b:1;s:12:\"manage_links\";b:1;s:12:\"upload_files\";b:1;s:6:\"import\";b:1;s:15:\"unfiltered_html\";b:1;s:10:\"edit_posts\";b:1;s:17:\"edit_others_posts\";b:1;s:20:\"edit_published_posts\";b:1;s:13:\"publish_posts\";b:1;s:10:\"edit_pages\";b:1;s:4:\"read\";b:1;s:8:\"level_10\";b:1;s:7:\"level_9\";b:1;s:7:\"level_8\";b:1;s:7:\"level_7\";b:1;s:7:\"level_6\";b:1;s:7:\"level_5\";b:1;s:7:\"level_4\";b:1;s:7:\"level_3\";b:1;s:7:\"level_2\";b:1;s:7:\"level_1\";b:1;s:7:\"level_0\";b:1;s:17:\"edit_others_pages\";b:1;s:20:\"edit_published_pages\";b:1;s:13:\"publish_pages\";b:1;s:12:\"delete_pages\";b:1;s:19:\"delete_others_pages\";b:1;s:22:\"delete_published_pages\";b:1;s:12:\"delete_posts\";b:1;s:19:\"delete_others_posts\";b:1;s:22:\"delete_published_posts\";b:1;s:20:\"delete_private_posts\";b:1;s:18:\"edit_private_posts\";b:1;s:18:\"read_private_posts\";b:1;s:20:\"delete_private_pages\";b:1;s:18:\"edit_private_pages\";b:1;s:18:\"read_private_pages\";b:1;s:12:\"delete_users\";b:1;s:12:\"create_users\";b:1;s:17:\"unfiltered_upload\";b:1;s:14:\"edit_dashboard\";b:1;s:14:\"update_plugins\";b:1;s:14:\"delete_plugins\";b:1;s:15:\"install_plugins\";b:1;s:13:\"update_themes\";b:1;s:14:\"install_themes\";b:1;s:11:\"update_core\";b:1;s:10:\"list_users\";b:1;s:12:\"remove_users\";b:1;s:13:\"promote_users\";b:1;s:18:\"edit_theme_options\";b:1;s:13:\"delete_themes\";b:1;s:6:\"export\";b:1;s:18:\"manage_woocommerce\";b:1;s:16:\"create_customers\";b:1;s:24:\"view_woocommerce_reports\";b:1;s:12:\"edit_product\";b:1;s:12:\"read_product\";b:1;s:14:\"delete_product\";b:1;s:13:\"edit_products\";b:1;s:20:\"edit_others_products\";b:1;s:16:\"publish_products\";b:1;s:21:\"read_private_products\";b:1;s:15:\"delete_products\";b:1;s:23:\"delete_private_products\";b:1;s:25:\"delete_published_products\";b:1;s:22:\"delete_others_products\";b:1;s:21:\"edit_private_products\";b:1;s:23:\"edit_published_products\";b:1;s:20:\"manage_product_terms\";b:1;s:18:\"edit_product_terms\";b:1;s:20:\"delete_product_terms\";b:1;s:20:\"assign_product_terms\";b:1;s:15:\"edit_shop_order\";b:1;s:15:\"read_shop_order\";b:1;s:17:\"delete_shop_order\";b:1;s:16:\"edit_shop_orders\";b:1;s:23:\"edit_others_shop_orders\";b:1;s:19:\"publish_shop_orders\";b:1;s:24:\"read_private_shop_orders\";b:1;s:18:\"delete_shop_orders\";b:1;s:26:\"delete_private_shop_orders\";b:1;s:28:\"delete_published_shop_orders\";b:1;s:25:\"delete_others_shop_orders\";b:1;s:24:\"edit_private_shop_orders\";b:1;s:26:\"edit_published_shop_orders\";b:1;s:23:\"manage_shop_order_terms\";b:1;s:21:\"edit_shop_order_terms\";b:1;s:23:\"delete_shop_order_terms\";b:1;s:23:\"assign_shop_order_terms\";b:1;s:16:\"edit_shop_coupon\";b:1;s:16:\"read_shop_coupon\";b:1;s:18:\"delete_shop_coupon\";b:1;s:17:\"edit_shop_coupons\";b:1;s:24:\"edit_others_shop_coupons\";b:1;s:20:\"publish_shop_coupons\";b:1;s:25:\"read_private_shop_coupons\";b:1;s:19:\"delete_shop_coupons\";b:1;s:27:\"delete_private_shop_coupons\";b:1;s:29:\"delete_published_shop_coupons\";b:1;s:26:\"delete_others_shop_coupons\";b:1;s:25:\"edit_private_shop_coupons\";b:1;s:27:\"edit_published_shop_coupons\";b:1;s:24:\"manage_shop_coupon_terms\";b:1;s:22:\"edit_shop_coupon_terms\";b:1;s:24:\"delete_shop_coupon_terms\";b:1;s:24:\"assign_shop_coupon_terms\";b:1;}}s:6:\"editor\";a:2:{s:4:\"name\";s:6:\"Editor\";s:12:\"capabilities\";a:34:{s:17:\"moderate_comments\";b:1;s:17:\"manage_categories\";b:1;s:12:\"manage_links\";b:1;s:12:\"upload_files\";b:1;s:15:\"unfiltered_html\";b:1;s:10:\"edit_posts\";b:1;s:17:\"edit_others_posts\";b:1;s:20:\"edit_published_posts\";b:1;s:13:\"publish_posts\";b:1;s:10:\"edit_pages\";b:1;s:4:\"read\";b:1;s:7:\"level_7\";b:1;s:7:\"level_6\";b:1;s:7:\"level_5\";b:1;s:7:\"level_4\";b:1;s:7:\"level_3\";b:1;s:7:\"level_2\";b:1;s:7:\"level_1\";b:1;s:7:\"level_0\";b:1;s:17:\"edit_others_pages\";b:1;s:20:\"edit_published_pages\";b:1;s:13:\"publish_pages\";b:1;s:12:\"delete_pages\";b:1;s:19:\"delete_others_pages\";b:1;s:22:\"delete_published_pages\";b:1;s:12:\"delete_posts\";b:1;s:19:\"delete_others_posts\";b:1;s:22:\"delete_published_posts\";b:1;s:20:\"delete_private_posts\";b:1;s:18:\"edit_private_posts\";b:1;s:18:\"read_private_posts\";b:1;s:20:\"delete_private_pages\";b:1;s:18:\"edit_private_pages\";b:1;s:18:\"read_private_pages\";b:1;}}s:6:\"author\";a:2:{s:4:\"name\";s:6:\"Author\";s:12:\"capabilities\";a:10:{s:12:\"upload_files\";b:1;s:10:\"edit_posts\";b:1;s:20:\"edit_published_posts\";b:1;s:13:\"publish_posts\";b:1;s:4:\"read\";b:1;s:7:\"level_2\";b:1;s:7:\"level_1\";b:1;s:7:\"level_0\";b:1;s:12:\"delete_posts\";b:1;s:22:\"delete_published_posts\";b:1;}}s:11:\"contributor\";a:2:{s:4:\"name\";s:11:\"Contributor\";s:12:\"capabilities\";a:5:{s:10:\"edit_posts\";b:1;s:4:\"read\";b:1;s:7:\"level_1\";b:1;s:7:\"level_0\";b:1;s:12:\"delete_posts\";b:1;}}s:10:\"subscriber\";a:2:{s:4:\"name\";s:10:\"Subscriber\";s:12:\"capabilities\";a:2:{s:4:\"read\";b:1;s:7:\"level_0\";b:1;}}s:8:\"customer\";a:2:{s:4:\"name\";s:8:\"Customer\";s:12:\"capabilities\";a:1:{s:4:\"read\";b:1;}}s:12:\"shop_manager\";a:2:{s:4:\"name\";s:12:\"Shop manager\";s:12:\"capabilities\";a:93:{s:7:\"level_9\";b:1;s:7:\"level_8\";b:1;s:7:\"level_7\";b:1;s:7:\"level_6\";b:1;s:7:\"level_5\";b:1;s:7:\"level_4\";b:1;s:7:\"level_3\";b:1;s:7:\"level_2\";b:1;s:7:\"level_1\";b:1;s:7:\"level_0\";b:1;s:4:\"read\";b:1;s:18:\"read_private_pages\";b:1;s:18:\"read_private_posts\";b:1;s:10:\"edit_posts\";b:1;s:10:\"edit_pages\";b:1;s:20:\"edit_published_posts\";b:1;s:20:\"edit_published_pages\";b:1;s:18:\"edit_private_pages\";b:1;s:18:\"edit_private_posts\";b:1;s:17:\"edit_others_posts\";b:1;s:17:\"edit_others_pages\";b:1;s:13:\"publish_posts\";b:1;s:13:\"publish_pages\";b:1;s:12:\"delete_posts\";b:1;s:12:\"delete_pages\";b:1;s:20:\"delete_private_pages\";b:1;s:20:\"delete_private_posts\";b:1;s:22:\"delete_published_pages\";b:1;s:22:\"delete_published_posts\";b:1;s:19:\"delete_others_posts\";b:1;s:19:\"delete_others_pages\";b:1;s:17:\"manage_categories\";b:1;s:12:\"manage_links\";b:1;s:17:\"moderate_comments\";b:1;s:12:\"upload_files\";b:1;s:6:\"export\";b:1;s:6:\"import\";b:1;s:10:\"list_users\";b:1;s:18:\"edit_theme_options\";b:1;s:18:\"manage_woocommerce\";b:1;s:16:\"create_customers\";b:1;s:24:\"view_woocommerce_reports\";b:1;s:12:\"edit_product\";b:1;s:12:\"read_product\";b:1;s:14:\"delete_product\";b:1;s:13:\"edit_products\";b:1;s:20:\"edit_others_products\";b:1;s:16:\"publish_products\";b:1;s:21:\"read_private_products\";b:1;s:15:\"delete_products\";b:1;s:23:\"delete_private_products\";b:1;s:25:\"delete_published_products\";b:1;s:22:\"delete_others_products\";b:1;s:21:\"edit_private_products\";b:1;s:23:\"edit_published_products\";b:1;s:20:\"manage_product_terms\";b:1;s:18:\"edit_product_terms\";b:1;s:20:\"delete_product_terms\";b:1;s:20:\"assign_product_terms\";b:1;s:15:\"edit_shop_order\";b:1;s:15:\"read_shop_order\";b:1;s:17:\"delete_shop_order\";b:1;s:16:\"edit_shop_orders\";b:1;s:23:\"edit_others_shop_orders\";b:1;s:19:\"publish_shop_orders\";b:1;s:24:\"read_private_shop_orders\";b:1;s:18:\"delete_shop_orders\";b:1;s:26:\"delete_private_shop_orders\";b:1;s:28:\"delete_published_shop_orders\";b:1;s:25:\"delete_others_shop_orders\";b:1;s:24:\"edit_private_shop_orders\";b:1;s:26:\"edit_published_shop_orders\";b:1;s:23:\"manage_shop_order_terms\";b:1;s:21:\"edit_shop_order_terms\";b:1;s:23:\"delete_shop_order_terms\";b:1;s:23:\"assign_shop_order_terms\";b:1;s:16:\"edit_shop_coupon\";b:1;s:16:\"read_shop_coupon\";b:1;s:18:\"delete_shop_coupon\";b:1;s:17:\"edit_shop_coupons\";b:1;s:24:\"edit_others_shop_coupons\";b:1;s:20:\"publish_shop_coupons\";b:1;s:25:\"read_private_shop_coupons\";b:1;s:19:\"delete_shop_coupons\";b:1;s:27:\"delete_private_shop_coupons\";b:1;s:29:\"delete_published_shop_coupons\";b:1;s:26:\"delete_others_shop_coupons\";b:1;s:25:\"edit_private_shop_coupons\";b:1;s:27:\"edit_published_shop_coupons\";b:1;s:24:\"manage_shop_coupon_terms\";b:1;s:22:\"edit_shop_coupon_terms\";b:1;s:24:\"delete_shop_coupon_terms\";b:1;s:24:\"assign_shop_coupon_terms\";b:1;}}}', 'on');
 <<<<<<< HEAD
+<<<<<<< HEAD
 INSERT INTO `wp_options` VALUES (104, 'fresh_site', '1', 'off');
 INSERT INTO `wp_options` VALUES (105, 'WPLANG', 'zh_CN', 'auto');
 INSERT INTO `wp_options` VALUES (106, 'user_count', '1', 'off');
@@ -607,11 +733,16 @@ INSERT INTO `wp_options` VALUES (107, 'widget_block', 'a:6:{i:2;a:1:{s:7:\"conte
 INSERT INTO `wp_options` VALUES (108, 'sidebars_widgets', 'a:7:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:5:{i:0;s:7:\"block-2\";i:1;s:7:\"block-3\";i:2;s:7:\"block-4\";i:3;s:7:\"block-5\";i:4;s:7:\"block-6\";}s:8:\"footer-1\";a:0:{}s:8:\"footer-2\";a:0:{}s:8:\"footer-3\";a:0:{}s:8:\"footer-4\";a:0:{}s:13:\"array_version\";i:3;}', 'auto');
 INSERT INTO `wp_options` VALUES (448, 'woocommerce_maybe_regenerate_images_hash', '991b1ca641921cf0f5baf7a2fe85861b', 'auto');
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
 INSERT INTO `wp_options` VALUES (104, 'fresh_site', '0', 'off');
 INSERT INTO `wp_options` VALUES (105, 'WPLANG', 'zh_CN', 'auto');
 INSERT INTO `wp_options` VALUES (106, 'user_count', '1', 'off');
 INSERT INTO `wp_options` VALUES (107, 'widget_block', 'a:6:{i:2;a:1:{s:7:\"content\";s:19:\"<!-- wp:search /-->\";}i:3;a:1:{s:7:\"content\";s:154:\"<!-- wp:group --><div class=\"wp-block-group\"><!-- wp:heading --><h2>近期文章</h2><!-- /wp:heading --><!-- wp:latest-posts /--></div><!-- /wp:group -->\";}i:4;a:1:{s:7:\"content\";s:224:\"<!-- wp:group --><div class=\"wp-block-group\"><!-- wp:heading --><h2>近期评论</h2><!-- /wp:heading --><!-- wp:latest-comments {\"displayAvatar\":false,\"displayDate\":false,\"displayExcerpt\":false} /--></div><!-- /wp:group -->\";}i:5;a:1:{s:7:\"content\";s:144:\"<!-- wp:group --><div class=\"wp-block-group\"><!-- wp:heading --><h2>归档</h2><!-- /wp:heading --><!-- wp:archives /--></div><!-- /wp:group -->\";}i:6;a:1:{s:7:\"content\";s:146:\"<!-- wp:group --><div class=\"wp-block-group\"><!-- wp:heading --><h2>分类</h2><!-- /wp:heading --><!-- wp:categories /--></div><!-- /wp:group -->\";}s:12:\"_multiwidget\";i:1;}', 'auto');
 INSERT INTO `wp_options` VALUES (108, 'sidebars_widgets', 'a:4:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:3:{i:0;s:7:\"block-2\";i:1;s:7:\"block-3\";i:2;s:7:\"block-4\";}s:9:\"sidebar-2\";a:2:{i:0;s:7:\"block-5\";i:1;s:7:\"block-6\";}s:13:\"array_version\";i:3;}', 'auto');
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 INSERT INTO `wp_options` VALUES (109, 'widget_pages', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'auto');
 INSERT INTO `wp_options` VALUES (110, 'widget_calendar', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'auto');
@@ -628,6 +759,7 @@ INSERT INTO `wp_options` VALUES (120, 'widget_tag_cloud', 'a:1:{s:12:\"_multiwid
 INSERT INTO `wp_options` VALUES (121, 'widget_nav_menu', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'auto');
 INSERT INTO `wp_options` VALUES (122, 'widget_custom_html', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'auto');
 INSERT INTO `wp_options` VALUES (123, '_transient_wp_core_block_css_files', 'a:2:{s:7:\"version\";s:5:\"6.9.1\";s:5:\"files\";a:584:{i:0;s:31:\"accordion-heading/style-rtl.css\";i:1;s:35:\"accordion-heading/style-rtl.min.css\";i:2;s:27:\"accordion-heading/style.css\";i:3;s:31:\"accordion-heading/style.min.css\";i:4;s:28:\"accordion-item/style-rtl.css\";i:5;s:32:\"accordion-item/style-rtl.min.css\";i:6;s:24:\"accordion-item/style.css\";i:7;s:28:\"accordion-item/style.min.css\";i:8;s:29:\"accordion-panel/style-rtl.css\";i:9;s:33:\"accordion-panel/style-rtl.min.css\";i:10;s:25:\"accordion-panel/style.css\";i:11;s:29:\"accordion-panel/style.min.css\";i:12;s:23:\"accordion/style-rtl.css\";i:13;s:27:\"accordion/style-rtl.min.css\";i:14;s:19:\"accordion/style.css\";i:15;s:23:\"accordion/style.min.css\";i:16;s:23:\"archives/editor-rtl.css\";i:17;s:27:\"archives/editor-rtl.min.css\";i:18;s:19:\"archives/editor.css\";i:19;s:23:\"archives/editor.min.css\";i:20;s:22:\"archives/style-rtl.css\";i:21;s:26:\"archives/style-rtl.min.css\";i:22;s:18:\"archives/style.css\";i:23;s:22:\"archives/style.min.css\";i:24;s:20:\"audio/editor-rtl.css\";i:25;s:24:\"audio/editor-rtl.min.css\";i:26;s:16:\"audio/editor.css\";i:27;s:20:\"audio/editor.min.css\";i:28;s:19:\"audio/style-rtl.css\";i:29;s:23:\"audio/style-rtl.min.css\";i:30;s:15:\"audio/style.css\";i:31;s:19:\"audio/style.min.css\";i:32;s:19:\"audio/theme-rtl.css\";i:33;s:23:\"audio/theme-rtl.min.css\";i:34;s:15:\"audio/theme.css\";i:35;s:19:\"audio/theme.min.css\";i:36;s:21:\"avatar/editor-rtl.css\";i:37;s:25:\"avatar/editor-rtl.min.css\";i:38;s:17:\"avatar/editor.css\";i:39;s:21:\"avatar/editor.min.css\";i:40;s:20:\"avatar/style-rtl.css\";i:41;s:24:\"avatar/style-rtl.min.css\";i:42;s:16:\"avatar/style.css\";i:43;s:20:\"avatar/style.min.css\";i:44;s:21:\"button/editor-rtl.css\";i:45;s:25:\"button/editor-rtl.min.css\";i:46;s:17:\"button/editor.css\";i:47;s:21:\"button/editor.min.css\";i:48;s:20:\"button/style-rtl.css\";i:49;s:24:\"button/style-rtl.min.css\";i:50;s:16:\"button/style.css\";i:51;s:20:\"button/style.min.css\";i:52;s:22:\"buttons/editor-rtl.css\";i:53;s:26:\"buttons/editor-rtl.min.css\";i:54;s:18:\"buttons/editor.css\";i:55;s:22:\"buttons/editor.min.css\";i:56;s:21:\"buttons/style-rtl.css\";i:57;s:25:\"buttons/style-rtl.min.css\";i:58;s:17:\"buttons/style.css\";i:59;s:21:\"buttons/style.min.css\";i:60;s:22:\"calendar/style-rtl.css\";i:61;s:26:\"calendar/style-rtl.min.css\";i:62;s:18:\"calendar/style.css\";i:63;s:22:\"calendar/style.min.css\";i:64;s:25:\"categories/editor-rtl.css\";i:65;s:29:\"categories/editor-rtl.min.css\";i:66;s:21:\"categories/editor.css\";i:67;s:25:\"categories/editor.min.css\";i:68;s:24:\"categories/style-rtl.css\";i:69;s:28:\"categories/style-rtl.min.css\";i:70;s:20:\"categories/style.css\";i:71;s:24:\"categories/style.min.css\";i:72;s:19:\"code/editor-rtl.css\";i:73;s:23:\"code/editor-rtl.min.css\";i:74;s:15:\"code/editor.css\";i:75;s:19:\"code/editor.min.css\";i:76;s:18:\"code/style-rtl.css\";i:77;s:22:\"code/style-rtl.min.css\";i:78;s:14:\"code/style.css\";i:79;s:18:\"code/style.min.css\";i:80;s:18:\"code/theme-rtl.css\";i:81;s:22:\"code/theme-rtl.min.css\";i:82;s:14:\"code/theme.css\";i:83;s:18:\"code/theme.min.css\";i:84;s:22:\"columns/editor-rtl.css\";i:85;s:26:\"columns/editor-rtl.min.css\";i:86;s:18:\"columns/editor.css\";i:87;s:22:\"columns/editor.min.css\";i:88;s:21:\"columns/style-rtl.css\";i:89;s:25:\"columns/style-rtl.min.css\";i:90;s:17:\"columns/style.css\";i:91;s:21:\"columns/style.min.css\";i:92;s:33:\"comment-author-name/style-rtl.css\";i:93;s:37:\"comment-author-name/style-rtl.min.css\";i:94;s:29:\"comment-author-name/style.css\";i:95;s:33:\"comment-author-name/style.min.css\";i:96;s:29:\"comment-content/style-rtl.css\";i:97;s:33:\"comment-content/style-rtl.min.css\";i:98;s:25:\"comment-content/style.css\";i:99;s:29:\"comment-content/style.min.css\";i:100;s:26:\"comment-date/style-rtl.css\";i:101;s:30:\"comment-date/style-rtl.min.css\";i:102;s:22:\"comment-date/style.css\";i:103;s:26:\"comment-date/style.min.css\";i:104;s:31:\"comment-edit-link/style-rtl.css\";i:105;s:35:\"comment-edit-link/style-rtl.min.css\";i:106;s:27:\"comment-edit-link/style.css\";i:107;s:31:\"comment-edit-link/style.min.css\";i:108;s:32:\"comment-reply-link/style-rtl.css\";i:109;s:36:\"comment-reply-link/style-rtl.min.css\";i:110;s:28:\"comment-reply-link/style.css\";i:111;s:32:\"comment-reply-link/style.min.css\";i:112;s:30:\"comment-template/style-rtl.css\";i:113;s:34:\"comment-template/style-rtl.min.css\";i:114;s:26:\"comment-template/style.css\";i:115;s:30:\"comment-template/style.min.css\";i:116;s:42:\"comments-pagination-numbers/editor-rtl.css\";i:117;s:46:\"comments-pagination-numbers/editor-rtl.min.css\";i:118;s:38:\"comments-pagination-numbers/editor.css\";i:119;s:42:\"comments-pagination-numbers/editor.min.css\";i:120;s:34:\"comments-pagination/editor-rtl.css\";i:121;s:38:\"comments-pagination/editor-rtl.min.css\";i:122;s:30:\"comments-pagination/editor.css\";i:123;s:34:\"comments-pagination/editor.min.css\";i:124;s:33:\"comments-pagination/style-rtl.css\";i:125;s:37:\"comments-pagination/style-rtl.min.css\";i:126;s:29:\"comments-pagination/style.css\";i:127;s:33:\"comments-pagination/style.min.css\";i:128;s:29:\"comments-title/editor-rtl.css\";i:129;s:33:\"comments-title/editor-rtl.min.css\";i:130;s:25:\"comments-title/editor.css\";i:131;s:29:\"comments-title/editor.min.css\";i:132;s:23:\"comments/editor-rtl.css\";i:133;s:27:\"comments/editor-rtl.min.css\";i:134;s:19:\"comments/editor.css\";i:135;s:23:\"comments/editor.min.css\";i:136;s:22:\"comments/style-rtl.css\";i:137;s:26:\"comments/style-rtl.min.css\";i:138;s:18:\"comments/style.css\";i:139;s:22:\"comments/style.min.css\";i:140;s:20:\"cover/editor-rtl.css\";i:141;s:24:\"cover/editor-rtl.min.css\";i:142;s:16:\"cover/editor.css\";i:143;s:20:\"cover/editor.min.css\";i:144;s:19:\"cover/style-rtl.css\";i:145;s:23:\"cover/style-rtl.min.css\";i:146;s:15:\"cover/style.css\";i:147;s:19:\"cover/style.min.css\";i:148;s:22:\"details/editor-rtl.css\";i:149;s:26:\"details/editor-rtl.min.css\";i:150;s:18:\"details/editor.css\";i:151;s:22:\"details/editor.min.css\";i:152;s:21:\"details/style-rtl.css\";i:153;s:25:\"details/style-rtl.min.css\";i:154;s:17:\"details/style.css\";i:155;s:21:\"details/style.min.css\";i:156;s:20:\"embed/editor-rtl.css\";i:157;s:24:\"embed/editor-rtl.min.css\";i:158;s:16:\"embed/editor.css\";i:159;s:20:\"embed/editor.min.css\";i:160;s:19:\"embed/style-rtl.css\";i:161;s:23:\"embed/style-rtl.min.css\";i:162;s:15:\"embed/style.css\";i:163;s:19:\"embed/style.min.css\";i:164;s:19:\"embed/theme-rtl.css\";i:165;s:23:\"embed/theme-rtl.min.css\";i:166;s:15:\"embed/theme.css\";i:167;s:19:\"embed/theme.min.css\";i:168;s:19:\"file/editor-rtl.css\";i:169;s:23:\"file/editor-rtl.min.css\";i:170;s:15:\"file/editor.css\";i:171;s:19:\"file/editor.min.css\";i:172;s:18:\"file/style-rtl.css\";i:173;s:22:\"file/style-rtl.min.css\";i:174;s:14:\"file/style.css\";i:175;s:18:\"file/style.min.css\";i:176;s:23:\"footnotes/style-rtl.css\";i:177;s:27:\"footnotes/style-rtl.min.css\";i:178;s:19:\"footnotes/style.css\";i:179;s:23:\"footnotes/style.min.css\";i:180;s:23:\"freeform/editor-rtl.css\";i:181;s:27:\"freeform/editor-rtl.min.css\";i:182;s:19:\"freeform/editor.css\";i:183;s:23:\"freeform/editor.min.css\";i:184;s:22:\"gallery/editor-rtl.css\";i:185;s:26:\"gallery/editor-rtl.min.css\";i:186;s:18:\"gallery/editor.css\";i:187;s:22:\"gallery/editor.min.css\";i:188;s:21:\"gallery/style-rtl.css\";i:189;s:25:\"gallery/style-rtl.min.css\";i:190;s:17:\"gallery/style.css\";i:191;s:21:\"gallery/style.min.css\";i:192;s:21:\"gallery/theme-rtl.css\";i:193;s:25:\"gallery/theme-rtl.min.css\";i:194;s:17:\"gallery/theme.css\";i:195;s:21:\"gallery/theme.min.css\";i:196;s:20:\"group/editor-rtl.css\";i:197;s:24:\"group/editor-rtl.min.css\";i:198;s:16:\"group/editor.css\";i:199;s:20:\"group/editor.min.css\";i:200;s:19:\"group/style-rtl.css\";i:201;s:23:\"group/style-rtl.min.css\";i:202;s:15:\"group/style.css\";i:203;s:19:\"group/style.min.css\";i:204;s:19:\"group/theme-rtl.css\";i:205;s:23:\"group/theme-rtl.min.css\";i:206;s:15:\"group/theme.css\";i:207;s:19:\"group/theme.min.css\";i:208;s:21:\"heading/style-rtl.css\";i:209;s:25:\"heading/style-rtl.min.css\";i:210;s:17:\"heading/style.css\";i:211;s:21:\"heading/style.min.css\";i:212;s:19:\"html/editor-rtl.css\";i:213;s:23:\"html/editor-rtl.min.css\";i:214;s:15:\"html/editor.css\";i:215;s:19:\"html/editor.min.css\";i:216;s:20:\"image/editor-rtl.css\";i:217;s:24:\"image/editor-rtl.min.css\";i:218;s:16:\"image/editor.css\";i:219;s:20:\"image/editor.min.css\";i:220;s:19:\"image/style-rtl.css\";i:221;s:23:\"image/style-rtl.min.css\";i:222;s:15:\"image/style.css\";i:223;s:19:\"image/style.min.css\";i:224;s:19:\"image/theme-rtl.css\";i:225;s:23:\"image/theme-rtl.min.css\";i:226;s:15:\"image/theme.css\";i:227;s:19:\"image/theme.min.css\";i:228;s:29:\"latest-comments/style-rtl.css\";i:229;s:33:\"latest-comments/style-rtl.min.css\";i:230;s:25:\"latest-comments/style.css\";i:231;s:29:\"latest-comments/style.min.css\";i:232;s:27:\"latest-posts/editor-rtl.css\";i:233;s:31:\"latest-posts/editor-rtl.min.css\";i:234;s:23:\"latest-posts/editor.css\";i:235;s:27:\"latest-posts/editor.min.css\";i:236;s:26:\"latest-posts/style-rtl.css\";i:237;s:30:\"latest-posts/style-rtl.min.css\";i:238;s:22:\"latest-posts/style.css\";i:239;s:26:\"latest-posts/style.min.css\";i:240;s:18:\"list/style-rtl.css\";i:241;s:22:\"list/style-rtl.min.css\";i:242;s:14:\"list/style.css\";i:243;s:18:\"list/style.min.css\";i:244;s:22:\"loginout/style-rtl.css\";i:245;s:26:\"loginout/style-rtl.min.css\";i:246;s:18:\"loginout/style.css\";i:247;s:22:\"loginout/style.min.css\";i:248;s:19:\"math/editor-rtl.css\";i:249;s:23:\"math/editor-rtl.min.css\";i:250;s:15:\"math/editor.css\";i:251;s:19:\"math/editor.min.css\";i:252;s:18:\"math/style-rtl.css\";i:253;s:22:\"math/style-rtl.min.css\";i:254;s:14:\"math/style.css\";i:255;s:18:\"math/style.min.css\";i:256;s:25:\"media-text/editor-rtl.css\";i:257;s:29:\"media-text/editor-rtl.min.css\";i:258;s:21:\"media-text/editor.css\";i:259;s:25:\"media-text/editor.min.css\";i:260;s:24:\"media-text/style-rtl.css\";i:261;s:28:\"media-text/style-rtl.min.css\";i:262;s:20:\"media-text/style.css\";i:263;s:24:\"media-text/style.min.css\";i:264;s:19:\"more/editor-rtl.css\";i:265;s:23:\"more/editor-rtl.min.css\";i:266;s:15:\"more/editor.css\";i:267;s:19:\"more/editor.min.css\";i:268;s:30:\"navigation-link/editor-rtl.css\";i:269;s:34:\"navigation-link/editor-rtl.min.css\";i:270;s:26:\"navigation-link/editor.css\";i:271;s:30:\"navigation-link/editor.min.css\";i:272;s:29:\"navigation-link/style-rtl.css\";i:273;s:33:\"navigation-link/style-rtl.min.css\";i:274;s:25:\"navigation-link/style.css\";i:275;s:29:\"navigation-link/style.min.css\";i:276;s:33:\"navigation-submenu/editor-rtl.css\";i:277;s:37:\"navigation-submenu/editor-rtl.min.css\";i:278;s:29:\"navigation-submenu/editor.css\";i:279;s:33:\"navigation-submenu/editor.min.css\";i:280;s:25:\"navigation/editor-rtl.css\";i:281;s:29:\"navigation/editor-rtl.min.css\";i:282;s:21:\"navigation/editor.css\";i:283;s:25:\"navigation/editor.min.css\";i:284;s:24:\"navigation/style-rtl.css\";i:285;s:28:\"navigation/style-rtl.min.css\";i:286;s:20:\"navigation/style.css\";i:287;s:24:\"navigation/style.min.css\";i:288;s:23:\"nextpage/editor-rtl.css\";i:289;s:27:\"nextpage/editor-rtl.min.css\";i:290;s:19:\"nextpage/editor.css\";i:291;s:23:\"nextpage/editor.min.css\";i:292;s:24:\"page-list/editor-rtl.css\";i:293;s:28:\"page-list/editor-rtl.min.css\";i:294;s:20:\"page-list/editor.css\";i:295;s:24:\"page-list/editor.min.css\";i:296;s:23:\"page-list/style-rtl.css\";i:297;s:27:\"page-list/style-rtl.min.css\";i:298;s:19:\"page-list/style.css\";i:299;s:23:\"page-list/style.min.css\";i:300;s:24:\"paragraph/editor-rtl.css\";i:301;s:28:\"paragraph/editor-rtl.min.css\";i:302;s:20:\"paragraph/editor.css\";i:303;s:24:\"paragraph/editor.min.css\";i:304;s:23:\"paragraph/style-rtl.css\";i:305;s:27:\"paragraph/style-rtl.min.css\";i:306;s:19:\"paragraph/style.css\";i:307;s:23:\"paragraph/style.min.css\";i:308;s:35:\"post-author-biography/style-rtl.css\";i:309;s:39:\"post-author-biography/style-rtl.min.css\";i:310;s:31:\"post-author-biography/style.css\";i:311;s:35:\"post-author-biography/style.min.css\";i:312;s:30:\"post-author-name/style-rtl.css\";i:313;s:34:\"post-author-name/style-rtl.min.css\";i:314;s:26:\"post-author-name/style.css\";i:315;s:30:\"post-author-name/style.min.css\";i:316;s:25:\"post-author/style-rtl.css\";i:317;s:29:\"post-author/style-rtl.min.css\";i:318;s:21:\"post-author/style.css\";i:319;s:25:\"post-author/style.min.css\";i:320;s:33:\"post-comments-count/style-rtl.css\";i:321;s:37:\"post-comments-count/style-rtl.min.css\";i:322;s:29:\"post-comments-count/style.css\";i:323;s:33:\"post-comments-count/style.min.css\";i:324;s:33:\"post-comments-form/editor-rtl.css\";i:325;s:37:\"post-comments-form/editor-rtl.min.css\";i:326;s:29:\"post-comments-form/editor.css\";i:327;s:33:\"post-comments-form/editor.min.css\";i:328;s:32:\"post-comments-form/style-rtl.css\";i:329;s:36:\"post-comments-form/style-rtl.min.css\";i:330;s:28:\"post-comments-form/style.css\";i:331;s:32:\"post-comments-form/style.min.css\";i:332;s:32:\"post-comments-link/style-rtl.css\";i:333;s:36:\"post-comments-link/style-rtl.min.css\";i:334;s:28:\"post-comments-link/style.css\";i:335;s:32:\"post-comments-link/style.min.css\";i:336;s:26:\"post-content/style-rtl.css\";i:337;s:30:\"post-content/style-rtl.min.css\";i:338;s:22:\"post-content/style.css\";i:339;s:26:\"post-content/style.min.css\";i:340;s:23:\"post-date/style-rtl.css\";i:341;s:27:\"post-date/style-rtl.min.css\";i:342;s:19:\"post-date/style.css\";i:343;s:23:\"post-date/style.min.css\";i:344;s:27:\"post-excerpt/editor-rtl.css\";i:345;s:31:\"post-excerpt/editor-rtl.min.css\";i:346;s:23:\"post-excerpt/editor.css\";i:347;s:27:\"post-excerpt/editor.min.css\";i:348;s:26:\"post-excerpt/style-rtl.css\";i:349;s:30:\"post-excerpt/style-rtl.min.css\";i:350;s:22:\"post-excerpt/style.css\";i:351;s:26:\"post-excerpt/style.min.css\";i:352;s:34:\"post-featured-image/editor-rtl.css\";i:353;s:38:\"post-featured-image/editor-rtl.min.css\";i:354;s:30:\"post-featured-image/editor.css\";i:355;s:34:\"post-featured-image/editor.min.css\";i:356;s:33:\"post-featured-image/style-rtl.css\";i:357;s:37:\"post-featured-image/style-rtl.min.css\";i:358;s:29:\"post-featured-image/style.css\";i:359;s:33:\"post-featured-image/style.min.css\";i:360;s:34:\"post-navigation-link/style-rtl.css\";i:361;s:38:\"post-navigation-link/style-rtl.min.css\";i:362;s:30:\"post-navigation-link/style.css\";i:363;s:34:\"post-navigation-link/style.min.css\";i:364;s:27:\"post-template/style-rtl.css\";i:365;s:31:\"post-template/style-rtl.min.css\";i:366;s:23:\"post-template/style.css\";i:367;s:27:\"post-template/style.min.css\";i:368;s:24:\"post-terms/style-rtl.css\";i:369;s:28:\"post-terms/style-rtl.min.css\";i:370;s:20:\"post-terms/style.css\";i:371;s:24:\"post-terms/style.min.css\";i:372;s:31:\"post-time-to-read/style-rtl.css\";i:373;s:35:\"post-time-to-read/style-rtl.min.css\";i:374;s:27:\"post-time-to-read/style.css\";i:375;s:31:\"post-time-to-read/style.min.css\";i:376;s:24:\"post-title/style-rtl.css\";i:377;s:28:\"post-title/style-rtl.min.css\";i:378;s:20:\"post-title/style.css\";i:379;s:24:\"post-title/style.min.css\";i:380;s:26:\"preformatted/style-rtl.css\";i:381;s:30:\"preformatted/style-rtl.min.css\";i:382;s:22:\"preformatted/style.css\";i:383;s:26:\"preformatted/style.min.css\";i:384;s:24:\"pullquote/editor-rtl.css\";i:385;s:28:\"pullquote/editor-rtl.min.css\";i:386;s:20:\"pullquote/editor.css\";i:387;s:24:\"pullquote/editor.min.css\";i:388;s:23:\"pullquote/style-rtl.css\";i:389;s:27:\"pullquote/style-rtl.min.css\";i:390;s:19:\"pullquote/style.css\";i:391;s:23:\"pullquote/style.min.css\";i:392;s:23:\"pullquote/theme-rtl.css\";i:393;s:27:\"pullquote/theme-rtl.min.css\";i:394;s:19:\"pullquote/theme.css\";i:395;s:23:\"pullquote/theme.min.css\";i:396;s:39:\"query-pagination-numbers/editor-rtl.css\";i:397;s:43:\"query-pagination-numbers/editor-rtl.min.css\";i:398;s:35:\"query-pagination-numbers/editor.css\";i:399;s:39:\"query-pagination-numbers/editor.min.css\";i:400;s:31:\"query-pagination/editor-rtl.css\";i:401;s:35:\"query-pagination/editor-rtl.min.css\";i:402;s:27:\"query-pagination/editor.css\";i:403;s:31:\"query-pagination/editor.min.css\";i:404;s:30:\"query-pagination/style-rtl.css\";i:405;s:34:\"query-pagination/style-rtl.min.css\";i:406;s:26:\"query-pagination/style.css\";i:407;s:30:\"query-pagination/style.min.css\";i:408;s:25:\"query-title/style-rtl.css\";i:409;s:29:\"query-title/style-rtl.min.css\";i:410;s:21:\"query-title/style.css\";i:411;s:25:\"query-title/style.min.css\";i:412;s:25:\"query-total/style-rtl.css\";i:413;s:29:\"query-total/style-rtl.min.css\";i:414;s:21:\"query-total/style.css\";i:415;s:25:\"query-total/style.min.css\";i:416;s:20:\"query/editor-rtl.css\";i:417;s:24:\"query/editor-rtl.min.css\";i:418;s:16:\"query/editor.css\";i:419;s:20:\"query/editor.min.css\";i:420;s:19:\"quote/style-rtl.css\";i:421;s:23:\"quote/style-rtl.min.css\";i:422;s:15:\"quote/style.css\";i:423;s:19:\"quote/style.min.css\";i:424;s:19:\"quote/theme-rtl.css\";i:425;s:23:\"quote/theme-rtl.min.css\";i:426;s:15:\"quote/theme.css\";i:427;s:19:\"quote/theme.min.css\";i:428;s:23:\"read-more/style-rtl.css\";i:429;s:27:\"read-more/style-rtl.min.css\";i:430;s:19:\"read-more/style.css\";i:431;s:23:\"read-more/style.min.css\";i:432;s:18:\"rss/editor-rtl.css\";i:433;s:22:\"rss/editor-rtl.min.css\";i:434;s:14:\"rss/editor.css\";i:435;s:18:\"rss/editor.min.css\";i:436;s:17:\"rss/style-rtl.css\";i:437;s:21:\"rss/style-rtl.min.css\";i:438;s:13:\"rss/style.css\";i:439;s:17:\"rss/style.min.css\";i:440;s:21:\"search/editor-rtl.css\";i:441;s:25:\"search/editor-rtl.min.css\";i:442;s:17:\"search/editor.css\";i:443;s:21:\"search/editor.min.css\";i:444;s:20:\"search/style-rtl.css\";i:445;s:24:\"search/style-rtl.min.css\";i:446;s:16:\"search/style.css\";i:447;s:20:\"search/style.min.css\";i:448;s:20:\"search/theme-rtl.css\";i:449;s:24:\"search/theme-rtl.min.css\";i:450;s:16:\"search/theme.css\";i:451;s:20:\"search/theme.min.css\";i:452;s:24:\"separator/editor-rtl.css\";i:453;s:28:\"separator/editor-rtl.min.css\";i:454;s:20:\"separator/editor.css\";i:455;s:24:\"separator/editor.min.css\";i:456;s:23:\"separator/style-rtl.css\";i:457;s:27:\"separator/style-rtl.min.css\";i:458;s:19:\"separator/style.css\";i:459;s:23:\"separator/style.min.css\";i:460;s:23:\"separator/theme-rtl.css\";i:461;s:27:\"separator/theme-rtl.min.css\";i:462;s:19:\"separator/theme.css\";i:463;s:23:\"separator/theme.min.css\";i:464;s:24:\"shortcode/editor-rtl.css\";i:465;s:28:\"shortcode/editor-rtl.min.css\";i:466;s:20:\"shortcode/editor.css\";i:467;s:24:\"shortcode/editor.min.css\";i:468;s:24:\"site-logo/editor-rtl.css\";i:469;s:28:\"site-logo/editor-rtl.min.css\";i:470;s:20:\"site-logo/editor.css\";i:471;s:24:\"site-logo/editor.min.css\";i:472;s:23:\"site-logo/style-rtl.css\";i:473;s:27:\"site-logo/style-rtl.min.css\";i:474;s:19:\"site-logo/style.css\";i:475;s:23:\"site-logo/style.min.css\";i:476;s:27:\"site-tagline/editor-rtl.css\";i:477;s:31:\"site-tagline/editor-rtl.min.css\";i:478;s:23:\"site-tagline/editor.css\";i:479;s:27:\"site-tagline/editor.min.css\";i:480;s:26:\"site-tagline/style-rtl.css\";i:481;s:30:\"site-tagline/style-rtl.min.css\";i:482;s:22:\"site-tagline/style.css\";i:483;s:26:\"site-tagline/style.min.css\";i:484;s:25:\"site-title/editor-rtl.css\";i:485;s:29:\"site-title/editor-rtl.min.css\";i:486;s:21:\"site-title/editor.css\";i:487;s:25:\"site-title/editor.min.css\";i:488;s:24:\"site-title/style-rtl.css\";i:489;s:28:\"site-title/style-rtl.min.css\";i:490;s:20:\"site-title/style.css\";i:491;s:24:\"site-title/style.min.css\";i:492;s:26:\"social-link/editor-rtl.css\";i:493;s:30:\"social-link/editor-rtl.min.css\";i:494;s:22:\"social-link/editor.css\";i:495;s:26:\"social-link/editor.min.css\";i:496;s:27:\"social-links/editor-rtl.css\";i:497;s:31:\"social-links/editor-rtl.min.css\";i:498;s:23:\"social-links/editor.css\";i:499;s:27:\"social-links/editor.min.css\";i:500;s:26:\"social-links/style-rtl.css\";i:501;s:30:\"social-links/style-rtl.min.css\";i:502;s:22:\"social-links/style.css\";i:503;s:26:\"social-links/style.min.css\";i:504;s:21:\"spacer/editor-rtl.css\";i:505;s:25:\"spacer/editor-rtl.min.css\";i:506;s:17:\"spacer/editor.css\";i:507;s:21:\"spacer/editor.min.css\";i:508;s:20:\"spacer/style-rtl.css\";i:509;s:24:\"spacer/style-rtl.min.css\";i:510;s:16:\"spacer/style.css\";i:511;s:20:\"spacer/style.min.css\";i:512;s:20:\"table/editor-rtl.css\";i:513;s:24:\"table/editor-rtl.min.css\";i:514;s:16:\"table/editor.css\";i:515;s:20:\"table/editor.min.css\";i:516;s:19:\"table/style-rtl.css\";i:517;s:23:\"table/style-rtl.min.css\";i:518;s:15:\"table/style.css\";i:519;s:19:\"table/style.min.css\";i:520;s:19:\"table/theme-rtl.css\";i:521;s:23:\"table/theme-rtl.min.css\";i:522;s:15:\"table/theme.css\";i:523;s:19:\"table/theme.min.css\";i:524;s:24:\"tag-cloud/editor-rtl.css\";i:525;s:28:\"tag-cloud/editor-rtl.min.css\";i:526;s:20:\"tag-cloud/editor.css\";i:527;s:24:\"tag-cloud/editor.min.css\";i:528;s:23:\"tag-cloud/style-rtl.css\";i:529;s:27:\"tag-cloud/style-rtl.min.css\";i:530;s:19:\"tag-cloud/style.css\";i:531;s:23:\"tag-cloud/style.min.css\";i:532;s:28:\"template-part/editor-rtl.css\";i:533;s:32:\"template-part/editor-rtl.min.css\";i:534;s:24:\"template-part/editor.css\";i:535;s:28:\"template-part/editor.min.css\";i:536;s:27:\"template-part/theme-rtl.css\";i:537;s:31:\"template-part/theme-rtl.min.css\";i:538;s:23:\"template-part/theme.css\";i:539;s:27:\"template-part/theme.min.css\";i:540;s:24:\"term-count/style-rtl.css\";i:541;s:28:\"term-count/style-rtl.min.css\";i:542;s:20:\"term-count/style.css\";i:543;s:24:\"term-count/style.min.css\";i:544;s:30:\"term-description/style-rtl.css\";i:545;s:34:\"term-description/style-rtl.min.css\";i:546;s:26:\"term-description/style.css\";i:547;s:30:\"term-description/style.min.css\";i:548;s:23:\"term-name/style-rtl.css\";i:549;s:27:\"term-name/style-rtl.min.css\";i:550;s:19:\"term-name/style.css\";i:551;s:23:\"term-name/style.min.css\";i:552;s:28:\"term-template/editor-rtl.css\";i:553;s:32:\"term-template/editor-rtl.min.css\";i:554;s:24:\"term-template/editor.css\";i:555;s:28:\"term-template/editor.min.css\";i:556;s:27:\"term-template/style-rtl.css\";i:557;s:31:\"term-template/style-rtl.min.css\";i:558;s:23:\"term-template/style.css\";i:559;s:27:\"term-template/style.min.css\";i:560;s:27:\"text-columns/editor-rtl.css\";i:561;s:31:\"text-columns/editor-rtl.min.css\";i:562;s:23:\"text-columns/editor.css\";i:563;s:27:\"text-columns/editor.min.css\";i:564;s:26:\"text-columns/style-rtl.css\";i:565;s:30:\"text-columns/style-rtl.min.css\";i:566;s:22:\"text-columns/style.css\";i:567;s:26:\"text-columns/style.min.css\";i:568;s:19:\"verse/style-rtl.css\";i:569;s:23:\"verse/style-rtl.min.css\";i:570;s:15:\"verse/style.css\";i:571;s:19:\"verse/style.min.css\";i:572;s:20:\"video/editor-rtl.css\";i:573;s:24:\"video/editor-rtl.min.css\";i:574;s:16:\"video/editor.css\";i:575;s:20:\"video/editor.min.css\";i:576;s:19:\"video/style-rtl.css\";i:577;s:23:\"video/style-rtl.min.css\";i:578;s:15:\"video/style.css\";i:579;s:19:\"video/style.min.css\";i:580;s:19:\"video/theme-rtl.css\";i:581;s:23:\"video/theme-rtl.min.css\";i:582;s:15:\"video/theme.css\";i:583;s:19:\"video/theme.min.css\";}}', 'on');
+<<<<<<< HEAD
 <<<<<<< HEAD
 INSERT INTO `wp_options` VALUES (126, 'theme_mods_twentytwentyfive', 'a:2:{s:18:\"custom_css_post_id\";i:-1;s:16:\"sidebars_widgets\";a:2:{s:4:\"time\";i:1772031344;s:4:\"data\";a:3:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:3:{i:0;s:7:\"block-2\";i:1;s:7:\"block-3\";i:2;s:7:\"block-4\";}s:9:\"sidebar-2\";a:2:{i:0;s:7:\"block-5\";i:1;s:7:\"block-6\";}}}}', 'off');
 INSERT INTO `wp_options` VALUES (127, '_transient_wp_styles_for_blocks', 'a:2:{s:4:\"hash\";s:32:\"75b19e8ce2c60a276e29eda76a38ec11\";s:6:\"blocks\";a:6:{s:11:\"core/button\";s:0:\"\";s:14:\"core/site-logo\";s:0:\"\";s:18:\"core/post-template\";s:120:\":where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}\";s:18:\"core/term-template\";s:120:\":where(.wp-block-term-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-term-template.is-layout-grid){gap: 1.25em;}\";s:12:\"core/columns\";s:102:\":where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}\";s:14:\"core/pullquote\";s:69:\":root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}\";}}', 'on');
@@ -913,6 +1045,8 @@ INSERT INTO `wp_options` VALUES (401, 'jetpack_options', 'a:1:{s:14:\"last_heart
 INSERT INTO `wp_options` VALUES (407, '_transient_woocommerce_marketplace_promotions_v2', 'a:2:{s:6:\"notice\";a:8:{s:13:\"date_from_gmt\";s:16:\"2024-11-17 00:00\";s:11:\"date_to_gmt\";s:16:\"2024-11-20 23:59\";s:6:\"format\";s:6:\"notice\";s:5:\"style\";s:4:\"info\";s:5:\"pages\";a:5:{i:0;a:4:{s:4:\"page\";s:8:\"wc-admin\";s:4:\"path\";s:11:\"/extensions\";s:3:\"tab\";s:0:\"\";s:4:\"name\";s:8:\"Discover\";}i:1;a:4:{s:4:\"page\";s:8:\"wc-admin\";s:4:\"path\";s:11:\"/extensions\";s:3:\"tab\";s:10:\"extensions\";s:4:\"name\";s:6:\"Browse\";}i:2;a:4:{s:4:\"page\";s:8:\"wc-admin\";s:4:\"path\";s:11:\"/extensions\";s:3:\"tab\";s:6:\"themes\";s:4:\"name\";s:6:\"Themes\";}i:3;a:4:{s:4:\"page\";s:8:\"wc-admin\";s:4:\"path\";s:11:\"/extensions\";s:3:\"tab\";s:17:\"business-services\";s:4:\"name\";s:17:\"Business Services\";}i:4;a:4:{s:4:\"page\";s:8:\"wc-admin\";s:4:\"path\";s:11:\"/extensions\";s:3:\"tab\";s:16:\"my-subscriptions\";s:4:\"name\";s:16:\"My Subscriptions\";}}s:7:\"content\";a:1:{s:5:\"en_US\";s:192:\"<strong>Save 40%</strong> in the WooCommerce Marketplace sale. Offer ends December 3 at 3 pm UTC. <a href=\"https://woocommerce.com/products/#sale-ts-and-cs\" target=\"_blank\">T&amp;Cs</a> apply.\";}s:4:\"icon\";s:7:\"percent\";s:14:\"is_dismissible\";b:1;}s:6:\"promos\";a:4:{i:0;a:9:{s:13:\"date_from_gmt\";s:16:\"2025-11-26 14:15\";s:11:\"date_to_gmt\";s:16:\"2025-12-02 13:59\";s:6:\"format\";s:10:\"promo-card\";s:5:\"pages\";a:1:{i:0;a:2:{s:4:\"path\";s:0:\"\";s:8:\"pathname\";s:33:\"/wp-admin/admin.php?page=wc-admin\";}}s:9:\"cta_label\";a:1:{s:5:\"en_US\";s:13:\"Shop the sale\";}s:8:\"cta_link\";s:52:\"/wp-admin/admin.php?page=wc-admin&path=%2Fextensions\";s:7:\"content\";a:1:{s:5:\"en_US\";s:240:\"Save up to 40% on themes and extensions in the WooCommerce Marketplace until December 2 at 14:00 UTC. <strong>Coupon applied at checkout.</strong> <a href=\"https://woocommerce.com/products/#sale-ts-and-cs\" target=\"_blank\">T&C</a>’s apply.\";}s:5:\"title\";a:1:{s:5:\"en_US\";s:29:\"Black Friday savings are live\";}s:4:\"icon\";s:7:\"percent\";}i:1;a:9:{s:13:\"date_from_gmt\";s:16:\"2025-11-26 14:15\";s:11:\"date_to_gmt\";s:16:\"2025-12-02 13:59\";s:6:\"format\";s:10:\"promo-card\";s:5:\"pages\";a:1:{i:0;a:2:{s:4:\"page\";s:8:\"wc-admin\";s:4:\"path\";s:10:\"/marketing\";}}s:9:\"cta_label\";a:1:{s:5:\"en_US\";s:23:\"Level up your marketing\";}s:8:\"cta_link\";s:52:\"/wp-admin/admin.php?page=wc-admin&path=%2Fextensions\";s:7:\"content\";a:1:{s:5:\"en_US\";s:223:\"Save up to 40% in the Woo BFCM sale. <strong>Coupon applied at checkout.</strong> Offer ends December 2 at 14:00 UTC. T&Cs apply. <a href=\"https://woocommerce.com/products/#sale-ts-and-cs\" target=\"_blank\">T&C</a>’s apply.\";}s:5:\"title\";a:1:{s:5:\"en_US\";s:43:\"Take up to 40% off marketing tools and more\";}s:4:\"icon\";s:7:\"percent\";}i:2;a:10:{s:13:\"date_from_gmt\";s:16:\"2025-11-26 14:15\";s:11:\"date_to_gmt\";s:16:\"2025-12-02 13:59\";s:6:\"format\";s:10:\"promo-card\";s:5:\"pages\";a:1:{i:0;a:2:{s:4:\"path\";s:0:\"\";s:8:\"pathname\";s:40:\"/wp-admin/edit.php?post_type=shop_coupon\";}}s:9:\"cta_label\";a:1:{s:5:\"en_US\";s:19:\"Upgrade your promos\";}s:8:\"cta_link\";s:52:\"/wp-admin/admin.php?page=wc-admin&path=%2Fextensions\";s:7:\"content\";a:1:{s:5:\"en_US\";s:211:\"Save up to 40% in the Woo BFCM sale. <strong>Coupon applied at checkout.</strong> Offer ends December 2 at 14:00 UTC. <a href=\"https://woocommerce.com/products/#sale-ts-and-cs\" target=\"_blank\">T&C</a>’s apply.\";}s:5:\"title\";a:1:{s:5:\"en_US\";s:46:\"Take up to 40% off coupon and promo extensions\";}s:5:\"style\";s:4:\"wide\";s:4:\"icon\";s:7:\"percent\";}i:3;a:10:{s:13:\"date_from_gmt\";s:16:\"2025-11-26 14:15\";s:11:\"date_to_gmt\";s:16:\"2025-12-02 13:59\";s:6:\"format\";s:10:\"promo-card\";s:5:\"pages\";a:1:{i:0;a:2:{s:4:\"page\";s:8:\"wc-admin\";s:4:\"path\";s:11:\"/extensions\";}}s:9:\"cta_label\";a:1:{s:5:\"en_US\";s:13:\"Shop the sale\";}s:8:\"cta_link\";s:52:\"/wp-admin/admin.php?page=wc-admin&path=%2Fextensions\";s:7:\"content\";a:1:{s:5:\"en_US\";s:233:\"Take up to 40% off WooCommerce Marketplace products this BFCM. <strong>Coupon applied at checkout.</strong> Sale ends December 2 at 14:00 UTC. <a href=\"https://woocommerce.com/products/#sale-ts-and-cs\" target=\"_blank\">T&Cs</a> apply.\";}s:5:\"title\";a:1:{s:5:\"en_US\";s:39:\"Save up to 40% on your next big upgrade\";}s:5:\"style\";s:14:\"has-background\";s:4:\"icon\";s:7:\"percent\";}}}', 'off');
 INSERT INTO `wp_options` VALUES (406, '_transient_timeout_woocommerce_marketplace_promotions_v2', '1772117225', 'off');
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
 INSERT INTO `wp_options` VALUES (126, 'theme_mods_twentytwentyfive', 'a:1:{s:18:\"custom_css_post_id\";i:-1;}', 'auto');
 INSERT INTO `wp_options` VALUES (127, '_transient_wp_styles_for_blocks', 'a:2:{s:4:\"hash\";s:32:\"3c607c80f608f1f5ebf822196e9c47b0\";s:6:\"blocks\";a:6:{s:11:\"core/button\";s:0:\"\";s:14:\"core/site-logo\";s:0:\"\";s:18:\"core/post-template\";s:120:\":where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}\";s:18:\"core/term-template\";s:120:\":where(.wp-block-term-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-term-template.is-layout-grid){gap: 1.25em;}\";s:12:\"core/columns\";s:102:\":where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}\";s:14:\"core/pullquote\";s:69:\":root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}\";}}', 'on');
 INSERT INTO `wp_options` VALUES (129, 'recovery_keys', 'a:0:{}', 'off');
@@ -1206,6 +1340,9 @@ INSERT INTO `wp_options` VALUES (455, 'amm_hidden_menus', 'a:0:{}', 'auto');
 INSERT INTO `wp_options` VALUES (457, 'jetpack_connection_active_plugins', 'a:1:{s:11:\"woocommerce\";a:1:{s:4:\"name\";s:11:\"WooCommerce\";}}', 'auto');
 INSERT INTO `wp_options` VALUES (459, '_site_transient_update_plugins', 'O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1772070658;s:8:\"response\";a:0:{}s:12:\"translations\";a:0:{}s:9:\"no_update\";a:3:{s:19:\"akismet/akismet.php\";O:8:\"stdClass\":10:{s:2:\"id\";s:21:\"w.org/plugins/akismet\";s:4:\"slug\";s:7:\"akismet\";s:6:\"plugin\";s:19:\"akismet/akismet.php\";s:11:\"new_version\";s:3:\"5.6\";s:3:\"url\";s:38:\"https://wordpress.org/plugins/akismet/\";s:7:\"package\";s:54:\"https://downloads.wordpress.org/plugin/akismet.5.6.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:60:\"https://ps.w.org/akismet/assets/icon-256x256.png?rev=2818463\";s:2:\"1x\";s:60:\"https://ps.w.org/akismet/assets/icon-128x128.png?rev=2818463\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:63:\"https://ps.w.org/akismet/assets/banner-1544x500.png?rev=2900731\";s:2:\"1x\";s:62:\"https://ps.w.org/akismet/assets/banner-772x250.png?rev=2900731\";}s:11:\"banners_rtl\";a:0:{}s:8:\"requires\";s:3:\"5.8\";}s:9:\"hello.php\";O:8:\"stdClass\":10:{s:2:\"id\";s:25:\"w.org/plugins/hello-dolly\";s:4:\"slug\";s:11:\"hello-dolly\";s:6:\"plugin\";s:9:\"hello.php\";s:11:\"new_version\";s:5:\"1.7.2\";s:3:\"url\";s:42:\"https://wordpress.org/plugins/hello-dolly/\";s:7:\"package\";s:60:\"https://downloads.wordpress.org/plugin/hello-dolly.1.7.2.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:64:\"https://ps.w.org/hello-dolly/assets/icon-256x256.jpg?rev=2052855\";s:2:\"1x\";s:64:\"https://ps.w.org/hello-dolly/assets/icon-128x128.jpg?rev=2052855\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:67:\"https://ps.w.org/hello-dolly/assets/banner-1544x500.jpg?rev=2645582\";s:2:\"1x\";s:66:\"https://ps.w.org/hello-dolly/assets/banner-772x250.jpg?rev=2052855\";}s:11:\"banners_rtl\";a:0:{}s:8:\"requires\";s:3:\"4.6\";}s:27:\"woocommerce/woocommerce.php\";O:8:\"stdClass\":10:{s:2:\"id\";s:25:\"w.org/plugins/woocommerce\";s:4:\"slug\";s:11:\"woocommerce\";s:6:\"plugin\";s:27:\"woocommerce/woocommerce.php\";s:11:\"new_version\";s:6:\"10.5.2\";s:3:\"url\";s:42:\"https://wordpress.org/plugins/woocommerce/\";s:7:\"package\";s:61:\"https://downloads.wordpress.org/plugin/woocommerce.10.5.2.zip\";s:5:\"icons\";a:2:{s:2:\"1x\";s:56:\"https://ps.w.org/woocommerce/assets/icon.svg?rev=3234504\";s:3:\"svg\";s:56:\"https://ps.w.org/woocommerce/assets/icon.svg?rev=3234504\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:67:\"https://ps.w.org/woocommerce/assets/banner-1544x500.png?rev=3234504\";s:2:\"1x\";s:66:\"https://ps.w.org/woocommerce/assets/banner-772x250.png?rev=3234504\";}s:11:\"banners_rtl\";a:0:{}s:8:\"requires\";s:3:\"6.8\";}}s:7:\"checked\";a:5:{s:19:\"akismet/akismet.php\";s:3:\"5.6\";s:9:\"hello.php\";s:5:\"1.7.2\";s:27:\"woocommerce/woocommerce.php\";s:6:\"10.5.2\";s:45:\"theme-delete-manager/theme-delete-manager.php\";s:5:\"1.0.0\";s:41:\"admin-menu-manager/admin-menu-manager.php\";s:5:\"1.0.0\";}}', 'off');
 INSERT INTO `wp_options` VALUES (460, '_transient_jetpack_connection_active_plugins_refresh', '1772070658', 'on');
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -1213,6 +1350,7 @@ INSERT INTO `wp_options` VALUES (460, '_transient_jetpack_connection_active_plug
 -- ----------------------------
 DROP TABLE IF EXISTS `wp_postmeta`;
 CREATE TABLE `wp_postmeta`  (
+<<<<<<< HEAD
 <<<<<<< HEAD
   `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `post_id` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
@@ -1223,6 +1361,8 @@ CREATE TABLE `wp_postmeta`  (
   INDEX `meta_key`(`meta_key`(191)) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `meta_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `post_id` bigint UNSIGNED NOT NULL DEFAULT 0,
   `meta_key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NULL DEFAULT NULL,
@@ -1231,6 +1371,9 @@ CREATE TABLE `wp_postmeta`  (
   INDEX `post_id`(`post_id` ASC) USING BTREE,
   INDEX `meta_key`(`meta_key`(191) ASC) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -1239,8 +1382,13 @@ CREATE TABLE `wp_postmeta`  (
 INSERT INTO `wp_postmeta` VALUES (1, 2, '_wp_page_template', 'default');
 INSERT INTO `wp_postmeta` VALUES (2, 3, '_wp_page_template', 'default');
 <<<<<<< HEAD
+<<<<<<< HEAD
 INSERT INTO `wp_postmeta` VALUES (6, 7, '_wp_attachment_metadata', 'a:6:{s:5:\"width\";i:1200;s:6:\"height\";i:1200;s:4:\"file\";s:28:\"woocommerce-placeholder.webp\";s:8:\"filesize\";i:9892;s:5:\"sizes\";a:7:{s:21:\"woocommerce_thumbnail\";a:6:{s:4:\"file\";s:36:\"woocommerce-placeholder-300x300.webp\";s:5:\"width\";i:300;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:1358;s:9:\"uncropped\";b:0;}s:29:\"woocommerce_gallery_thumbnail\";a:5:{s:4:\"file\";s:36:\"woocommerce-placeholder-100x100.webp\";s:5:\"width\";i:100;s:6:\"height\";i:100;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:428;}s:18:\"woocommerce_single\";a:5:{s:4:\"file\";s:36:\"woocommerce-placeholder-600x600.webp\";s:5:\"width\";i:600;s:6:\"height\";i:600;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:3190;}s:6:\"medium\";a:5:{s:4:\"file\";s:36:\"woocommerce-placeholder-300x300.webp\";s:5:\"width\";i:300;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:1358;}s:5:\"large\";a:5:{s:4:\"file\";s:38:\"woocommerce-placeholder-1024x1024.webp\";s:5:\"width\";i:1024;s:6:\"height\";i:1024;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:5980;}s:9:\"thumbnail\";a:5:{s:4:\"file\";s:36:\"woocommerce-placeholder-150x150.webp\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:664;}s:12:\"medium_large\";a:5:{s:4:\"file\";s:36:\"woocommerce-placeholder-768x768.webp\";s:5:\"width\";i:768;s:6:\"height\";i:768;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:4242;}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}');
 INSERT INTO `wp_postmeta` VALUES (5, 7, '_wp_attached_file', 'woocommerce-placeholder.webp');
+=======
+INSERT INTO `wp_postmeta` VALUES (7, 9, '_wp_attached_file', 'woocommerce-placeholder.webp');
+INSERT INTO `wp_postmeta` VALUES (8, 9, '_wp_attachment_metadata', 'a:6:{s:5:\"width\";i:1200;s:6:\"height\";i:1200;s:4:\"file\";s:28:\"woocommerce-placeholder.webp\";s:8:\"filesize\";i:9892;s:5:\"sizes\";a:4:{s:6:\"medium\";a:5:{s:4:\"file\";s:36:\"woocommerce-placeholder-300x300.webp\";s:5:\"width\";i:300;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:1358;}s:5:\"large\";a:5:{s:4:\"file\";s:38:\"woocommerce-placeholder-1024x1024.webp\";s:5:\"width\";i:1024;s:6:\"height\";i:1024;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:5980;}s:9:\"thumbnail\";a:5:{s:4:\"file\";s:36:\"woocommerce-placeholder-150x150.webp\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:664;}s:12:\"medium_large\";a:5:{s:4:\"file\";s:36:\"woocommerce-placeholder-768x768.webp\";s:5:\"width\";i:768;s:6:\"height\";i:768;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:4242;}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}');
+>>>>>>> 45062407 (init wordpress project)
 =======
 INSERT INTO `wp_postmeta` VALUES (7, 9, '_wp_attached_file', 'woocommerce-placeholder.webp');
 INSERT INTO `wp_postmeta` VALUES (8, 9, '_wp_attachment_metadata', 'a:6:{s:5:\"width\";i:1200;s:6:\"height\";i:1200;s:4:\"file\";s:28:\"woocommerce-placeholder.webp\";s:8:\"filesize\";i:9892;s:5:\"sizes\";a:4:{s:6:\"medium\";a:5:{s:4:\"file\";s:36:\"woocommerce-placeholder-300x300.webp\";s:5:\"width\";i:300;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:1358;}s:5:\"large\";a:5:{s:4:\"file\";s:38:\"woocommerce-placeholder-1024x1024.webp\";s:5:\"width\";i:1024;s:6:\"height\";i:1024;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:5980;}s:9:\"thumbnail\";a:5:{s:4:\"file\";s:36:\"woocommerce-placeholder-150x150.webp\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:664;}s:12:\"medium_large\";a:5:{s:4:\"file\";s:36:\"woocommerce-placeholder-768x768.webp\";s:5:\"width\";i:768;s:6:\"height\";i:768;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:4242;}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}');
@@ -1252,8 +1400,13 @@ INSERT INTO `wp_postmeta` VALUES (8, 9, '_wp_attachment_metadata', 'a:6:{s:5:\"w
 DROP TABLE IF EXISTS `wp_posts`;
 CREATE TABLE `wp_posts`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `post_author` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
+=======
+  `ID` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `post_author` bigint UNSIGNED NOT NULL DEFAULT 0,
+>>>>>>> 45062407 (init wordpress project)
 =======
   `ID` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `post_author` bigint UNSIGNED NOT NULL DEFAULT 0,
@@ -1274,6 +1427,7 @@ CREATE TABLE `wp_posts`  (
   `post_modified_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `post_content_filtered` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
 <<<<<<< HEAD
+<<<<<<< HEAD
   `post_parent` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
   `guid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
   `menu_order` int(11) NOT NULL DEFAULT 0,
@@ -1288,6 +1442,8 @@ CREATE TABLE `wp_posts`  (
   INDEX `type_status_author`(`post_type`, `post_status`, `post_author`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `post_parent` bigint UNSIGNED NOT NULL DEFAULT 0,
   `guid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
   `menu_order` int NOT NULL DEFAULT 0,
@@ -1301,11 +1457,15 @@ CREATE TABLE `wp_posts`  (
   INDEX `post_author`(`post_author` ASC) USING BTREE,
   INDEX `type_status_author`(`post_type` ASC, `post_status` ASC, `post_author` ASC) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 18 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
 -- Records of wp_posts
 -- ----------------------------
+<<<<<<< HEAD
 <<<<<<< HEAD
 INSERT INTO `wp_posts` VALUES (1, 1, '2026-02-25 22:41:49', '2026-02-25 14:41:49', '<!-- wp:paragraph -->\n<p>欢迎使用 WordPress。这是您的第一篇文章。编辑或删除它，然后开始写作吧！</p>\n<!-- /wp:paragraph -->', '世界，您好！', '', 'publish', 'open', 'open', '', 'hello-world', '', '', '2026-02-25 22:41:49', '2026-02-25 14:41:49', '', 0, 'http://localhost/?p=1', 0, 'post', '', 1);
 INSERT INTO `wp_posts` VALUES (2, 1, '2026-02-25 22:41:49', '2026-02-25 14:41:49', '<!-- wp:paragraph -->\n<p>这是示范页面。页面和博客文章不同，它的位置是固定的，通常会在站点导航栏显示。很多用户都创建一个「关于」页面，向访客介绍自己。例如：</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\">\n<!-- wp:paragraph -->\n<p>大家好！ 我白天是一名快递小哥，晚上是一名有抱负的魔术师，这是我的网站。 我住在北京，养了一只名叫二哈的小狗。 我平时喜欢喝可乐，还有遛狗。</p>\n<!-- /wp:paragraph -->\n</blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>……或这个：</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\">\n<!-- wp:paragraph -->\n<p>XYZ Doohickey 公司成立于 1971 年，自从建立以来，我们一直向社会贡献着优秀 doohickies。我们的公司总部位于天朝魔都，有着超过两千名员工，对魔都政府税收有着巨大贡献。</p>\n<!-- /wp:paragraph -->\n</blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>而您，作为一位 WordPress 新用户，我们建议您转到<a href=\"http://localhost/wp-admin/\">您站点的仪表盘</a>，删除本页面，然后创建包含您自己内容的新页面。祝您使用愉快！</p>\n<!-- /wp:paragraph -->', '示例页面', '', 'publish', 'closed', 'open', '', 'sample-page', '', '', '2026-02-25 22:41:49', '2026-02-25 14:41:49', '', 0, 'http://localhost/?page_id=2', 0, 'page', '', 0);
@@ -1319,6 +1479,8 @@ INSERT INTO `wp_posts` VALUES (10, 1, '2026-02-25 22:46:24', '2026-02-25 14:46:2
 INSERT INTO `wp_posts` VALUES (11, 1, '2026-02-25 22:46:24', '2026-02-25 14:46:24', '<!-- wp:shortcode -->[woocommerce_my_account]<!-- /wp:shortcode -->', 'My account', '', 'publish', 'closed', 'closed', '', 'my-account', '', '', '2026-02-25 22:46:24', '2026-02-25 14:46:24', '', 0, 'http://localhost/?page_id=11', 0, 'page', '', 0);
 INSERT INTO `wp_posts` VALUES (12, 1, '2026-02-25 22:46:24', '0000-00-00 00:00:00', '<!-- wp:paragraph -->\n<p><b>This is a sample page.</b></p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Overview</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Our refund and returns policy lasts 30 days. If 30 days have passed since your purchase, we can’t offer you a full refund or exchange.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>To be eligible for a return, your item must be unused and in the same condition that you received it. It must also be in the original packaging.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Several types of goods are exempt from being returned. Perishable goods such as food, flowers, newspapers or magazines cannot be returned. We also do not accept products that are intimate or sanitary goods, hazardous materials, or flammable liquids or gases.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Additional non-returnable items:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul>\n<li>Gift cards</li>\n<li>Downloadable software products</li>\n<li>Some health and personal care items</li>\n</ul>\n<!-- /wp:list -->\n\n<!-- wp:paragraph -->\n<p>To complete your return, we require a receipt or proof of purchase.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Please do not send your purchase back to the manufacturer.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>There are certain situations where only partial refunds are granted:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul>\n<li>Book with obvious signs of use</li>\n<li>CD, DVD, VHS tape, software, video game, cassette tape, or vinyl record that has been opened.</li>\n<li>Any item not in its original condition, is damaged or missing parts for reasons not due to our error.</li>\n<li>Any item that is returned more than 30 days after delivery</li>\n</ul>\n<!-- /wp:list -->\n\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Refunds</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Once your return is received and inspected, we will send you an email to notify you that we have received your returned item. We will also notify you of the approval or rejection of your refund.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>If you are approved, then your refund will be processed, and a credit will automatically be applied to your credit card or original method of payment, within a certain amount of days.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">Late or missing refunds</h3>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>If you haven’t received a refund yet, first check your bank account again.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Then contact your credit card company, it may take some time before your refund is officially posted.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Next contact your bank. There is often some processing time before a refund is posted.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>If you’ve done all of this and you still have not received your refund yet, please contact us at {email address}.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">Sale items</h3>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Only regular priced items may be refunded. Sale items cannot be refunded.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Exchanges</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>We only replace items if they are defective or damaged. If you need to exchange it for the same item, send us an email at {email address} and send your item to: {physical address}.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Gifts</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>If the item was marked as a gift when purchased and shipped directly to you, you’ll receive a gift credit for the value of your return. Once the returned item is received, a gift certificate will be mailed to you.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>If the item wasn’t marked as a gift when purchased, or the gift giver had the order shipped to themselves to give to you later, we will send a refund to the gift giver and they will find out about your return.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Shipping returns</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>To return your product, you should mail your product to: {physical address}.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>You will be responsible for paying for your own shipping costs for returning your item. Shipping costs are non-refundable. If you receive a refund, the cost of return shipping will be deducted from your refund.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Depending on where you live, the time it may take for your exchanged product to reach you may vary.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>If you are returning more expensive items, you may consider using a trackable shipping service or purchasing shipping insurance. We don’t guarantee that we will receive your returned item.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Need help?</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Contact us at {email} for questions related to refunds and returns.</p>\n<!-- /wp:paragraph -->', 'Refund and Returns Policy', '', 'draft', 'closed', 'closed', '', 'refund_returns', '', '', '2026-02-25 22:46:24', '0000-00-00 00:00:00', '', 0, 'http://localhost/?page_id=12', 0, 'page', '', 0);
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
 INSERT INTO `wp_posts` VALUES (1, 1, '2026-02-26 09:42:25', '2026-02-26 01:42:25', '<!-- wp:paragraph -->\n<p>欢迎使用 WordPress。这是您的第一篇文章。编辑或删除它，然后开始写作吧！</p>\n<!-- /wp:paragraph -->', '世界，您好！', '', 'publish', 'open', 'open', '', 'hello-world', '', '', '2026-02-26 09:42:25', '2026-02-26 01:42:25', '', 0, 'http://localhost/?p=1', 0, 'post', '', 1);
 INSERT INTO `wp_posts` VALUES (2, 1, '2026-02-26 09:42:25', '2026-02-26 01:42:25', '<!-- wp:paragraph -->\n<p>这是示范页面。页面和博客文章不同，它的位置是固定的，通常会在站点导航栏显示。很多用户都创建一个「关于」页面，向访客介绍自己。例如：</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\">\n<!-- wp:paragraph -->\n<p>大家好！ 我白天是一名快递小哥，晚上是一名有抱负的魔术师，这是我的网站。 我住在北京，养了一只名叫二哈的小狗。 我平时喜欢喝可乐，还有遛狗。</p>\n<!-- /wp:paragraph -->\n</blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>……或这个：</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\">\n<!-- wp:paragraph -->\n<p>XYZ Doohickey 公司成立于 1971 年，自从建立以来，我们一直向社会贡献着优秀 doohickies。我们的公司总部位于天朝魔都，有着超过两千名员工，对魔都政府税收有着巨大贡献。</p>\n<!-- /wp:paragraph -->\n</blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>而您，作为一位 WordPress 新用户，我们建议您转到<a href=\"http://localhost/wp-admin/\">您站点的仪表盘</a>，删除本页面，然后创建包含您自己内容的新页面。祝您使用愉快！</p>\n<!-- /wp:paragraph -->', '示例页面', '', 'publish', 'closed', 'open', '', 'sample-page', '', '', '2026-02-26 09:42:25', '2026-02-26 01:42:25', '', 0, 'http://localhost/?page_id=2', 0, 'page', '', 0);
 INSERT INTO `wp_posts` VALUES (3, 1, '2026-02-26 09:42:25', '2026-02-26 01:42:25', '<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">我们是谁</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">推荐的文本： </strong>我们的站点地址是：http://localhost。</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">评论</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">推荐的文本： </strong>当访客留下评论时，我们会收集评论表单所显示的数据，和访客的 IP 地址及浏览器的 User-Agent 字符串来帮助检查垃圾评论。</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>由您的邮箱地址所生成的匿名化字符串（又称为哈希）可能会被提供给 Gravatar 服务确认您是否有使用该服务。 Gravatar 服务的隐私政策在此：https://automattic.com/privacy/。在您的评论获批准后，您的资料图片将在您的评论旁公开展示。</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">媒体</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">推荐的文本： </strong>如果您向此网站上传图片，您应当避免上传那些有嵌入地理位置信息（EXIF GPS）的图片。此网站的访客将可以下载并提取此网站的图片中的位置信息。</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Cookies</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">推荐的文本： </strong>如果您在我们的站点上留下评论，您可以选择用 Cookies 保存您的名字、邮箱地址和网站地址。这是通过让您可以不用在评论时再次填写相关内容而向您提供方便。这些 Cookies 会保留一年。</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>如果您访问我们的登录页，我们会设置一个临时的 Cookie 来确认您的浏览器是否接受 Cookies。此 Cookie 不包含个人数据，且会在您关闭浏览器时被丢弃。</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>当您登录时，我们也会设置多个 Cookies 来保存您的登录信息及屏幕显示选项。登录 Cookies 会保留两天，而屏幕显示选项 Cookies 会保留一年。如果您选择了「记住我」，您的登录状态则会保留两周。如果您注销登陆了您的账户，用于登录的 Cookies 将会被移除。</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>如果您编辑或发布文章，我们会在您的浏览器中保存一个额外的 Cookie。这个 Cookie 不包含个人数据而只记录了您刚才编辑的文章的 ID。这个 Cookie 会保留一天。</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">来自其他网站的嵌入内容</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">推荐的文本： </strong>此站点上的文章可能会包含嵌入的内容（如视频、图片、文章等）。来自其他站点的嵌入内容的行为和您直接访问这些其他站点没有区别。</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>这些站点可能会收集关于您的数据、使用 Cookies 、嵌入额外的第三方跟踪程序及监视您与这些嵌入内容的交互，包括在您有这些站点的账户并登录了这些站点时，跟踪您与嵌入内容的交互。</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">我们与谁共享您的信息</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">推荐的文本： </strong>若您请求重置密码，您的 IP 地址将包含于密码重置邮件中。</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">我们保留多久您的信息</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">推荐的文本： </strong>如果您留下评论，评论和其元数据将被无限期保存。我们这样做以便能识别并自动批准任何后续评论，而不用将这些后续评论加入待审队列。</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>对于本网站的注册用户，我们也会保存用户在个人资料中提供的个人信息。所有用户可以在任何时候查看、编辑或删除他们的个人信息（除了不能变更用户名外）、站点管理员也可以查看及编辑那些信息。</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">您对您的信息有什么权利</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">推荐的文本： </strong>如果您有此站点的账户，或曾经留下评论，您可以请求我们提供我们所拥有的您的个人数据的导出文件，这也包括了所有您提供给我们的数据。您也可以要求我们抹除所有关于您的个人数据。这不包括我们因管理、法规或安全需要而必须保留的数据。</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">您的数据将发送到何处</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p><strong class=\"privacy-policy-tutorial\">推荐的文本： </strong>访客评论可能会被自动垃圾评论监测服务检查。</p>\n<!-- /wp:paragraph -->\n', '隐私政策', '', 'draft', 'closed', 'open', '', 'privacy-policy', '', '', '2026-02-26 09:42:25', '2026-02-26 01:42:25', '', 0, 'http://localhost/?page_id=3', 0, 'page', '', 0);
@@ -1332,6 +1494,9 @@ INSERT INTO `wp_posts` VALUES (12, 1, '2026-02-26 09:49:12', '2026-02-26 01:49:1
 INSERT INTO `wp_posts` VALUES (13, 1, '2026-02-26 09:49:13', '2026-02-26 01:49:13', '<!-- wp:shortcode -->[woocommerce_my_account]<!-- /wp:shortcode -->', '我的帐户', '', 'publish', 'closed', 'closed', '', 'my-account', '', '', '2026-02-26 09:49:13', '2026-02-26 01:49:13', '', 0, 'http://localhost/index.php/my-account/', 0, 'page', '', 0);
 INSERT INTO `wp_posts` VALUES (14, 1, '2026-02-26 09:49:13', '0000-00-00 00:00:00', '<!-- wp:paragraph -->\n<p><b>This is a sample page.</b></p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Overview</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Our refund and returns policy lasts 30 days. If 30 days have passed since your purchase, we can’t offer you a full refund or exchange.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>To be eligible for a return, your item must be unused and in the same condition that you received it. It must also be in the original packaging.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Several types of goods are exempt from being returned. Perishable goods such as food, flowers, newspapers or magazines cannot be returned. We also do not accept products that are intimate or sanitary goods, hazardous materials, or flammable liquids or gases.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Additional non-returnable items:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul>\n<li>Gift cards</li>\n<li>Downloadable software products</li>\n<li>Some health and personal care items</li>\n</ul>\n<!-- /wp:list -->\n\n<!-- wp:paragraph -->\n<p>To complete your return, we require a receipt or proof of purchase.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Please do not send your purchase back to the manufacturer.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>There are certain situations where only partial refunds are granted:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul>\n<li>Book with obvious signs of use</li>\n<li>CD, DVD, VHS tape, software, video game, cassette tape, or vinyl record that has been opened.</li>\n<li>Any item not in its original condition, is damaged or missing parts for reasons not due to our error.</li>\n<li>Any item that is returned more than 30 days after delivery</li>\n</ul>\n<!-- /wp:list -->\n\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Refunds</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Once your return is received and inspected, we will send you an email to notify you that we have received your returned item. We will also notify you of the approval or rejection of your refund.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>If you are approved, then your refund will be processed, and a credit will automatically be applied to your credit card or original method of payment, within a certain amount of days.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">Late or missing refunds</h3>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>If you haven’t received a refund yet, first check your bank account again.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Then contact your credit card company, it may take some time before your refund is officially posted.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Next contact your bank. There is often some processing time before a refund is posted.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>If you’ve done all of this and you still have not received your refund yet, please contact us at {email address}.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">Sale items</h3>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Only regular priced items may be refunded. Sale items cannot be refunded.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Exchanges</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>We only replace items if they are defective or damaged. If you need to exchange it for the same item, send us an email at {email address} and send your item to: {physical address}.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Gifts</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>If the item was marked as a gift when purchased and shipped directly to you, you’ll receive a gift credit for the value of your return. Once the returned item is received, a gift certificate will be mailed to you.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>If the item wasn’t marked as a gift when purchased, or the gift giver had the order shipped to themselves to give to you later, we will send a refund to the gift giver and they will find out about your return.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Shipping returns</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>To return your product, you should mail your product to: {physical address}.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>You will be responsible for paying for your own shipping costs for returning your item. Shipping costs are non-refundable. If you receive a refund, the cost of return shipping will be deducted from your refund.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Depending on where you live, the time it may take for your exchanged product to reach you may vary.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>If you are returning more expensive items, you may consider using a trackable shipping service or purchasing shipping insurance. We don’t guarantee that we will receive your returned item.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Need help?</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Contact us at {email} for questions related to refunds and returns.</p>\n<!-- /wp:paragraph -->', '退款和退货策略', '', 'draft', 'closed', 'closed', '', 'refund_returns', '', '', '2026-02-26 09:49:13', '0000-00-00 00:00:00', '', 0, 'http://localhost/?page_id=14', 0, 'page', '', 0);
 INSERT INTO `wp_posts` VALUES (15, 1, '2026-02-26 09:49:35', '2026-02-26 01:49:35', '<!-- wp:woocommerce/cart -->\n<div class=\"wp-block-woocommerce-cart alignwide is-loading\"><!-- wp:woocommerce/filled-cart-block -->\n<div class=\"wp-block-woocommerce-filled-cart-block\"><!-- wp:woocommerce/cart-items-block -->\n<div class=\"wp-block-woocommerce-cart-items-block\"><!-- wp:woocommerce/cart-line-items-block -->\n<div class=\"wp-block-woocommerce-cart-line-items-block\"></div>\n<!-- /wp:woocommerce/cart-line-items-block -->\n\n<!-- wp:woocommerce/product-collection {\"queryId\":0,\"query\":{\"perPage\":3,\"pages\":1,\"offset\":0,\"postType\":\"product\",\"order\":\"asc\",\"orderBy\":\"title\",\"search\":\"\",\"exclude\":[],\"inherit\":false,\"taxQuery\":{},\"isProductCollectionBlock\":true,\"featured\":false,\"woocommerceOnSale\":false,\"woocommerceStockStatus\":[\"instock\",\"outofstock\",\"onbackorder\"],\"woocommerceAttributes\":[],\"woocommerceHandPickedProducts\":[],\"filterable\":false,\"relatedBy\":{\"categories\":true,\"tags\":true}},\"tagName\":\"div\",\"displayLayout\":{\"type\":\"flex\",\"columns\":3,\"shrinkColumns\":true},\"dimensions\":{\"widthType\":\"fill\"},\"collection\":\"woocommerce/product-collection/cross-sells\",\"hideControls\":[\"filterable\"],\"queryContextIncludes\":[\"collection\"],\"__privatePreviewState\":{\"isPreview\":true,\"previewMessage\":\"Actual products will vary depending on the page being viewed.\"}} -->\n<div class=\"wp-block-woocommerce-product-collection\"><!-- wp:heading {\"textAlign\":\"left\",\"style\":{\"spacing\":{\"margin\":{\"bottom\":\"1rem\"}}}} -->\n<h2 class=\"wp-block-heading has-text-align-left\" style=\"margin-bottom:1rem\">您也许喜欢&hellip;</h2>\n\n<!-- /wp:heading -->\n\n<!-- wp:woocommerce/product-template -->\n<!-- wp:woocommerce/product-image {\"showSaleBadge\":false,\"imageSizing\":\"thumbnail\",\"isDescendentOfQueryLoop\":true} -->\n<!-- wp:woocommerce/product-sale-badge {\"align\":\"right\"} /-->\n<!-- /wp:woocommerce/product-image -->\n\n<!-- wp:post-title {\"textAlign\":\"center\",\"isLink\":true,\"style\":{\"spacing\":{\"margin\":{\"bottom\":\"0.75rem\",\"top\":\"0\"}},\"typography\":{\"lineHeight\":\"1.4\"}},\"fontSize\":\"medium\",\"__woocommerceNamespace\":\"woocommerce/product-collection/product-title\"} /-->\n\n<!-- wp:woocommerce/product-price {\"isDescendentOfQueryLoop\":true,\"textAlign\":\"center\",\"fontSize\":\"small\"} /-->\n\n<!-- wp:woocommerce/product-button {\"textAlign\":\"center\",\"isDescendentOfQueryLoop\":true,\"fontSize\":\"small\"} /-->\n<!-- /wp:woocommerce/product-template --></div>\n<!-- /wp:woocommerce/product-collection --></div>\n\n<!-- /wp:woocommerce/cart-items-block -->\n\n<!-- wp:woocommerce/cart-totals-block -->\n<div class=\"wp-block-woocommerce-cart-totals-block\"><!-- wp:woocommerce/cart-order-summary-block -->\n<div class=\"wp-block-woocommerce-cart-order-summary-block\"><!-- wp:woocommerce/cart-order-summary-heading-block -->\n<div class=\"wp-block-woocommerce-cart-order-summary-heading-block\"></div>\n<!-- /wp:woocommerce/cart-order-summary-heading-block -->\n\n<!-- wp:woocommerce/cart-order-summary-coupon-form-block -->\n<div class=\"wp-block-woocommerce-cart-order-summary-coupon-form-block\"></div>\n<!-- /wp:woocommerce/cart-order-summary-coupon-form-block -->\n\n<!-- wp:woocommerce/cart-order-summary-subtotal-block -->\n<div class=\"wp-block-woocommerce-cart-order-summary-subtotal-block\"></div>\n<!-- /wp:woocommerce/cart-order-summary-subtotal-block -->\n\n<!-- wp:woocommerce/cart-order-summary-fee-block -->\n<div class=\"wp-block-woocommerce-cart-order-summary-fee-block\"></div>\n<!-- /wp:woocommerce/cart-order-summary-fee-block -->\n\n<!-- wp:woocommerce/cart-order-summary-discount-block -->\n<div class=\"wp-block-woocommerce-cart-order-summary-discount-block\"></div>\n<!-- /wp:woocommerce/cart-order-summary-discount-block -->\n\n<!-- wp:woocommerce/cart-order-summary-shipping-block -->\n<div class=\"wp-block-woocommerce-cart-order-summary-shipping-block\"></div>\n<!-- /wp:woocommerce/cart-order-summary-shipping-block -->\n\n<!-- wp:woocommerce/cart-order-summary-taxes-block -->\n<div class=\"wp-block-woocommerce-cart-order-summary-taxes-block\"></div>\n<!-- /wp:woocommerce/cart-order-summary-taxes-block --></div>\n<!-- /wp:woocommerce/cart-order-summary-block -->\n\n<!-- wp:woocommerce/cart-express-payment-block -->\n<div class=\"wp-block-woocommerce-cart-express-payment-block\"></div>\n<!-- /wp:woocommerce/cart-express-payment-block -->\n\n<!-- wp:woocommerce/proceed-to-checkout-block -->\n<div class=\"wp-block-woocommerce-proceed-to-checkout-block\"></div>\n<!-- /wp:woocommerce/proceed-to-checkout-block -->\n\n<!-- wp:woocommerce/cart-accepted-payment-methods-block -->\n<div class=\"wp-block-woocommerce-cart-accepted-payment-methods-block\"></div>\n<!-- /wp:woocommerce/cart-accepted-payment-methods-block --></div>\n<!-- /wp:woocommerce/cart-totals-block --></div>\n<!-- /wp:woocommerce/filled-cart-block -->\n\n<!-- wp:woocommerce/empty-cart-block -->\n<div class=\"wp-block-woocommerce-empty-cart-block\"><!-- wp:heading {\"textAlign\":\"center\",\"className\":\"with-empty-cart-icon wc-block-cart__empty-cart__title\"} -->\n<h2 class=\"wp-block-heading has-text-align-center with-empty-cart-icon wc-block-cart__empty-cart__title\">您的购物车目前是空的！</h2>\n<!-- /wp:heading -->\n\n<!-- wp:separator {\"className\":\"is-style-dots\"} -->\n<hr class=\"wp-block-separator has-alpha-channel-opacity is-style-dots\"/>\n<!-- /wp:separator -->\n\n<!-- wp:heading {\"textAlign\":\"center\"} -->\n<h2 class=\"wp-block-heading has-text-align-center\">商店新品</h2>\n<!-- /wp:heading -->\n\n<!-- wp:woocommerce/product-new {\"columns\":4,\"rows\":1} /--></div>\n<!-- /wp:woocommerce/empty-cart-block --></div>\n<!-- /wp:woocommerce/cart -->', '购物车', '', 'inherit', 'closed', 'closed', '', '11-revision-v1', '', '', '2026-02-26 09:49:35', '2026-02-26 01:49:35', '', 11, 'http://localhost/?p=15', 0, 'revision', '', 0);
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -1340,6 +1505,7 @@ INSERT INTO `wp_posts` VALUES (15, 1, '2026-02-26 09:49:35', '2026-02-26 01:49:3
 DROP TABLE IF EXISTS `wp_term_relationships`;
 CREATE TABLE `wp_term_relationships`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `object_id` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
   `term_taxonomy_id` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
   `term_order` int(11) NOT NULL DEFAULT 0,
@@ -1347,12 +1513,17 @@ CREATE TABLE `wp_term_relationships`  (
   INDEX `term_taxonomy_id`(`term_taxonomy_id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Fixed;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `object_id` bigint UNSIGNED NOT NULL DEFAULT 0,
   `term_taxonomy_id` bigint UNSIGNED NOT NULL DEFAULT 0,
   `term_order` int NOT NULL DEFAULT 0,
   PRIMARY KEY (`object_id`, `term_taxonomy_id`) USING BTREE,
   INDEX `term_taxonomy_id`(`term_taxonomy_id` ASC) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -1360,6 +1531,10 @@ CREATE TABLE `wp_term_relationships`  (
 -- ----------------------------
 INSERT INTO `wp_term_relationships` VALUES (1, 1, 0);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+INSERT INTO `wp_term_relationships` VALUES (6, 2, 0);
+>>>>>>> 45062407 (init wordpress project)
 =======
 INSERT INTO `wp_term_relationships` VALUES (6, 2, 0);
 >>>>>>> 45062407 (init wordpress project)
@@ -1369,6 +1544,7 @@ INSERT INTO `wp_term_relationships` VALUES (6, 2, 0);
 -- ----------------------------
 DROP TABLE IF EXISTS `wp_term_taxonomy`;
 CREATE TABLE `wp_term_taxonomy`  (
+<<<<<<< HEAD
 <<<<<<< HEAD
   `term_taxonomy_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `term_id` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
@@ -1381,6 +1557,8 @@ CREATE TABLE `wp_term_taxonomy`  (
   INDEX `taxonomy`(`taxonomy`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `term_taxonomy_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `term_id` bigint UNSIGNED NOT NULL DEFAULT 0,
   `taxonomy` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
@@ -1391,6 +1569,9 @@ CREATE TABLE `wp_term_taxonomy`  (
   UNIQUE INDEX `term_id_taxonomy`(`term_id` ASC, `taxonomy` ASC) USING BTREE,
   INDEX `taxonomy`(`taxonomy` ASC) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 17 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -1398,17 +1579,23 @@ CREATE TABLE `wp_term_taxonomy`  (
 -- ----------------------------
 INSERT INTO `wp_term_taxonomy` VALUES (1, 1, 'category', '', 0, 1);
 <<<<<<< HEAD
+<<<<<<< HEAD
 INSERT INTO `wp_term_taxonomy` VALUES (2, 2, 'product_type', '', 0, 0);
 INSERT INTO `wp_term_taxonomy` VALUES (3, 3, 'product_type', '', 0, 0);
 INSERT INTO `wp_term_taxonomy` VALUES (4, 4, 'product_type', '', 0, 0);
 INSERT INTO `wp_term_taxonomy` VALUES (5, 5, 'product_type', '', 0, 0);
 INSERT INTO `wp_term_taxonomy` VALUES (6, 6, 'product_visibility', '', 0, 0);
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
 INSERT INTO `wp_term_taxonomy` VALUES (2, 2, 'wp_theme', '', 0, 1);
 INSERT INTO `wp_term_taxonomy` VALUES (3, 3, 'product_type', '', 0, 0);
 INSERT INTO `wp_term_taxonomy` VALUES (4, 4, 'product_type', '', 0, 0);
 INSERT INTO `wp_term_taxonomy` VALUES (5, 5, 'product_type', '', 0, 0);
 INSERT INTO `wp_term_taxonomy` VALUES (6, 6, 'product_type', '', 0, 0);
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 INSERT INTO `wp_term_taxonomy` VALUES (7, 7, 'product_visibility', '', 0, 0);
 INSERT INTO `wp_term_taxonomy` VALUES (8, 8, 'product_visibility', '', 0, 0);
@@ -1419,7 +1606,12 @@ INSERT INTO `wp_term_taxonomy` VALUES (12, 12, 'product_visibility', '', 0, 0);
 INSERT INTO `wp_term_taxonomy` VALUES (13, 13, 'product_visibility', '', 0, 0);
 INSERT INTO `wp_term_taxonomy` VALUES (14, 14, 'product_visibility', '', 0, 0);
 <<<<<<< HEAD
+<<<<<<< HEAD
 INSERT INTO `wp_term_taxonomy` VALUES (15, 15, 'product_cat', '', 0, 0);
+=======
+INSERT INTO `wp_term_taxonomy` VALUES (15, 15, 'product_visibility', '', 0, 0);
+INSERT INTO `wp_term_taxonomy` VALUES (16, 16, 'product_cat', '', 0, 0);
+>>>>>>> 45062407 (init wordpress project)
 =======
 INSERT INTO `wp_term_taxonomy` VALUES (15, 15, 'product_visibility', '', 0, 0);
 INSERT INTO `wp_term_taxonomy` VALUES (16, 16, 'product_cat', '', 0, 0);
@@ -1431,6 +1623,7 @@ INSERT INTO `wp_term_taxonomy` VALUES (16, 16, 'product_cat', '', 0, 0);
 DROP TABLE IF EXISTS `wp_termmeta`;
 CREATE TABLE `wp_termmeta`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `term_id` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
   `meta_key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NULL DEFAULT NULL,
@@ -1440,6 +1633,8 @@ CREATE TABLE `wp_termmeta`  (
   INDEX `meta_key`(`meta_key`(191)) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `meta_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `term_id` bigint UNSIGNED NOT NULL DEFAULT 0,
   `meta_key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NULL DEFAULT NULL,
@@ -1448,6 +1643,9 @@ CREATE TABLE `wp_termmeta`  (
   INDEX `term_id`(`term_id` ASC) USING BTREE,
   INDEX `meta_key`(`meta_key`(191) ASC) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -1460,6 +1658,7 @@ CREATE TABLE `wp_termmeta`  (
 DROP TABLE IF EXISTS `wp_terms`;
 CREATE TABLE `wp_terms`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `term_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
   `slug` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
@@ -1469,6 +1668,8 @@ CREATE TABLE `wp_terms`  (
   INDEX `name`(`name`(191)) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `term_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
   `slug` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
@@ -1477,12 +1678,16 @@ CREATE TABLE `wp_terms`  (
   INDEX `slug`(`slug`(191) ASC) USING BTREE,
   INDEX `name`(`name`(191) ASC) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 17 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
 -- Records of wp_terms
 -- ----------------------------
 INSERT INTO `wp_terms` VALUES (1, '未分类', 'uncategorized', 0);
+<<<<<<< HEAD
 <<<<<<< HEAD
 INSERT INTO `wp_terms` VALUES (2, 'simple', 'simple', 0);
 INSERT INTO `wp_terms` VALUES (3, 'grouped', 'grouped', 0);
@@ -1499,6 +1704,8 @@ INSERT INTO `wp_terms` VALUES (13, 'rated-4', 'rated-4', 0);
 INSERT INTO `wp_terms` VALUES (14, 'rated-5', 'rated-5', 0);
 INSERT INTO `wp_terms` VALUES (15, 'Uncategorized', 'uncategorized', 0);
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
 INSERT INTO `wp_terms` VALUES (2, 'twentytwentyfour', 'twentytwentyfour', 0);
 INSERT INTO `wp_terms` VALUES (3, 'simple', 'simple', 0);
 INSERT INTO `wp_terms` VALUES (4, 'grouped', 'grouped', 0);
@@ -1514,6 +1721,9 @@ INSERT INTO `wp_terms` VALUES (13, 'rated-3', 'rated-3', 0);
 INSERT INTO `wp_terms` VALUES (14, 'rated-4', 'rated-4', 0);
 INSERT INTO `wp_terms` VALUES (15, 'rated-5', 'rated-5', 0);
 INSERT INTO `wp_terms` VALUES (16, 'Uncategorized', 'uncategorized', 0);
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -1521,6 +1731,7 @@ INSERT INTO `wp_terms` VALUES (16, 'Uncategorized', 'uncategorized', 0);
 -- ----------------------------
 DROP TABLE IF EXISTS `wp_usermeta`;
 CREATE TABLE `wp_usermeta`  (
+<<<<<<< HEAD
 <<<<<<< HEAD
   `umeta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
@@ -1531,6 +1742,8 @@ CREATE TABLE `wp_usermeta`  (
   INDEX `meta_key`(`meta_key`(191)) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 21 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `umeta_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `user_id` bigint UNSIGNED NOT NULL DEFAULT 0,
   `meta_key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NULL DEFAULT NULL,
@@ -1539,6 +1752,9 @@ CREATE TABLE `wp_usermeta`  (
   INDEX `user_id`(`user_id` ASC) USING BTREE,
   INDEX `meta_key`(`meta_key`(191) ASC) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 22 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -1560,6 +1776,7 @@ INSERT INTO `wp_usermeta` VALUES (13, 1, 'wp_user_level', '10');
 INSERT INTO `wp_usermeta` VALUES (14, 1, 'dismissed_wp_pointers', '');
 INSERT INTO `wp_usermeta` VALUES (15, 1, 'show_welcome_panel', '1');
 <<<<<<< HEAD
+<<<<<<< HEAD
 INSERT INTO `wp_usermeta` VALUES (16, 1, 'session_tokens', 'a:1:{s:64:\"7825a14c2258d907a922cae2558fa5d4f17fd3cf6edf4c95d60bb5caf6100eb6\";a:4:{s:10:\"expiration\";i:1772203326;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:111:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36\";s:5:\"login\";i:1772030526;}}');
 INSERT INTO `wp_usermeta` VALUES (17, 1, 'wp_user-settings', 'mfold=o&libraryContent=browse');
 INSERT INTO `wp_usermeta` VALUES (18, 1, 'wp_user-settings-time', '1772030527');
@@ -1568,12 +1785,17 @@ INSERT INTO `wp_usermeta` VALUES (20, 1, 'community-events-location', 'a:1:{s:2:
 INSERT INTO `wp_usermeta` VALUES (21, 1, '_woocommerce_persistent_cart_1', 'a:1:{s:4:\"cart\";a:0:{}}');
 INSERT INTO `wp_usermeta` VALUES (22, 1, 'wc_last_active', '1772031396');
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
 INSERT INTO `wp_usermeta` VALUES (16, 1, 'session_tokens', 'a:1:{s:64:\"e7360566caa5ecbf1627da8ea5ca30e65a58baa1479e8ce9f0ceb3530bac8eba\";a:4:{s:10:\"expiration\";i:1772242956;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:125:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\";s:5:\"login\";i:1772070156;}}');
 INSERT INTO `wp_usermeta` VALUES (17, 1, 'wp_user-settings', 'mfold=o&libraryContent=browse&editor=tinymce&product_cat_tab=pop');
 INSERT INTO `wp_usermeta` VALUES (18, 1, 'wp_user-settings-time', '1772070160');
 INSERT INTO `wp_usermeta` VALUES (19, 1, 'wp_dashboard_quick_press_last_post_id', '5');
 INSERT INTO `wp_usermeta` VALUES (20, 1, 'community-events-location', 'a:1:{s:2:\"ip\";s:9:\"127.0.0.0\";}');
 INSERT INTO `wp_usermeta` VALUES (21, 1, '_woocommerce_persistent_cart_1', 'a:1:{s:4:\"cart\";a:0:{}}');
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -1582,7 +1804,11 @@ INSERT INTO `wp_usermeta` VALUES (21, 1, '_woocommerce_persistent_cart_1', 'a:1:
 DROP TABLE IF EXISTS `wp_users`;
 CREATE TABLE `wp_users`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+=======
+  `ID` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+>>>>>>> 45062407 (init wordpress project)
 =======
   `ID` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
 >>>>>>> 45062407 (init wordpress project)
@@ -1594,6 +1820,7 @@ CREATE TABLE `wp_users`  (
   `user_registered` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `user_activation_key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
 <<<<<<< HEAD
+<<<<<<< HEAD
   `user_status` int(11) NOT NULL DEFAULT 0,
   `display_name` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`ID`) USING BTREE,
@@ -1602,6 +1829,8 @@ CREATE TABLE `wp_users`  (
   INDEX `user_email`(`user_email`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `user_status` int NOT NULL DEFAULT 0,
   `display_name` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`ID`) USING BTREE,
@@ -1609,13 +1838,20 @@ CREATE TABLE `wp_users`  (
   INDEX `user_nicename`(`user_nicename` ASC) USING BTREE,
   INDEX `user_email`(`user_email` ASC) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
 -- Records of wp_users
 -- ----------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 INSERT INTO `wp_users` VALUES (1, 'admin', '$wp$2y$10$lp8q0rFZdupEhsgiadvIqePmfO8uCip63W4iuRCILfK1rawqVlvoy', 'admin', 'test@qq.com', 'http://localhost', '2026-02-25 14:41:49', '', 0, 'admin');
+=======
+INSERT INTO `wp_users` VALUES (1, 'admin', '$wp$2y$10$lljdOTu57m9iaUA3r9QVfuC2iSDTTEztqx9pJNxmsyH.YoouRSrd.', 'admin', '2711398045@qq.com', 'http://localhost', '2026-02-26 01:42:25', '', 0, 'admin');
+>>>>>>> 45062407 (init wordpress project)
 =======
 INSERT INTO `wp_users` VALUES (1, 'admin', '$wp$2y$10$lljdOTu57m9iaUA3r9QVfuC2iSDTTEztqx9pJNxmsyH.YoouRSrd.', 'admin', '2711398045@qq.com', 'http://localhost', '2026-02-26 01:42:25', '', 0, 'admin');
 >>>>>>> 45062407 (init wordpress project)
@@ -1626,8 +1862,13 @@ INSERT INTO `wp_users` VALUES (1, 'admin', '$wp$2y$10$lljdOTu57m9iaUA3r9QVfuC2iS
 DROP TABLE IF EXISTS `wp_wc_admin_note_actions`;
 CREATE TABLE `wp_wc_admin_note_actions`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `action_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `note_id` bigint(20) UNSIGNED NOT NULL,
+=======
+  `action_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `note_id` bigint UNSIGNED NOT NULL,
+>>>>>>> 45062407 (init wordpress project)
 =======
   `action_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `note_id` bigint UNSIGNED NOT NULL,
@@ -1641,8 +1882,13 @@ CREATE TABLE `wp_wc_admin_note_actions`  (
   `nonce_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NULL DEFAULT NULL,
   PRIMARY KEY (`action_id`) USING BTREE,
 <<<<<<< HEAD
+<<<<<<< HEAD
   INDEX `note_id`(`note_id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 315 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+=======
+  INDEX `note_id`(`note_id` ASC) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 238 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+>>>>>>> 45062407 (init wordpress project)
 =======
   INDEX `note_id`(`note_id` ASC) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 238 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
@@ -1651,6 +1897,7 @@ CREATE TABLE `wp_wc_admin_note_actions`  (
 -- ----------------------------
 -- Records of wp_wc_admin_note_actions
 -- ----------------------------
+<<<<<<< HEAD
 <<<<<<< HEAD
 INSERT INTO `wp_wc_admin_note_actions` VALUES (1, 1, 'try-the-new-templates', 'Try the new templates', '?page=wc-settings&tab=email&try-new-templates', 'actioned', '', NULL, NULL);
 INSERT INTO `wp_wc_admin_note_actions` VALUES (2, 2, 'notify-refund-returns-page', 'Edit page', 'http://localhost/wp-admin/post.php?post=12&action=edit', 'actioned', '', NULL, NULL);
@@ -1733,6 +1980,8 @@ INSERT INTO `wp_wc_admin_note_actions` VALUES (312, 54, 'paypal-braintree-sdk-de
 INSERT INTO `wp_wc_admin_note_actions` VALUES (314, 55, 'activate-now', 'Activate Now', 'http://localhost/wp-admin/admin.php?page=wc-settings&tab=integration&section=ppcp-recaptcha', 'unactioned', '', NULL, NULL);
 INSERT INTO `wp_wc_admin_note_actions` VALUES (313, 55, 'setup-instructions', 'Setup Instructions', 'https://woocommerce.com/document/woocommerce-paypal-payments/fraud-and-disputes/?utm_source=inbox_note&utm_medium=product&utm_campaign=setup-instructions#section-4', 'unactioned', '', NULL, NULL);
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
 INSERT INTO `wp_wc_admin_note_actions` VALUES (1, 1, 'try-the-new-templates', '试用新模板', '?page=wc-settings&tab=email&try-new-templates', 'actioned', '', NULL, NULL);
 INSERT INTO `wp_wc_admin_note_actions` VALUES (2, 2, 'scheduled-updates-enable', '启用', 'http://localhost/wp-admin/admin.php?page=wc-admin', 'actioned', '计划更新已启用', NULL, NULL);
 INSERT INTO `wp_wc_admin_note_actions` VALUES (3, 3, 'notify-refund-returns-page', '编辑页面', 'http://localhost/wp-admin/post.php?post=14&action=edit', 'actioned', '', NULL, NULL);
@@ -1814,6 +2063,9 @@ INSERT INTO `wp_wc_admin_note_actions` VALUES (234, 54, 'uk-vat-notice-button-20
 INSERT INTO `wp_wc_admin_note_actions` VALUES (235, 55, 'paypal-braintree-sdk-depreciation-2025-05-30-button', 'Update now', 'http://localhost/wp-admin/wp-admin/plugins.php', 'unactioned', '', NULL, NULL);
 INSERT INTO `wp_wc_admin_note_actions` VALUES (236, 56, 'setup-instructions', 'Setup Instructions', 'https://woocommerce.com/document/woocommerce-paypal-payments/fraud-and-disputes/?utm_source=inbox_note&utm_medium=product&utm_campaign=setup-instructions#section-4', 'unactioned', '', NULL, NULL);
 INSERT INTO `wp_wc_admin_note_actions` VALUES (237, 56, 'activate-now', 'Activate Now', 'http://localhost/wp-admin/admin.php?page=wc-settings&tab=integration&section=ppcp-recaptcha', 'unactioned', '', NULL, NULL);
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -1822,7 +2074,11 @@ INSERT INTO `wp_wc_admin_note_actions` VALUES (237, 56, 'activate-now', 'Activat
 DROP TABLE IF EXISTS `wp_wc_admin_notes`;
 CREATE TABLE `wp_wc_admin_notes`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `note_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+=======
+  `note_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+>>>>>>> 45062407 (init wordpress project)
 =======
   `note_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
 >>>>>>> 45062407 (init wordpress project)
@@ -1844,7 +2100,11 @@ CREATE TABLE `wp_wc_admin_notes`  (
   `icon` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'info',
   PRIMARY KEY (`note_id`) USING BTREE
 <<<<<<< HEAD
+<<<<<<< HEAD
 ) ENGINE = MyISAM AUTO_INCREMENT = 56 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+=======
+) ENGINE = InnoDB AUTO_INCREMENT = 57 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+>>>>>>> 45062407 (init wordpress project)
 =======
 ) ENGINE = InnoDB AUTO_INCREMENT = 57 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 >>>>>>> 45062407 (init wordpress project)
@@ -1852,6 +2112,7 @@ CREATE TABLE `wp_wc_admin_notes`  (
 -- ----------------------------
 -- Records of wp_wc_admin_notes
 -- ----------------------------
+<<<<<<< HEAD
 <<<<<<< HEAD
 INSERT INTO `wp_wc_admin_notes` VALUES (1, 'wc-admin-email-improvements', 'info', 'en_US', 'Store emails have had an upgrade!', 'We’ve made some exciting improvements to our email templates, including modern, shopper-friendly designs and new customization options. And if you’re using a block theme, you can automatically sync your theme styles! Head to your email settings to explore the new features.', '{}', 'unactioned', 'woocommerce-admin', '2026-02-25 14:46:25', NULL, 0, 'plain', '', 0, 0, 'info');
 INSERT INTO `wp_wc_admin_notes` VALUES (2, 'wc-refund-returns-page', 'info', 'en_US', 'Setup a Refund and Returns Policy page to boost your store\'s credibility.', 'We have created a sample draft Refund and Returns Policy page for you. Please have a look and update it to fit your store.', '{}', 'unactioned', 'woocommerce-core', '2026-02-25 14:46:27', NULL, 0, 'plain', '', 0, 0, 'info');
@@ -1909,6 +2170,8 @@ INSERT INTO `wp_wc_admin_notes` VALUES (53, 'uk-vat-notice-2025-04-30', 'warning
 INSERT INTO `wp_wc_admin_notes` VALUES (54, 'paypal-braintree-sdk-depreciation-2025-05-30', 'update', 'en_US', 'Action required: Update the PayPal Braintree extension', 'Your PayPal Braintree extension is using an outdated SDK and will stop processing payments after June 30, 2025, due to a root SSL certificate expiration. To avoid service disruption, update to version 3.2.4 or newer immediately.', '{}', 'pending', 'woocommerce.com', '2026-02-25 14:46:32', NULL, 0, 'plain', '', 0, 0, 'info');
 INSERT INTO `wp_wc_admin_notes` VALUES (55, 'paypal-carding-recaptcha-jan-26', 'update', 'en_US', 'Fraud protection is now required — enable today', 'Card networks like Visa and Mastercard now require fraud prevention controls, and non-compliance may result in fines and processing restrictions. Please enable reCAPTCHA in your PayPal Payments settings to help protect your store and maintain compliance.', '{}', 'pending', 'woocommerce.com', '2026-02-25 14:46:32', NULL, 0, 'plain', '', 0, 0, 'info');
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
 INSERT INTO `wp_wc_admin_notes` VALUES (1, 'wc-admin-email-improvements', 'info', 'en_US', '商店电子邮件已升级！', '我们对我们的电子邮件模板进行了一些令人兴奋的改进，包括方便购物者浏览的现代化设计和新的自定义选项。 如果您使用的是区块主题，则可以自动同步主题样式！ 请前往电子邮件设置以探索新功能。', '{}', 'unactioned', 'woocommerce-admin', '2026-02-26 01:49:14', NULL, 0, 'plain', '', 0, 0, 'info');
 INSERT INTO `wp_wc_admin_notes` VALUES (2, 'wc-admin-scheduled-updates-promotion', 'info', 'en_US', 'Analytics 现已支持计划更新', '这可提升您商店的性能表现，请在“分析 &gt; 设置”中将其启用。', '{}', 'unactioned', 'woocommerce-admin', '2026-02-26 01:49:15', NULL, 0, 'plain', '', 0, 1, 'info');
 INSERT INTO `wp_wc_admin_notes` VALUES (3, 'wc-refund-returns-page', 'info', 'en_US', '设置“退款和退货策略”页面，提升您商店的信誉度。', '我们为您创建了一个退款和货策略页面的样本草稿。 请查看，并根据您的商店进行更新。', '{}', 'unactioned', 'woocommerce-core', '2026-02-26 01:49:15', NULL, 0, 'plain', '', 0, 1, 'info');
@@ -1965,6 +2228,9 @@ INSERT INTO `wp_wc_admin_notes` VALUES (53, 'paypal-braintree-sdk-depreciation-2
 INSERT INTO `wp_wc_admin_notes` VALUES (54, 'uk-vat-notice-2025-04-30', 'warning', 'en_US', 'UK VAT numbers are no longer supported', 'Due to recent HM Revenue &amp; Customs (HMRC) VAT API changes, your EU VAT Number for WooCommerce extension can no longer validate UK VAT numbers. HMRC now requires merchants to register an API key, which this extension does not currently support. We recommend EU/UK VAT Validation Manager for WooCommerce as a replacement', '{}', 'pending', 'woocommerce.com', '2026-02-26 01:49:17', NULL, 0, 'plain', '', 0, 0, 'info');
 INSERT INTO `wp_wc_admin_notes` VALUES (55, 'paypal-braintree-sdk-depreciation-2025-05-30', 'update', 'en_US', 'Action required: Update the PayPal Braintree extension', 'Your PayPal Braintree extension is using an outdated SDK and will stop processing payments after June 30, 2025, due to a root SSL certificate expiration. To avoid service disruption, update to version 3.2.4 or newer immediately.', '{}', 'pending', 'woocommerce.com', '2026-02-26 01:49:17', NULL, 0, 'plain', '', 0, 0, 'info');
 INSERT INTO `wp_wc_admin_notes` VALUES (56, 'paypal-carding-recaptcha-jan-26', 'update', 'en_US', 'Fraud protection is now required — enable today', 'Card networks like Visa and Mastercard now require fraud prevention controls, and non-compliance may result in fines and processing restrictions. Please enable reCAPTCHA in your PayPal Payments settings to help protect your store and maintain compliance.', '{}', 'pending', 'woocommerce.com', '2026-02-26 01:49:17', NULL, 0, 'plain', '', 0, 0, 'info');
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -1973,22 +2239,32 @@ INSERT INTO `wp_wc_admin_notes` VALUES (56, 'paypal-carding-recaptcha-jan-26', '
 DROP TABLE IF EXISTS `wp_wc_category_lookup`;
 CREATE TABLE `wp_wc_category_lookup`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `category_tree_id` bigint(20) UNSIGNED NOT NULL,
   `category_id` bigint(20) UNSIGNED NOT NULL,
   PRIMARY KEY (`category_tree_id`, `category_id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Fixed;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `category_tree_id` bigint UNSIGNED NOT NULL,
   `category_id` bigint UNSIGNED NOT NULL,
   PRIMARY KEY (`category_tree_id`, `category_id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
 -- Records of wp_wc_category_lookup
 -- ----------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 INSERT INTO `wp_wc_category_lookup` VALUES (15, 15);
+=======
+INSERT INTO `wp_wc_category_lookup` VALUES (16, 16);
+>>>>>>> 45062407 (init wordpress project)
 =======
 INSERT INTO `wp_wc_category_lookup` VALUES (16, 16);
 >>>>>>> 45062407 (init wordpress project)
@@ -1999,8 +2275,13 @@ INSERT INTO `wp_wc_category_lookup` VALUES (16, 16);
 DROP TABLE IF EXISTS `wp_wc_customer_lookup`;
 CREATE TABLE `wp_wc_customer_lookup`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `customer_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) UNSIGNED NULL DEFAULT NULL,
+=======
+  `customer_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `user_id` bigint UNSIGNED NULL DEFAULT NULL,
+>>>>>>> 45062407 (init wordpress project)
 =======
   `customer_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `user_id` bigint UNSIGNED NULL DEFAULT NULL,
@@ -2017,9 +2298,15 @@ CREATE TABLE `wp_wc_customer_lookup`  (
   `state` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`customer_id`) USING BTREE,
 <<<<<<< HEAD
+<<<<<<< HEAD
   UNIQUE INDEX `user_id`(`user_id`) USING BTREE,
   INDEX `email`(`email`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+=======
+  UNIQUE INDEX `user_id`(`user_id` ASC) USING BTREE,
+  INDEX `email`(`email` ASC) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+>>>>>>> 45062407 (init wordpress project)
 =======
   UNIQUE INDEX `user_id`(`user_id` ASC) USING BTREE,
   INDEX `email`(`email` ASC) USING BTREE
@@ -2036,6 +2323,7 @@ CREATE TABLE `wp_wc_customer_lookup`  (
 DROP TABLE IF EXISTS `wp_wc_download_log`;
 CREATE TABLE `wp_wc_download_log`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `download_log_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `timestamp` datetime NOT NULL,
   `permission_id` bigint(20) UNSIGNED NOT NULL,
@@ -2046,6 +2334,8 @@ CREATE TABLE `wp_wc_download_log`  (
   INDEX `timestamp`(`timestamp`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `download_log_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `timestamp` datetime NOT NULL,
   `permission_id` bigint UNSIGNED NOT NULL,
@@ -2055,6 +2345,9 @@ CREATE TABLE `wp_wc_download_log`  (
   INDEX `permission_id`(`permission_id` ASC) USING BTREE,
   INDEX `timestamp`(`timestamp` ASC) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -2067,8 +2360,13 @@ CREATE TABLE `wp_wc_download_log`  (
 DROP TABLE IF EXISTS `wp_wc_order_addresses`;
 CREATE TABLE `wp_wc_order_addresses`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `order_id` bigint(20) UNSIGNED NOT NULL,
+=======
+  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `order_id` bigint UNSIGNED NOT NULL,
+>>>>>>> 45062407 (init wordpress project)
 =======
   `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `order_id` bigint UNSIGNED NOT NULL,
@@ -2087,17 +2385,23 @@ CREATE TABLE `wp_wc_order_addresses`  (
   `phone` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
 <<<<<<< HEAD
+<<<<<<< HEAD
   UNIQUE INDEX `address_type_order_id`(`address_type`, `order_id`) USING BTREE,
   INDEX `order_id`(`order_id`) USING BTREE,
   INDEX `email`(`email`(191)) USING BTREE,
   INDEX `phone`(`phone`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   UNIQUE INDEX `address_type_order_id`(`address_type` ASC, `order_id` ASC) USING BTREE,
   INDEX `order_id`(`order_id` ASC) USING BTREE,
   INDEX `email`(`email`(191) ASC) USING BTREE,
   INDEX `phone`(`phone` ASC) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -2110,6 +2414,7 @@ CREATE TABLE `wp_wc_order_addresses`  (
 DROP TABLE IF EXISTS `wp_wc_order_coupon_lookup`;
 CREATE TABLE `wp_wc_order_coupon_lookup`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `order_id` bigint(20) UNSIGNED NOT NULL,
   `coupon_id` bigint(20) NOT NULL,
   `date_created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -2119,6 +2424,8 @@ CREATE TABLE `wp_wc_order_coupon_lookup`  (
   INDEX `date_created`(`date_created`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Fixed;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `order_id` bigint UNSIGNED NOT NULL,
   `coupon_id` bigint NOT NULL,
   `date_created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -2127,6 +2434,9 @@ CREATE TABLE `wp_wc_order_coupon_lookup`  (
   INDEX `coupon_id`(`coupon_id` ASC) USING BTREE,
   INDEX `date_created`(`date_created` ASC) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -2139,8 +2449,13 @@ CREATE TABLE `wp_wc_order_coupon_lookup`  (
 DROP TABLE IF EXISTS `wp_wc_order_operational_data`;
 CREATE TABLE `wp_wc_order_operational_data`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `order_id` bigint(20) UNSIGNED NULL DEFAULT NULL,
+=======
+  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `order_id` bigint UNSIGNED NULL DEFAULT NULL,
+>>>>>>> 45062407 (init wordpress project)
 =======
   `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `order_id` bigint UNSIGNED NULL DEFAULT NULL,
@@ -2163,9 +2478,15 @@ CREATE TABLE `wp_wc_order_operational_data`  (
   `recorded_sales` tinyint(1) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
 <<<<<<< HEAD
+<<<<<<< HEAD
   UNIQUE INDEX `order_id`(`order_id`) USING BTREE,
   INDEX `order_key`(`order_key`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+=======
+  UNIQUE INDEX `order_id`(`order_id` ASC) USING BTREE,
+  INDEX `order_key`(`order_key` ASC) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+>>>>>>> 45062407 (init wordpress project)
 =======
   UNIQUE INDEX `order_id`(`order_id` ASC) USING BTREE,
   INDEX `order_key`(`order_key` ASC) USING BTREE
@@ -2182,6 +2503,7 @@ CREATE TABLE `wp_wc_order_operational_data`  (
 DROP TABLE IF EXISTS `wp_wc_order_product_lookup`;
 CREATE TABLE `wp_wc_order_product_lookup`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `order_item_id` bigint(20) UNSIGNED NOT NULL,
   `order_id` bigint(20) UNSIGNED NOT NULL,
   `product_id` bigint(20) UNSIGNED NOT NULL,
@@ -2190,6 +2512,8 @@ CREATE TABLE `wp_wc_order_product_lookup`  (
   `date_created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `product_qty` int(11) NOT NULL,
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `order_item_id` bigint UNSIGNED NOT NULL,
   `order_id` bigint UNSIGNED NOT NULL,
   `product_id` bigint UNSIGNED NOT NULL,
@@ -2197,6 +2521,9 @@ CREATE TABLE `wp_wc_order_product_lookup`  (
   `customer_id` bigint UNSIGNED NULL DEFAULT NULL,
   `date_created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `product_qty` int NOT NULL,
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
   `product_net_revenue` double NOT NULL DEFAULT 0,
   `product_gross_revenue` double NOT NULL DEFAULT 0,
@@ -2206,6 +2533,7 @@ CREATE TABLE `wp_wc_order_product_lookup`  (
   `shipping_tax_amount` double NOT NULL DEFAULT 0,
   PRIMARY KEY (`order_item_id`, `order_id`) USING BTREE,
 <<<<<<< HEAD
+<<<<<<< HEAD
   INDEX `order_id`(`order_id`) USING BTREE,
   INDEX `product_id`(`product_id`) USING BTREE,
   INDEX `customer_id`(`customer_id`) USING BTREE,
@@ -2213,12 +2541,17 @@ CREATE TABLE `wp_wc_order_product_lookup`  (
   INDEX `customer_product_date`(`customer_id`, `product_id`, `date_created`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Fixed;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   INDEX `order_id`(`order_id` ASC) USING BTREE,
   INDEX `product_id`(`product_id` ASC) USING BTREE,
   INDEX `customer_id`(`customer_id` ASC) USING BTREE,
   INDEX `date_created`(`date_created` ASC) USING BTREE,
   INDEX `customer_product_date`(`customer_id` ASC, `product_id` ASC, `date_created` ASC) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -2231,8 +2564,13 @@ CREATE TABLE `wp_wc_order_product_lookup`  (
 DROP TABLE IF EXISTS `wp_wc_order_stats`;
 CREATE TABLE `wp_wc_order_stats`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `order_id` bigint(20) UNSIGNED NOT NULL,
   `parent_id` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
+=======
+  `order_id` bigint UNSIGNED NOT NULL,
+  `parent_id` bigint UNSIGNED NOT NULL DEFAULT 0,
+>>>>>>> 45062407 (init wordpress project)
 =======
   `order_id` bigint UNSIGNED NOT NULL,
   `parent_id` bigint UNSIGNED NOT NULL DEFAULT 0,
@@ -2242,7 +2580,11 @@ CREATE TABLE `wp_wc_order_stats`  (
   `date_paid` datetime NULL DEFAULT '0000-00-00 00:00:00',
   `date_completed` datetime NULL DEFAULT '0000-00-00 00:00:00',
 <<<<<<< HEAD
+<<<<<<< HEAD
   `num_items_sold` int(11) NOT NULL DEFAULT 0,
+=======
+  `num_items_sold` int NOT NULL DEFAULT 0,
+>>>>>>> 45062407 (init wordpress project)
 =======
   `num_items_sold` int NOT NULL DEFAULT 0,
 >>>>>>> 45062407 (init wordpress project)
@@ -2253,6 +2595,7 @@ CREATE TABLE `wp_wc_order_stats`  (
   `returning_customer` tinyint(1) NULL DEFAULT NULL,
   `status` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
 <<<<<<< HEAD
+<<<<<<< HEAD
   `customer_id` bigint(20) UNSIGNED NOT NULL,
   PRIMARY KEY (`order_id`) USING BTREE,
   INDEX `date_created`(`date_created`) USING BTREE,
@@ -2261,6 +2604,8 @@ CREATE TABLE `wp_wc_order_stats`  (
   INDEX `idx_date_paid_status_parent`(`date_paid`, `status`, `parent_id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `customer_id` bigint UNSIGNED NOT NULL,
   PRIMARY KEY (`order_id`) USING BTREE,
   INDEX `date_created`(`date_created` ASC) USING BTREE,
@@ -2268,6 +2613,9 @@ CREATE TABLE `wp_wc_order_stats`  (
   INDEX `status`(`status` ASC) USING BTREE,
   INDEX `idx_date_paid_status_parent`(`date_paid` ASC, `status` ASC, `parent_id` ASC) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -2280,8 +2628,13 @@ CREATE TABLE `wp_wc_order_stats`  (
 DROP TABLE IF EXISTS `wp_wc_order_tax_lookup`;
 CREATE TABLE `wp_wc_order_tax_lookup`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `order_id` bigint(20) UNSIGNED NOT NULL,
   `tax_rate_id` bigint(20) UNSIGNED NOT NULL,
+=======
+  `order_id` bigint UNSIGNED NOT NULL,
+  `tax_rate_id` bigint UNSIGNED NOT NULL,
+>>>>>>> 45062407 (init wordpress project)
 =======
   `order_id` bigint UNSIGNED NOT NULL,
   `tax_rate_id` bigint UNSIGNED NOT NULL,
@@ -2292,9 +2645,15 @@ CREATE TABLE `wp_wc_order_tax_lookup`  (
   `total_tax` double NOT NULL DEFAULT 0,
   PRIMARY KEY (`order_id`, `tax_rate_id`) USING BTREE,
 <<<<<<< HEAD
+<<<<<<< HEAD
   INDEX `tax_rate_id`(`tax_rate_id`) USING BTREE,
   INDEX `date_created`(`date_created`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Fixed;
+=======
+  INDEX `tax_rate_id`(`tax_rate_id` ASC) USING BTREE,
+  INDEX `date_created`(`date_created` ASC) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+>>>>>>> 45062407 (init wordpress project)
 =======
   INDEX `tax_rate_id`(`tax_rate_id` ASC) USING BTREE,
   INDEX `date_created`(`date_created` ASC) USING BTREE
@@ -2311,7 +2670,11 @@ CREATE TABLE `wp_wc_order_tax_lookup`  (
 DROP TABLE IF EXISTS `wp_wc_orders`;
 CREATE TABLE `wp_wc_orders`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `id` bigint(20) UNSIGNED NOT NULL,
+=======
+  `id` bigint UNSIGNED NOT NULL,
+>>>>>>> 45062407 (init wordpress project)
 =======
   `id` bigint UNSIGNED NOT NULL,
 >>>>>>> 45062407 (init wordpress project)
@@ -2321,17 +2684,23 @@ CREATE TABLE `wp_wc_orders`  (
   `tax_amount` decimal(26, 8) NULL DEFAULT NULL,
   `total_amount` decimal(26, 8) NULL DEFAULT NULL,
 <<<<<<< HEAD
+<<<<<<< HEAD
   `customer_id` bigint(20) UNSIGNED NULL DEFAULT NULL,
   `billing_email` varchar(320) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NULL DEFAULT NULL,
   `date_created_gmt` datetime NULL DEFAULT NULL,
   `date_updated_gmt` datetime NULL DEFAULT NULL,
   `parent_order_id` bigint(20) UNSIGNED NULL DEFAULT NULL,
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `customer_id` bigint UNSIGNED NULL DEFAULT NULL,
   `billing_email` varchar(320) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NULL DEFAULT NULL,
   `date_created_gmt` datetime NULL DEFAULT NULL,
   `date_updated_gmt` datetime NULL DEFAULT NULL,
   `parent_order_id` bigint UNSIGNED NULL DEFAULT NULL,
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
   `payment_method` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NULL DEFAULT NULL,
   `payment_method_title` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NULL,
@@ -2340,6 +2709,7 @@ CREATE TABLE `wp_wc_orders`  (
   `user_agent` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NULL,
   `customer_note` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NULL,
   PRIMARY KEY (`id`) USING BTREE,
+<<<<<<< HEAD
 <<<<<<< HEAD
   INDEX `status`(`status`) USING BTREE,
   INDEX `date_created`(`date_created_gmt`) USING BTREE,
@@ -2350,6 +2720,8 @@ CREATE TABLE `wp_wc_orders`  (
   INDEX `date_updated`(`date_updated_gmt`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   INDEX `status`(`status` ASC) USING BTREE,
   INDEX `date_created`(`date_created_gmt` ASC) USING BTREE,
   INDEX `customer_id_billing_email`(`customer_id` ASC, `billing_email`(171) ASC) USING BTREE,
@@ -2358,6 +2730,9 @@ CREATE TABLE `wp_wc_orders`  (
   INDEX `parent_order_id`(`parent_order_id` ASC) USING BTREE,
   INDEX `date_updated`(`date_updated_gmt` ASC) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -2370,6 +2745,7 @@ CREATE TABLE `wp_wc_orders`  (
 DROP TABLE IF EXISTS `wp_wc_orders_meta`;
 CREATE TABLE `wp_wc_orders_meta`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `order_id` bigint(20) UNSIGNED NULL DEFAULT NULL,
   `meta_key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NULL DEFAULT NULL,
@@ -2379,6 +2755,8 @@ CREATE TABLE `wp_wc_orders_meta`  (
   INDEX `order_id_meta_key_meta_value`(`order_id`, `meta_key`(100), `meta_value`(82)) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `order_id` bigint UNSIGNED NULL DEFAULT NULL,
   `meta_key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NULL DEFAULT NULL,
@@ -2387,6 +2765,9 @@ CREATE TABLE `wp_wc_orders_meta`  (
   INDEX `meta_key_value`(`meta_key`(100) ASC, `meta_value`(82) ASC) USING BTREE,
   INDEX `order_id_meta_key_meta_value`(`order_id` ASC, `meta_key`(100) ASC, `meta_value`(82) ASC) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -2399,6 +2780,7 @@ CREATE TABLE `wp_wc_orders_meta`  (
 DROP TABLE IF EXISTS `wp_wc_product_attributes_lookup`;
 CREATE TABLE `wp_wc_product_attributes_lookup`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `product_id` bigint(20) NOT NULL,
   `product_or_parent_id` bigint(20) NOT NULL,
   `taxonomy` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
@@ -2409,6 +2791,8 @@ CREATE TABLE `wp_wc_product_attributes_lookup`  (
   INDEX `is_variation_attribute_term_id`(`is_variation_attribute`, `term_id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `product_id` bigint NOT NULL,
   `product_or_parent_id` bigint NOT NULL,
   `taxonomy` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
@@ -2418,6 +2802,9 @@ CREATE TABLE `wp_wc_product_attributes_lookup`  (
   PRIMARY KEY (`product_or_parent_id`, `term_id`, `product_id`, `taxonomy`) USING BTREE,
   INDEX `is_variation_attribute_term_id`(`is_variation_attribute` ASC, `term_id` ASC) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -2430,6 +2817,7 @@ CREATE TABLE `wp_wc_product_attributes_lookup`  (
 DROP TABLE IF EXISTS `wp_wc_product_download_directories`;
 CREATE TABLE `wp_wc_product_download_directories`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `url_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `url` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `enabled` tinyint(1) NOT NULL DEFAULT 0,
@@ -2437,19 +2825,28 @@ CREATE TABLE `wp_wc_product_download_directories`  (
   INDEX `url`(`url`(191)) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `url_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `url` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `enabled` tinyint(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`url_id`) USING BTREE,
   INDEX `url`(`url`(191) ASC) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
 -- Records of wp_wc_product_download_directories
 -- ----------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 INSERT INTO `wp_wc_product_download_directories` VALUES (1, 'file://F:/Overseas-E-commerce/wp-content/uploads/woocommerce_uploads/', 1);
+=======
+INSERT INTO `wp_wc_product_download_directories` VALUES (1, 'file://D:/wordpress/wp-content/uploads/woocommerce_uploads/', 1);
+>>>>>>> 45062407 (init wordpress project)
 =======
 INSERT INTO `wp_wc_product_download_directories` VALUES (1, 'file://D:/wordpress/wp-content/uploads/woocommerce_uploads/', 1);
 >>>>>>> 45062407 (init wordpress project)
@@ -2461,7 +2858,11 @@ INSERT INTO `wp_wc_product_download_directories` VALUES (2, 'http://localhost/wp
 DROP TABLE IF EXISTS `wp_wc_product_meta_lookup`;
 CREATE TABLE `wp_wc_product_meta_lookup`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `product_id` bigint(20) NOT NULL,
+=======
+  `product_id` bigint NOT NULL,
+>>>>>>> 45062407 (init wordpress project)
 =======
   `product_id` bigint NOT NULL,
 >>>>>>> 45062407 (init wordpress project)
@@ -2474,6 +2875,7 @@ CREATE TABLE `wp_wc_product_meta_lookup`  (
   `onsale` tinyint(1) NULL DEFAULT 0,
   `stock_quantity` double NULL DEFAULT NULL,
   `stock_status` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NULL DEFAULT 'instock',
+<<<<<<< HEAD
 <<<<<<< HEAD
   `rating_count` bigint(20) NULL DEFAULT 0,
   `average_rating` decimal(3, 2) NULL DEFAULT 0.00,
@@ -2490,6 +2892,8 @@ CREATE TABLE `wp_wc_product_meta_lookup`  (
   INDEX `sku`(`sku`(50)) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `rating_count` bigint NULL DEFAULT 0,
   `average_rating` decimal(3, 2) NULL DEFAULT 0.00,
   `total_sales` bigint NULL DEFAULT 0,
@@ -2504,6 +2908,9 @@ CREATE TABLE `wp_wc_product_meta_lookup`  (
   INDEX `min_max_price`(`min_price` ASC, `max_price` ASC) USING BTREE,
   INDEX `sku`(`sku`(50) ASC) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -2516,6 +2923,7 @@ CREATE TABLE `wp_wc_product_meta_lookup`  (
 DROP TABLE IF EXISTS `wp_wc_rate_limits`;
 CREATE TABLE `wp_wc_rate_limits`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `rate_limit_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `rate_limit_key` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `rate_limit_expiry` bigint(20) UNSIGNED NOT NULL,
@@ -2524,6 +2932,8 @@ CREATE TABLE `wp_wc_rate_limits`  (
   UNIQUE INDEX `rate_limit_key`(`rate_limit_key`(191)) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `rate_limit_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `rate_limit_key` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `rate_limit_expiry` bigint UNSIGNED NOT NULL,
@@ -2531,6 +2941,9 @@ CREATE TABLE `wp_wc_rate_limits`  (
   PRIMARY KEY (`rate_limit_id`) USING BTREE,
   UNIQUE INDEX `rate_limit_key`(`rate_limit_key`(191) ASC) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -2543,8 +2956,13 @@ CREATE TABLE `wp_wc_rate_limits`  (
 DROP TABLE IF EXISTS `wp_wc_reserved_stock`;
 CREATE TABLE `wp_wc_reserved_stock`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `order_id` bigint(20) NOT NULL,
   `product_id` bigint(20) NOT NULL,
+=======
+  `order_id` bigint NOT NULL,
+  `product_id` bigint NOT NULL,
+>>>>>>> 45062407 (init wordpress project)
 =======
   `order_id` bigint NOT NULL,
   `product_id` bigint NOT NULL,
@@ -2554,7 +2972,11 @@ CREATE TABLE `wp_wc_reserved_stock`  (
   `expires` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`order_id`, `product_id`) USING BTREE
 <<<<<<< HEAD
+<<<<<<< HEAD
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Fixed;
+=======
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+>>>>>>> 45062407 (init wordpress project)
 =======
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 >>>>>>> 45062407 (init wordpress project)
@@ -2569,6 +2991,7 @@ CREATE TABLE `wp_wc_reserved_stock`  (
 DROP TABLE IF EXISTS `wp_wc_tax_rate_classes`;
 CREATE TABLE `wp_wc_tax_rate_classes`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `tax_rate_class_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
   `slug` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
@@ -2576,20 +2999,30 @@ CREATE TABLE `wp_wc_tax_rate_classes`  (
   UNIQUE INDEX `slug`(`slug`(191)) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `tax_rate_class_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
   `slug` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`tax_rate_class_id`) USING BTREE,
   UNIQUE INDEX `slug`(`slug`(191) ASC) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
 -- Records of wp_wc_tax_rate_classes
 -- ----------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 INSERT INTO `wp_wc_tax_rate_classes` VALUES (1, 'Reduced rate', 'reduced-rate');
 INSERT INTO `wp_wc_tax_rate_classes` VALUES (2, 'Zero rate', 'zero-rate');
+=======
+INSERT INTO `wp_wc_tax_rate_classes` VALUES (1, '减税税率', '%e5%87%8f%e7%a8%8e%e7%a8%8e%e7%8e%87');
+INSERT INTO `wp_wc_tax_rate_classes` VALUES (2, '零税率', '%e9%9b%b6%e7%a8%8e%e7%8e%87');
+>>>>>>> 45062407 (init wordpress project)
 =======
 INSERT INTO `wp_wc_tax_rate_classes` VALUES (1, '减税税率', '%e5%87%8f%e7%a8%8e%e7%a8%8e%e7%8e%87');
 INSERT INTO `wp_wc_tax_rate_classes` VALUES (2, '零税率', '%e9%9b%b6%e7%a8%8e%e7%8e%87');
@@ -2601,15 +3034,21 @@ INSERT INTO `wp_wc_tax_rate_classes` VALUES (2, '零税率', '%e9%9b%b6%e7%a8%8e
 DROP TABLE IF EXISTS `wp_wc_webhooks`;
 CREATE TABLE `wp_wc_webhooks`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `webhook_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `status` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `name` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `user_id` bigint(20) UNSIGNED NOT NULL,
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `webhook_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `status` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `name` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `user_id` bigint UNSIGNED NOT NULL,
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
   `delivery_url` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `secret` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
@@ -2619,6 +3058,7 @@ CREATE TABLE `wp_wc_webhooks`  (
   `date_modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `date_modified_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
 <<<<<<< HEAD
+<<<<<<< HEAD
   `api_version` smallint(4) NOT NULL,
   `failure_count` smallint(10) NOT NULL DEFAULT 0,
   `pending_delivery` tinyint(1) NOT NULL DEFAULT 0,
@@ -2626,12 +3066,17 @@ CREATE TABLE `wp_wc_webhooks`  (
   INDEX `user_id`(`user_id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `api_version` smallint NOT NULL,
   `failure_count` smallint NOT NULL DEFAULT 0,
   `pending_delivery` tinyint(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`webhook_id`) USING BTREE,
   INDEX `user_id`(`user_id` ASC) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -2644,8 +3089,13 @@ CREATE TABLE `wp_wc_webhooks`  (
 DROP TABLE IF EXISTS `wp_woocommerce_api_keys`;
 CREATE TABLE `wp_woocommerce_api_keys`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `key_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) UNSIGNED NOT NULL,
+=======
+  `key_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `user_id` bigint UNSIGNED NOT NULL,
+>>>>>>> 45062407 (init wordpress project)
 =======
   `key_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `user_id` bigint UNSIGNED NOT NULL,
@@ -2659,9 +3109,15 @@ CREATE TABLE `wp_woocommerce_api_keys`  (
   `last_access` datetime NULL DEFAULT NULL,
   PRIMARY KEY (`key_id`) USING BTREE,
 <<<<<<< HEAD
+<<<<<<< HEAD
   INDEX `consumer_key`(`consumer_key`) USING BTREE,
   INDEX `consumer_secret`(`consumer_secret`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+=======
+  INDEX `consumer_key`(`consumer_key` ASC) USING BTREE,
+  INDEX `consumer_secret`(`consumer_secret` ASC) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+>>>>>>> 45062407 (init wordpress project)
 =======
   INDEX `consumer_key`(`consumer_key` ASC) USING BTREE,
   INDEX `consumer_secret`(`consumer_secret` ASC) USING BTREE
@@ -2678,7 +3134,11 @@ CREATE TABLE `wp_woocommerce_api_keys`  (
 DROP TABLE IF EXISTS `wp_woocommerce_attribute_taxonomies`;
 CREATE TABLE `wp_woocommerce_attribute_taxonomies`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `attribute_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+=======
+  `attribute_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+>>>>>>> 45062407 (init wordpress project)
 =======
   `attribute_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
 >>>>>>> 45062407 (init wordpress project)
@@ -2687,15 +3147,21 @@ CREATE TABLE `wp_woocommerce_attribute_taxonomies`  (
   `attribute_type` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `attribute_orderby` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
 <<<<<<< HEAD
+<<<<<<< HEAD
   `attribute_public` int(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`attribute_id`) USING BTREE,
   INDEX `attribute_name`(`attribute_name`(20)) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `attribute_public` int NOT NULL DEFAULT 1,
   PRIMARY KEY (`attribute_id`) USING BTREE,
   INDEX `attribute_name`(`attribute_name`(20) ASC) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -2707,6 +3173,7 @@ CREATE TABLE `wp_woocommerce_attribute_taxonomies`  (
 -- ----------------------------
 DROP TABLE IF EXISTS `wp_woocommerce_downloadable_product_permissions`;
 CREATE TABLE `wp_woocommerce_downloadable_product_permissions`  (
+<<<<<<< HEAD
 <<<<<<< HEAD
   `permission_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `download_id` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
@@ -2727,6 +3194,8 @@ CREATE TABLE `wp_woocommerce_downloadable_product_permissions`  (
   INDEX `idx_user_email`(`user_email`(100)) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `permission_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `download_id` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `product_id` bigint UNSIGNED NOT NULL,
@@ -2745,6 +3214,9 @@ CREATE TABLE `wp_woocommerce_downloadable_product_permissions`  (
   INDEX `user_order_remaining_expires`(`user_id` ASC, `order_id` ASC, `downloads_remaining` ASC, `access_expires` ASC) USING BTREE,
   INDEX `idx_user_email`(`user_email`(100) ASC) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -2757,9 +3229,15 @@ CREATE TABLE `wp_woocommerce_downloadable_product_permissions`  (
 DROP TABLE IF EXISTS `wp_woocommerce_log`;
 CREATE TABLE `wp_woocommerce_log`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `log_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `timestamp` datetime NOT NULL,
   `level` smallint(4) NOT NULL,
+=======
+  `log_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `timestamp` datetime NOT NULL,
+  `level` smallint NOT NULL,
+>>>>>>> 45062407 (init wordpress project)
 =======
   `log_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `timestamp` datetime NOT NULL,
@@ -2770,8 +3248,13 @@ CREATE TABLE `wp_woocommerce_log`  (
   `context` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NULL,
   PRIMARY KEY (`log_id`) USING BTREE,
 <<<<<<< HEAD
+<<<<<<< HEAD
   INDEX `level`(`level`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+=======
+  INDEX `level`(`level` ASC) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+>>>>>>> 45062407 (init wordpress project)
 =======
   INDEX `level`(`level` ASC) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
@@ -2787,6 +3270,7 @@ CREATE TABLE `wp_woocommerce_log`  (
 DROP TABLE IF EXISTS `wp_woocommerce_order_itemmeta`;
 CREATE TABLE `wp_woocommerce_order_itemmeta`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `order_item_id` bigint(20) UNSIGNED NOT NULL,
   `meta_key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NULL DEFAULT NULL,
@@ -2796,6 +3280,8 @@ CREATE TABLE `wp_woocommerce_order_itemmeta`  (
   INDEX `meta_key`(`meta_key`(32)) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `meta_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `order_item_id` bigint UNSIGNED NOT NULL,
   `meta_key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NULL DEFAULT NULL,
@@ -2804,6 +3290,9 @@ CREATE TABLE `wp_woocommerce_order_itemmeta`  (
   INDEX `order_item_id`(`order_item_id` ASC) USING BTREE,
   INDEX `meta_key`(`meta_key`(32) ASC) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -2816,6 +3305,7 @@ CREATE TABLE `wp_woocommerce_order_itemmeta`  (
 DROP TABLE IF EXISTS `wp_woocommerce_order_items`;
 CREATE TABLE `wp_woocommerce_order_items`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `order_item_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `order_item_name` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `order_item_type` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
@@ -2824,6 +3314,8 @@ CREATE TABLE `wp_woocommerce_order_items`  (
   INDEX `order_id`(`order_id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `order_item_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `order_item_name` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `order_item_type` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
@@ -2831,6 +3323,9 @@ CREATE TABLE `wp_woocommerce_order_items`  (
   PRIMARY KEY (`order_item_id`) USING BTREE,
   INDEX `order_id`(`order_id` ASC) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -2843,6 +3338,7 @@ CREATE TABLE `wp_woocommerce_order_items`  (
 DROP TABLE IF EXISTS `wp_woocommerce_payment_tokenmeta`;
 CREATE TABLE `wp_woocommerce_payment_tokenmeta`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `payment_token_id` bigint(20) UNSIGNED NOT NULL,
   `meta_key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NULL DEFAULT NULL,
@@ -2852,6 +3348,8 @@ CREATE TABLE `wp_woocommerce_payment_tokenmeta`  (
   INDEX `meta_key`(`meta_key`(32)) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `meta_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `payment_token_id` bigint UNSIGNED NOT NULL,
   `meta_key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NULL DEFAULT NULL,
@@ -2860,6 +3358,9 @@ CREATE TABLE `wp_woocommerce_payment_tokenmeta`  (
   INDEX `payment_token_id`(`payment_token_id` ASC) USING BTREE,
   INDEX `meta_key`(`meta_key`(32) ASC) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -2872,6 +3373,7 @@ CREATE TABLE `wp_woocommerce_payment_tokenmeta`  (
 DROP TABLE IF EXISTS `wp_woocommerce_payment_tokens`;
 CREATE TABLE `wp_woocommerce_payment_tokens`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `token_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `gateway_id` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `token` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
@@ -2882,6 +3384,8 @@ CREATE TABLE `wp_woocommerce_payment_tokens`  (
   INDEX `user_id`(`user_id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `token_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `gateway_id` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `token` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
@@ -2891,6 +3395,9 @@ CREATE TABLE `wp_woocommerce_payment_tokens`  (
   PRIMARY KEY (`token_id`) USING BTREE,
   INDEX `user_id`(`user_id` ASC) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -2903,6 +3410,7 @@ CREATE TABLE `wp_woocommerce_payment_tokens`  (
 DROP TABLE IF EXISTS `wp_woocommerce_sessions`;
 CREATE TABLE `wp_woocommerce_sessions`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `session_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `session_key` char(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `session_value` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
@@ -2912,6 +3420,8 @@ CREATE TABLE `wp_woocommerce_sessions`  (
   INDEX `session_expiry`(`session_expiry`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `session_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `session_key` char(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `session_value` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
@@ -2920,13 +3430,20 @@ CREATE TABLE `wp_woocommerce_sessions`  (
   UNIQUE INDEX `session_key`(`session_key` ASC) USING BTREE,
   INDEX `session_expiry`(`session_expiry` ASC) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
 -- Records of wp_woocommerce_sessions
 -- ----------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 INSERT INTO `wp_woocommerce_sessions` VALUES (1, '1', 'a:1:{s:8:\"customer\";s:754:\"a:28:{s:2:\"id\";s:1:\"1\";s:13:\"date_modified\";s:0:\"\";s:10:\"first_name\";s:0:\"\";s:9:\"last_name\";s:0:\"\";s:7:\"company\";s:0:\"\";s:5:\"phone\";s:0:\"\";s:5:\"email\";s:11:\"test@qq.com\";s:7:\"address\";s:0:\"\";s:9:\"address_1\";s:0:\"\";s:9:\"address_2\";s:0:\"\";s:4:\"city\";s:0:\"\";s:5:\"state\";s:2:\"CA\";s:8:\"postcode\";s:0:\"\";s:7:\"country\";s:2:\"US\";s:19:\"shipping_first_name\";s:0:\"\";s:18:\"shipping_last_name\";s:0:\"\";s:16:\"shipping_company\";s:0:\"\";s:14:\"shipping_phone\";s:0:\"\";s:16:\"shipping_address\";s:0:\"\";s:18:\"shipping_address_1\";s:0:\"\";s:18:\"shipping_address_2\";s:0:\"\";s:13:\"shipping_city\";s:0:\"\";s:14:\"shipping_state\";s:2:\"CA\";s:17:\"shipping_postcode\";s:0:\"\";s:16:\"shipping_country\";s:2:\"US\";s:13:\"is_vat_exempt\";s:0:\"\";s:19:\"calculated_shipping\";s:0:\"\";s:9:\"meta_data\";a:0:{}}\";}', 1772635590);
+=======
+INSERT INTO `wp_woocommerce_sessions` VALUES (1, '1', 'a:1:{s:8:\"customer\";s:764:\"a:28:{s:2:\"id\";s:1:\"1\";s:13:\"date_modified\";s:0:\"\";s:10:\"first_name\";s:0:\"\";s:9:\"last_name\";s:0:\"\";s:7:\"company\";s:0:\"\";s:5:\"phone\";s:0:\"\";s:5:\"email\";s:17:\"2711398045@qq.com\";s:7:\"address\";s:0:\"\";s:9:\"address_1\";s:0:\"\";s:9:\"address_2\";s:0:\"\";s:4:\"city\";s:0:\"\";s:5:\"state\";s:4:\"CN20\";s:8:\"postcode\";s:0:\"\";s:7:\"country\";s:2:\"CN\";s:19:\"shipping_first_name\";s:0:\"\";s:18:\"shipping_last_name\";s:0:\"\";s:16:\"shipping_company\";s:0:\"\";s:14:\"shipping_phone\";s:0:\"\";s:16:\"shipping_address\";s:0:\"\";s:18:\"shipping_address_1\";s:0:\"\";s:18:\"shipping_address_2\";s:0:\"\";s:13:\"shipping_city\";s:0:\"\";s:14:\"shipping_state\";s:4:\"CN20\";s:17:\"shipping_postcode\";s:0:\"\";s:16:\"shipping_country\";s:2:\"CN\";s:13:\"is_vat_exempt\";s:0:\"\";s:19:\"calculated_shipping\";s:0:\"\";s:9:\"meta_data\";a:0:{}}\";}', 1772675423);
+>>>>>>> 45062407 (init wordpress project)
 =======
 INSERT INTO `wp_woocommerce_sessions` VALUES (1, '1', 'a:1:{s:8:\"customer\";s:764:\"a:28:{s:2:\"id\";s:1:\"1\";s:13:\"date_modified\";s:0:\"\";s:10:\"first_name\";s:0:\"\";s:9:\"last_name\";s:0:\"\";s:7:\"company\";s:0:\"\";s:5:\"phone\";s:0:\"\";s:5:\"email\";s:17:\"2711398045@qq.com\";s:7:\"address\";s:0:\"\";s:9:\"address_1\";s:0:\"\";s:9:\"address_2\";s:0:\"\";s:4:\"city\";s:0:\"\";s:5:\"state\";s:4:\"CN20\";s:8:\"postcode\";s:0:\"\";s:7:\"country\";s:2:\"CN\";s:19:\"shipping_first_name\";s:0:\"\";s:18:\"shipping_last_name\";s:0:\"\";s:16:\"shipping_company\";s:0:\"\";s:14:\"shipping_phone\";s:0:\"\";s:16:\"shipping_address\";s:0:\"\";s:18:\"shipping_address_1\";s:0:\"\";s:18:\"shipping_address_2\";s:0:\"\";s:13:\"shipping_city\";s:0:\"\";s:14:\"shipping_state\";s:4:\"CN20\";s:17:\"shipping_postcode\";s:0:\"\";s:16:\"shipping_country\";s:2:\"CN\";s:13:\"is_vat_exempt\";s:0:\"\";s:19:\"calculated_shipping\";s:0:\"\";s:9:\"meta_data\";a:0:{}}\";}', 1772675423);
 >>>>>>> 45062407 (init wordpress project)
@@ -2937,6 +3454,7 @@ INSERT INTO `wp_woocommerce_sessions` VALUES (1, '1', 'a:1:{s:8:\"customer\";s:7
 DROP TABLE IF EXISTS `wp_woocommerce_shipping_zone_locations`;
 CREATE TABLE `wp_woocommerce_shipping_zone_locations`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `location_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `zone_id` bigint(20) UNSIGNED NOT NULL,
   `location_code` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
@@ -2946,6 +3464,8 @@ CREATE TABLE `wp_woocommerce_shipping_zone_locations`  (
   INDEX `location_type_code`(`location_type`(10), `location_code`(20)) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `location_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `zone_id` bigint UNSIGNED NOT NULL,
   `location_code` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
@@ -2954,6 +3474,9 @@ CREATE TABLE `wp_woocommerce_shipping_zone_locations`  (
   INDEX `zone_id`(`zone_id` ASC) USING BTREE,
   INDEX `location_type_code`(`location_type`(10) ASC, `location_code`(20) ASC) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -2966,6 +3489,7 @@ CREATE TABLE `wp_woocommerce_shipping_zone_locations`  (
 DROP TABLE IF EXISTS `wp_woocommerce_shipping_zone_methods`;
 CREATE TABLE `wp_woocommerce_shipping_zone_methods`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `zone_id` bigint(20) UNSIGNED NOT NULL,
   `instance_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `method_id` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
@@ -2974,6 +3498,8 @@ CREATE TABLE `wp_woocommerce_shipping_zone_methods`  (
   PRIMARY KEY (`instance_id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `zone_id` bigint UNSIGNED NOT NULL,
   `instance_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `method_id` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
@@ -2981,6 +3507,9 @@ CREATE TABLE `wp_woocommerce_shipping_zone_methods`  (
   `is_enabled` tinyint(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`instance_id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -2993,17 +3522,23 @@ CREATE TABLE `wp_woocommerce_shipping_zone_methods`  (
 DROP TABLE IF EXISTS `wp_woocommerce_shipping_zones`;
 CREATE TABLE `wp_woocommerce_shipping_zones`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `zone_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `zone_name` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `zone_order` bigint(20) UNSIGNED NOT NULL,
   PRIMARY KEY (`zone_id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `zone_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `zone_name` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `zone_order` bigint UNSIGNED NOT NULL,
   PRIMARY KEY (`zone_id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -3016,6 +3551,7 @@ CREATE TABLE `wp_woocommerce_shipping_zones`  (
 DROP TABLE IF EXISTS `wp_woocommerce_tax_rate_locations`;
 CREATE TABLE `wp_woocommerce_tax_rate_locations`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `location_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `location_code` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `tax_rate_id` bigint(20) UNSIGNED NOT NULL,
@@ -3025,6 +3561,8 @@ CREATE TABLE `wp_woocommerce_tax_rate_locations`  (
   INDEX `location_type_code`(`location_type`(10), `location_code`(20)) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `location_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `location_code` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `tax_rate_id` bigint UNSIGNED NOT NULL,
@@ -3033,6 +3571,9 @@ CREATE TABLE `wp_woocommerce_tax_rate_locations`  (
   INDEX `tax_rate_id`(`tax_rate_id` ASC) USING BTREE,
   INDEX `location_type_code`(`location_type`(10) ASC, `location_code`(20) ASC) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
@@ -3045,7 +3586,11 @@ CREATE TABLE `wp_woocommerce_tax_rate_locations`  (
 DROP TABLE IF EXISTS `wp_woocommerce_tax_rates`;
 CREATE TABLE `wp_woocommerce_tax_rates`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `tax_rate_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+=======
+  `tax_rate_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+>>>>>>> 45062407 (init wordpress project)
 =======
   `tax_rate_id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
 >>>>>>> 45062407 (init wordpress project)
@@ -3053,6 +3598,7 @@ CREATE TABLE `wp_woocommerce_tax_rates`  (
   `tax_rate_state` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
   `tax_rate` varchar(8) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
   `tax_rate_name` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+<<<<<<< HEAD
 <<<<<<< HEAD
   `tax_rate_priority` bigint(20) UNSIGNED NOT NULL,
   `tax_rate_compound` int(1) NOT NULL DEFAULT 0,
@@ -3066,6 +3612,8 @@ CREATE TABLE `wp_woocommerce_tax_rates`  (
   INDEX `tax_rate_priority`(`tax_rate_priority`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
 =======
+=======
+>>>>>>> 45062407 (init wordpress project)
   `tax_rate_priority` bigint UNSIGNED NOT NULL,
   `tax_rate_compound` int NOT NULL DEFAULT 0,
   `tax_rate_shipping` int NOT NULL DEFAULT 1,
@@ -3077,6 +3625,9 @@ CREATE TABLE `wp_woocommerce_tax_rates`  (
   INDEX `tax_rate_class`(`tax_rate_class`(10) ASC) USING BTREE,
   INDEX `tax_rate_priority`(`tax_rate_priority` ASC) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_520_ci ROW_FORMAT = Dynamic;
+<<<<<<< HEAD
+>>>>>>> 45062407 (init wordpress project)
+=======
 >>>>>>> 45062407 (init wordpress project)
 
 -- ----------------------------
