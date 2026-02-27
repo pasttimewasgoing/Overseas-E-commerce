@@ -1,0 +1,676 @@
+/* 产品页面样式 - 完全基于原型图 */
+
+/* 重置 WooCommerce 默认样式 */
+.woocommerce .products,
+.woocommerce ul.products {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    display: block !important;
+}
+
+.woocommerce ul.products li.product {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    float: none !important;
+}
+
+/* 隐藏 WooCommerce 默认元素 */
+.woocommerce-result-count,
+.woocommerce-ordering {
+    display: none !important;
+}
+
+/* 头部横幅 */
+.page-banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-image-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #d0d0d0;
+    z-index: 0;
+}
+
+.banner-overlay {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.banner-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.banner-left {
+    flex: 1;
+    position: relative;
+}
+
+.banner-images {
+    position: relative;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-placeholder {
+    width: 100%;
+    max-width: 500px;
+    height: 350px;
+    background: #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.banner-right {
+    flex: 1;
+}
+
+.banner-text {
+    text-align: left;
+}
+
+.banner-text h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.banner-subtitle {
+    font-size: 16px;
+    color: rgba(255,255,255,0.95);
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.banner-desc {
+    font-size: 16px;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.banner-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 35px;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    border: 2px solid #333;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.banner-btn:hover {
+    background: #333;
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.breadcrumb {
+    background: rgba(255,255,255,0.95);
+    padding: 12px 0;
+    border-top: 1px solid #e0e0e0;
+    position: relative;
+    z-index: 1;
+}
+
+.breadcrumb a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: #2c5aa0;
+}
+
+.breadcrumb span {
+    color: #333;
+    font-weight: 500;
+}
+
+/* 产品页面主体 */
+.products-page {
+    padding: 40px 0 80px;
+    min-height: calc(100vh - 200px);
+}
+
+.products-layout {
+    display: flex;
+    gap: 30px;
+}
+
+/* 左侧分类栏 */
+.category-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.category-header {
+    background: #2c5aa0;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+.category-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.category-nav {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+}
+
+.category-group {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.category-group:last-child {
+    border-bottom: none;
+}
+
+.category-title {
+    padding: 14px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.category-title .category-name {
+    flex: 1;
+}
+
+.category-title a {
+    color: inherit;
+    text-decoration: none;
+    flex: 1;
+}
+
+.category-title:hover {
+    background: #f8f9fa;
+}
+
+.category-title.active {
+    background: #f0f4f8;
+    color: #2c5aa0;
+}
+
+.category-title span:first-child {
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #fafafa;
+}
+
+.category-list li {
+    border-top: 1px solid #f0f0f0;
+}
+
+.category-list li:first-child {
+    border-top: none;
+}
+
+.category-list a {
+    display: block;
+    padding: 10px 20px 10px 40px;
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.category-list a:hover {
+    background: #fff;
+    color: #2c5aa0;
+    padding-left: 45px;
+}
+
+.category-list a.active {
+    background: #fff;
+    color: #2c5aa0;
+    font-weight: 500;
+}
+
+/* 右侧产品区域 */
+.products-content {
+    flex: 1;
+}
+
+/* 搜索容器 */
+.search-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
+.product-search-form {
+    display: flex;
+    gap: 10px;
+}
+
+.main-search-input {
+    width: 350px;
+    padding: 12px 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.main-search-input:focus {
+    border-color: #495057;
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
+}
+
+.search-btn {
+    padding: 12px 32px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.search-btn:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+/* 产品网格 */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    padding: 0;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+    border-color: #e0e0e0;
+}
+
+.product-card .product-img {
+    width: 100%;
+    height: 200px;
+    background: #f5f5f5;
+    transition: transform 0.4s;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card .product-img a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.product-card .product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.product-card:hover .product-img img {
+    transform: scale(1.05);
+}
+
+.product-card .badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.product-card .badge-sale {
+    background: #ff4757;
+    color: #fff;
+}
+
+.product-card .badge-hot {
+    background: #ffa502;
+    color: #fff;
+}
+
+.product-card h3,
+.product-card .product-title {
+    font-size: 15px;
+    margin: 15px 15px 8px;
+    color: #1a1a1a;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.product-card h3 a,
+.product-card .product-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.product-card h3 a:hover,
+.product-card .product-title a:hover {
+    color: #2c5aa0;
+}
+
+.product-card p.product-desc {
+    font-size: 13px;
+    color: #888;
+    margin: 0 15px 15px;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.product-card .product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-top: 1px solid #f0f0f0;
+    background: #fafafa;
+}
+
+.product-card .product-price,
+.product-card p.product-price {
+    font-size: 20px;
+    color: #ff4757;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.product-card .product-price .woocommerce-Price-amount,
+.product-card p.product-price .woocommerce-Price-amount {
+    color: #ff4757;
+}
+
+.product-card .product-price del,
+.product-card p.product-price del {
+    font-size: 14px;
+    color: #999;
+    margin-right: 5px;
+}
+
+.product-card .product-price del .woocommerce-Price-amount,
+.product-card p.product-price del .woocommerce-Price-amount {
+    color: #999;
+}
+
+.product-card .buy-btn,
+.product-card button.buy-btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.product-card .buy-btn:hover,
+.product-card button.buy-btn:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+.product-card .buy-btn:disabled,
+.product-card button.buy-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* 更多按钮容器 */
+.more-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.more-btn {
+    padding: 15px 50px;
+    background: #fff;
+    color: #333;
+    border: 2px solid #000;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.more-btn:hover {
+    background: #000;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* 分页 */
+.woocommerce-pagination {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.woocommerce-pagination ul {
+    display: inline-flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.woocommerce-pagination ul li {
+    display: inline-block;
+}
+
+.woocommerce-pagination ul li a,
+.woocommerce-pagination ul li span {
+    display: block;
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.woocommerce-pagination ul li a:hover,
+.woocommerce-pagination ul li span.current {
+    background: #2c5aa0;
+    color: #fff;
+    border-color: #2c5aa0;
+}
+
+/* 无产品提示 */
+.no-products-found {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.no-products-found p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+    .products-layout {
+        flex-direction: column;
+    }
+    
+    .category-sidebar {
+        width: 100%;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .banner-content {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px 20px;
+    }
+    
+    .banner-text h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .search-container {
+        justify-content: stretch;
+    }
+    
+    .product-search-form {
+        width: 100%;
+    }
+    
+    .main-search-input {
+        flex: 1;
+        width: auto;
+    }
+    
+    .banner-text h1 {
+        font-size: 26px;
+    }
+    
+    .banner-images {
+        min-height: 250px;
+    }
+    
+    .banner-placeholder {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .banner-text h1 {
+        font-size: 22px;
+    }
+    
+    .banner-desc {
+        font-size: 14px;
+    }
+}
+
+
+/* 产品占位符样式 */
+.product-placeholder {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.product-placeholder .placeholder-image {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.product-placeholder h3,
+.product-placeholder .product-desc,
+.product-placeholder .product-price {
+    color: #ccc;
+}
+
+.product-placeholder .buy-btn {
+    background: #e0e0e0;
+    color: #999;
+    cursor: not-allowed;
+}
+
+/* 无产品消息 */
+.no-products-message {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.no-products-message p {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}

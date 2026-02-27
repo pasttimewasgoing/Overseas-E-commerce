@@ -1,0 +1,142 @@
+# Chinese (China) translation for XSRUPB
+# Copyright (C) 2024 XSRUPB
+# This file is distributed under the same license as the XSRUPB package.
+msgid ""
+msgstr ""
+"Project-Id-Version: XSRUPB 1.0.0\n"
+"Report-Msgid-Bugs-To: https://example.com\n"
+"POT-Creation-Date: 2024-01-01 00:00:00+00:00\n"
+"PO-Revision-Date: 2024-01-01 00:00:00+00:00\n"
+"Last-Translator: XSRUPB Team\n"
+"Language-Team: Chinese (China)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "主导航菜单"
+msgstr "主导航菜单"
+
+msgid "页脚菜单"
+msgstr "页脚菜单"
+
+msgid "侧边栏"
+msgstr "侧边栏"
+
+msgid "主侧边栏小工具区域"
+msgstr "主侧边栏小工具区域"
+
+msgid "页脚区域 1"
+msgstr "页脚区域 1"
+
+msgid "页脚第一个小工具区域"
+msgstr "页脚第一个小工具区域"
+
+msgid "页脚区域 2"
+msgstr "页脚区域 2"
+
+msgid "页脚第二个小工具区域"
+msgstr "页脚第二个小工具区域"
+
+msgid "页脚区域 3"
+msgstr "页脚区域 3"
+
+msgid "页脚第三个小工具区域"
+msgstr "页脚第三个小工具区域"
+
+msgid "产品已添加到购物车"
+msgstr "产品已添加到购物车"
+
+msgid "添加到购物车失败"
+msgstr "添加到购物车失败"
+
+msgid "加载中..."
+msgstr "加载中..."
+
+msgid "SALE"
+msgstr "促销"
+
+msgid "HOT"
+msgstr "热门"
+
+msgid "购买"
+msgstr "购买"
+
+msgid "缺货"
+msgstr "缺货"
+
+msgid "暂无产品"
+msgstr "暂无产品"
+
+msgid "安全验证失败"
+msgstr "安全验证失败"
+
+msgid "无效的产品数据"
+msgstr "无效的产品数据"
+
+msgid "购物车数据为空"
+msgstr "购物车数据为空"
+
+msgid "购物车已更新"
+msgstr "购物车已更新"
+
+msgid "请输入搜索关键词"
+msgstr "请输入搜索关键词"
+
+msgid "未找到产品"
+msgstr "未找到产品"
+
+msgid "图片"
+msgstr "图片"
+
+msgid "产品"
+msgstr "产品"
+
+msgid "价格"
+msgstr "价格"
+
+msgid "数量"
+msgstr "数量"
+
+msgid "小计"
+msgstr "小计"
+
+msgid "可预订"
+msgstr "可预订"
+
+msgid "移除此项"
+msgstr "移除此项"
+
+msgid "更新购物车"
+msgstr "更新购物车"
+
+msgid "页面未找到"
+msgstr "页面未找到"
+
+msgid "抱歉，您访问的页面不存在或已被删除。"
+msgstr "抱歉，您访问的页面不存在或已被删除。"
+
+msgid "返回首页"
+msgstr "返回首页"
+
+msgid "浏览产品"
+msgstr "浏览产品"
+
+msgid "菜单"
+msgstr "菜单"
+
+msgid "版权所有"
+msgstr "版权所有"
+
+msgid "上一页"
+msgstr "上一页"
+
+msgid "下一页"
+msgstr "下一页"
+
+msgid "暂无内容"
+msgstr "暂无内容"
+
+msgid "首页"
+msgstr "首页"

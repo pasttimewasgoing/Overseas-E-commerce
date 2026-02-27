@@ -1,0 +1,776 @@
+/* 产品详情页面样式 */
+
+/* 面包屑导航 */
+.breadcrumb-section {
+    background: #f8f9fa;
+    padding: 15px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.breadcrumb-nav {
+    font-size: 14px;
+}
+
+.breadcrumb-nav .woocommerce-breadcrumb {
+    color: #666;
+}
+
+.breadcrumb-nav .woocommerce-breadcrumb a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumb-nav .woocommerce-breadcrumb a:hover {
+    color: #2c5aa0;
+}
+
+.breadcrumb-nav .separator {
+    margin: 0 10px;
+    color: #999;
+}
+
+/* 产品详情区域 */
+.product-detail-section {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.product-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+/* 产品图片画廊 */
+.product-gallery {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+}
+
+.main-image {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.main-image .image-placeholder {
+    width: 100%;
+    height: 500px;
+    background: #e0e0e0;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.main-image:hover img {
+    transform: scale(1.05);
+}
+
+.image-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 8px 16px;
+    background: #2c5aa0;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.sale-badge {
+    background: #ff4757;
+}
+
+.new-badge {
+    background: #2c5aa0;
+}
+
+.thumbnail-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.thumbnail {
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+    border-color: #2c5aa0;
+}
+
+.thumbnail .image-placeholder {
+    width: 100%;
+    height: 100px;
+    background: #e0e0e0;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* 产品信息 */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.product-code {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.product-code span {
+    font-weight: 600;
+    color: #333;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-rating .star-rating {
+    font-size: 18px;
+}
+
+.rating-text {
+    font-size: 14px;
+    color: #666;
+}
+
+.price-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    border-top: 1px solid #e9ecef;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.price-section .current-price {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2c5aa0;
+}
+
+.price-section .current-price .woocommerce-Price-amount {
+    color: #2c5aa0;
+}
+
+.price-section .current-price del,
+.price-section .current-price .original-price {
+    font-size: 24px;
+    color: #999;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.price-section .current-price del .woocommerce-Price-amount {
+    color: #999;
+}
+
+.discount-badge {
+    padding: 6px 12px;
+    background: #ff4757;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.product-description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* 产品选项 */
+.product-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-options .cart {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-options .quantity {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.product-options .quantity label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.product-options .quantity input {
+    width: 80px;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* 购买按钮 */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.action-buttons .single_add_to_cart_button,
+.action-buttons .add-to-cart-btn {
+    flex: 1;
+    padding: 16px 30px;
+    background: #fff;
+    color: #2c5aa0;
+    border: 2px solid #2c5aa0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.action-buttons .single_add_to_cart_button:hover,
+.action-buttons .add-to-cart-btn:hover {
+    background: #2c5aa0;
+    color: #fff;
+}
+
+.action-buttons .buy-now-btn {
+    flex: 1;
+    padding: 16px 30px;
+    background: #2c5aa0;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.action-buttons .buy-now-btn:hover {
+    background: #1a3a6b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(44, 90, 160, 0.3);
+}
+
+.action-buttons .wishlist-btn {
+    width: 56px;
+    height: 56px;
+    border: 2px solid #ddd;
+    background: #fff;
+    border-radius: 8px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s;
+    flex-shrink: 0;
+}
+
+.action-buttons .wishlist-btn:hover {
+    border-color: #ff4757;
+    color: #ff4757;
+}
+
+.product-options .single_add_to_cart_button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    border-color: #ccc;
+}
+
+/* 产品特点 */
+.product-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.feature-item .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: #2c5aa0;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* 产品标签页 */
+.product-tabs-section {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.woocommerce-tabs {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.woocommerce-tabs .tabs {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.woocommerce-tabs .tabs li {
+    flex: 1;
+}
+
+.woocommerce-tabs .tabs li a {
+    display: block;
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.woocommerce-tabs .tabs li a:hover {
+    color: #2c5aa0;
+    background: #f8f9fa;
+}
+
+.woocommerce-tabs .tabs li.active a {
+    color: #2c5aa0;
+    border-bottom-color: #2c5aa0;
+}
+
+.woocommerce-tabs .panel {
+    padding: 40px;
+}
+
+.woocommerce-tabs .panel h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.woocommerce-tabs .panel h3 {
+    font-size: 20px;
+    margin: 30px 0 15px;
+    color: #333;
+}
+
+.woocommerce-tabs .panel p {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.woocommerce-tabs .panel ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.woocommerce-tabs .panel ul li {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* 产品规格表格 */
+.woocommerce-product-attributes {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.woocommerce-product-attributes tr {
+    border-bottom: 1px solid #e9ecef;
+}
+
+.woocommerce-product-attributes th,
+.woocommerce-product-attributes td {
+    padding: 15px;
+    text-align: left;
+}
+
+.woocommerce-product-attributes th {
+    font-weight: 600;
+    color: #333;
+    width: 30%;
+    background: #f8f9fa;
+}
+
+.woocommerce-product-attributes td {
+    color: #555;
+}
+
+/* 评论区域 */
+#reviews {
+    margin-top: 20px;
+}
+
+#reviews .commentlist {
+    list-style: none;
+    padding: 0;
+}
+
+#reviews .comment {
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+#reviews .comment-text {
+    margin-top: 10px;
+}
+
+#reviews .star-rating {
+    margin-bottom: 10px;
+}
+
+/* 相关产品 */
+.related-products-section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+    .product-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .product-gallery {
+        position: static;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-title {
+        font-size: 24px;
+    }
+    
+    .price-section .price {
+        font-size: 28px;
+    }
+    
+    .product-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .woocommerce-tabs .tabs {
+        flex-wrap: wrap;
+    }
+    
+    .woocommerce-tabs .tabs li {
+        flex: 1 1 50%;
+    }
+    
+    .woocommerce-tabs .panel {
+        padding: 20px;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .thumbnail-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .woocommerce-tabs .tabs li {
+        flex: 1 1 100%;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 数量选择器样式 */
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.qty-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: #f8f9fa;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 4px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qty-btn:hover {
+    background: #2c5aa0;
+    color: #fff;
+}
+
+.qty-input {
+    width: 60px;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    background: transparent;
+}
+
+.qty-input:focus {
+    outline: none;
+}
+
+/* 自定义购买区域 */
+.custom-purchase-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.custom-purchase-area .option-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.custom-purchase-area .option-group label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* 收藏按钮激活状态 */
+.wishlist-btn.favorited {
+    color: #ff4757;
+    border-color: #ff4757;
+}
+
+/* 相关产品区域 */
+.related-products-section {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.related-products-section .section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+.related-products-section .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.related-products-section .product-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s;
+}
+
+.related-products-section .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* 产品标签页样式优化 */
+.product-tabs-section {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.woocommerce-tabs {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.woocommerce-tabs .tabs {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid #e9ecef;
+    background: #fff;
+}
+
+.woocommerce-tabs .tabs li {
+    flex: 1;
+}
+
+.woocommerce-tabs .tabs li a {
+    display: block;
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.woocommerce-tabs .tabs li a:hover {
+    color: #2c5aa0;
+    background: #f8f9fa;
+}
+
+.woocommerce-tabs .tabs li.active a {
+    color: #2c5aa0;
+    border-bottom-color: #2c5aa0;
+}
+
+.woocommerce-tabs .woocommerce-Tabs-panel {
+    padding: 40px;
+}
+
+.woocommerce-tabs .woocommerce-Tabs-panel h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.woocommerce-tabs .woocommerce-Tabs-panel h3 {
+    font-size: 20px;
+    margin: 30px 0 15px;
+    color: #333;
+}
+
+.woocommerce-tabs .woocommerce-Tabs-panel p {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.woocommerce-tabs .woocommerce-Tabs-panel ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.woocommerce-tabs .woocommerce-Tabs-panel ul li {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+/* 价格显示优化 */
+.price-section .current-price .woocommerce-Price-amount {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2c5aa0;
+}
+
+.price-section .current-price del .woocommerce-Price-amount {
+    font-size: 24px;
+    color: #999;
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+    .custom-purchase-area .action-buttons {
+        flex-direction: column;
+    }
+    
+    .custom-purchase-area .action-buttons .wishlist-btn {
+        width: 100%;
+    }
+    
+    .related-products-section .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .related-products-section .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
