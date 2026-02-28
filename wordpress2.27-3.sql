@@ -13,7 +13,7 @@
 
  Date: 27/02/2026 23:22:59
 */
-
+SET sql_mode='';
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 

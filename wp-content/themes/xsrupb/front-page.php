@@ -63,6 +63,7 @@ get_header();
         <div class="product-grid">
             <?php
             if (class_exists('WooCommerce')) {
+                // 查询带有"新品上线"标签的产品
                 $args = array(
                     'post_type' => 'product',
                     'posts_per_page' => 5,
@@ -70,10 +71,9 @@ get_header();
                     'order' => 'DESC',
                     'tax_query' => array(
                         array(
-                            'taxonomy' => 'product_visibility',
-                            'field'    => 'name',
-                            'terms'    => 'featured',
-                            'operator' => 'IN',
+                            'taxonomy' => 'product_tag',
+                            'field'    => 'slug',
+                            'terms'    => '新品上线', // 新品上线标签的 slug
                         ),
                     ),
                 );
@@ -87,17 +87,21 @@ get_header();
                         ?>
                         <div class="product-card">
                             <div class="product-img">
-                                <?php if ($product->is_featured()) : ?>
-                                    <span class="badge badge-new"><?php esc_html_e('NEW', 'xsrupb'); ?></span>
-                                <?php endif; ?>
-                                <?php if (has_post_thumbnail()) : ?>
-                                    <?php the_post_thumbnail('medium'); ?>
-                                <?php endif; ?>
+                                <a href="<?php echo esc_url(get_permalink()); ?>">
+                                    <?php if (has_post_thumbnail()) : ?>
+                                        <?php echo get_the_post_thumbnail(get_the_ID(), 'medium'); ?>
+                                    <?php else : ?>
+                                        <img src="<?php echo esc_url(wc_placeholder_img_src('medium')); ?>" alt="<?php echo esc_attr(get_the_title()); ?>">
+                                    <?php endif; ?>
+                                </a>
+                                <span class="badge badge-new"><?php esc_html_e('NEW', 'xsrupb'); ?></span>
                             </div>
-                            <h3><?php the_title(); ?></h3>
+                            <h3><a href="<?php echo esc_url(get_permalink()); ?>"><?php the_title(); ?></a></h3>
                             <p class="product-desc"><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                            <p class="product-price"><?php echo $product->get_price_html(); ?></p>
-                            <button class="buy-btn" onclick="location.href='<?php echo esc_url(get_permalink()); ?>'"><?php esc_html_e('立即购买', 'xsrupb'); ?></button>
+                            <div class="product-footer">
+                                <p class="product-price"><?php echo $product->get_price_html(); ?></p>
+                                <button class="buy-btn" onclick="location.href='<?php echo esc_url(get_permalink()); ?>'"><?php esc_html_e('购买', 'xsrupb'); ?></button>
+                            </div>
                         </div>
                         <?php
                     }
@@ -105,8 +109,8 @@ get_header();
                 } else {
                     echo '<div class="empty-placeholder" style="grid-column: 1 / -1;">';
                     echo '<div class="empty-icon">📦</div>';
-                    echo '<h3>' . esc_html__('暂无商品', 'xsrupb') . '</h3>';
-                    echo '<p>' . esc_html__('该分类下暂时没有商品，敬请期待', 'xsrupb') . '</p>';
+                    echo '<h3>' . esc_html__('暂无新品', 'xsrupb') . '</h3>';
+                    echo '<p>' . esc_html__('暂时没有新品上线，敬请期待', 'xsrupb') . '</p>';
                     echo '</div>';
                 }
             }
@@ -166,15 +170,21 @@ get_header();
                                 ?>
                                 <div class="product-card">
                                     <div class="product-img">
+                                        <a href="<?php echo esc_url(get_permalink()); ?>">
+                                            <?php if (has_post_thumbnail()) : ?>
+                                                <?php echo get_the_post_thumbnail(get_the_ID(), 'medium'); ?>
+                                            <?php else : ?>
+                                                <img src="<?php echo esc_url(wc_placeholder_img_src('medium')); ?>" alt="<?php echo esc_attr(get_the_title()); ?>">
+                                            <?php endif; ?>
+                                        </a>
                                         <span class="badge badge-hot"><?php esc_html_e('HOT', 'xsrupb'); ?></span>
-                                        <?php if (has_post_thumbnail()) : ?>
-                                            <?php the_post_thumbnail('medium'); ?>
-                                        <?php endif; ?>
                                     </div>
-                                    <h3><?php the_title(); ?></h3>
+                                    <h3><a href="<?php echo esc_url(get_permalink()); ?>"><?php the_title(); ?></a></h3>
                                     <p class="product-desc"><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                                    <p class="product-price"><?php echo $product->get_price_html(); ?></p>
-                                    <button class="buy-btn" onclick="location.href='<?php echo esc_url(get_permalink()); ?>'"><?php esc_html_e('立即购买', 'xsrupb'); ?></button>
+                                    <div class="product-footer">
+                                        <p class="product-price"><?php echo $product->get_price_html(); ?></p>
+                                        <button class="buy-btn" onclick="location.href='<?php echo esc_url(get_permalink()); ?>'"><?php esc_html_e('购买', 'xsrupb'); ?></button>
+                                    </div>
                                 </div>
                                 <?php
                             }
@@ -239,15 +249,18 @@ get_header();
         <div class="product-grid">
             <?php
             if (class_exists('WooCommerce')) {
+                // 查询除了"新品上线"标签之外的所有产品
                 $args = array(
                     'post_type' => 'product',
-                    'posts_per_page' => 5,
-                    'orderby' => 'rand',
-                    'meta_query' => array(
+                    'posts_per_page' => 10,
+                    'orderby' => 'date',
+                    'order' => 'DESC',
+                    'tax_query' => array(
                         array(
-                            'key' => '_sale_price',
-                            'value' => '',
-                            'compare' => '!=',
+                            'taxonomy' => 'product_tag',
+                            'field'    => 'slug',
+                            'terms'    => 'new-arrival', // 排除新品上线标签
+                            'operator' => 'NOT IN',
                         ),
                     ),
                 );
@@ -261,17 +274,25 @@ get_header();
                         ?>
                         <div class="product-card">
                             <div class="product-img">
+                                <a href="<?php echo esc_url(get_permalink()); ?>">
+                                    <?php if (has_post_thumbnail()) : ?>
+                                        <?php echo get_the_post_thumbnail(get_the_ID(), 'medium'); ?>
+                                    <?php else : ?>
+                                        <img src="<?php echo esc_url(wc_placeholder_img_src('medium')); ?>" alt="<?php echo esc_attr(get_the_title()); ?>">
+                                    <?php endif; ?>
+                                </a>
                                 <?php if ($product->is_on_sale()) : ?>
                                     <span class="badge badge-sale"><?php esc_html_e('SALE', 'xsrupb'); ?></span>
-                                <?php endif; ?>
-                                <?php if (has_post_thumbnail()) : ?>
-                                    <?php the_post_thumbnail('medium'); ?>
+                                <?php elseif ($product->is_featured()) : ?>
+                                    <span class="badge badge-hot"><?php esc_html_e('HOT', 'xsrupb'); ?></span>
                                 <?php endif; ?>
                             </div>
-                            <h3><?php the_title(); ?></h3>
+                            <h3><a href="<?php echo esc_url(get_permalink()); ?>"><?php the_title(); ?></a></h3>
                             <p class="product-desc"><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
-                            <p class="product-price"><?php echo $product->get_price_html(); ?></p>
-                            <button class="buy-btn" onclick="location.href='<?php echo esc_url(get_permalink()); ?>'"><?php esc_html_e('立即购买', 'xsrupb'); ?></button>
+                            <div class="product-footer">
+                                <p class="product-price"><?php echo $product->get_price_html(); ?></p>
+                                <button class="buy-btn" onclick="location.href='<?php echo esc_url(get_permalink()); ?>'"><?php esc_html_e('购买', 'xsrupb'); ?></button>
+                            </div>
                         </div>
                         <?php
                     }
@@ -280,11 +301,16 @@ get_header();
                     echo '<div class="empty-placeholder" style="grid-column: 1 / -1;">';
                     echo '<div class="empty-icon">📦</div>';
                     echo '<h3>' . esc_html__('暂无商品', 'xsrupb') . '</h3>';
-                    echo '<p>' . esc_html__('该分类下暂时没有商品，敬请期待', 'xsrupb') . '</p>';
+                    echo '<p>' . esc_html__('暂时没有更多商品，敬请期待', 'xsrupb') . '</p>';
                     echo '</div>';
                 }
             }
             ?>
+        </div>
+        <div class="more-container">
+            <a href="<?php echo esc_url(wc_get_page_permalink('shop')); ?>" class="more-btn">
+                <?php esc_html_e('查看更多产品', 'xsrupb'); ?> →
+            </a>
         </div>
     </div>
 </section>

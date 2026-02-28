@@ -109,6 +109,15 @@ class XSRUPB_Asset_Manager {
         
         // 首页专用脚本
         if (is_front_page()) {
+            // 首页样式
+            wp_enqueue_style(
+                'xsrupb-home',
+                get_template_directory_uri() . '/assets/css/home.css',
+                array('xsrupb-main'),
+                XSRUPB_VERSION
+            );
+            
+            // 首页脚本
             wp_enqueue_script(
                 'xsrupb-home',
                 get_template_directory_uri() . '/assets/js/home.js',
