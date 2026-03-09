@@ -1,0 +1,437 @@
+/**
+ * Admin styles for Elementor Dynamic Content Framework
+ *
+ * @package    Elementor_Dynamic_Content_Framework
+ * @subpackage Elementor_Dynamic_Content_Framework/assets/css
+ */
+
+/* General Admin Styles */
+.dcf-admin-page {
+	max-width: 1200px;
+	margin: 20px 0;
+}
+
+.dcf-admin-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.dcf-admin-header h1 {
+	margin: 0;
+}
+
+/* Table Styles */
+.dcf-table {
+	width: 100%;
+	border-collapse: collapse;
+	background: #fff;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.dcf-table th,
+.dcf-table td {
+	padding: 12px;
+	text-align: left;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.dcf-table th {
+	background: #f9f9f9;
+	font-weight: 600;
+}
+
+.dcf-table tr:hover {
+	background: #f9f9f9;
+}
+
+/* Form Styles */
+.dcf-form-group {
+	margin-bottom: 20px;
+}
+
+.dcf-form-group label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: 600;
+}
+
+.dcf-form-group input[type="text"],
+.dcf-form-group textarea,
+.dcf-form-group select {
+	width: 100%;
+	padding: 8px 12px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.dcf-form-group textarea {
+	min-height: 100px;
+	resize: vertical;
+}
+
+/* Schema Builder Styles */
+.dcf-schema-builder {
+	background: #fff;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.dcf-schema-field {
+	background: #f9f9f9;
+	padding: 15px;
+	margin-bottom: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	position: relative;
+}
+
+.dcf-schema-field-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.dcf-schema-field-actions {
+	display: flex;
+	gap: 5px;
+}
+
+.dcf-schema-field-actions button {
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+/* Item Editor Styles */
+.dcf-item-editor {
+	background: #fff;
+	padding: 20px;
+}
+
+.dcf-items-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.dcf-item {
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 15px;
+	margin-bottom: 10px;
+	cursor: move;
+	position: relative;
+}
+
+.dcf-item:hover {
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dcf-item-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.dcf-item-handle {
+	cursor: move;
+	padding: 5px;
+	color: #999;
+}
+
+.dcf-item-actions {
+	display: flex;
+	gap: 5px;
+}
+
+/* Repeater Field Styles */
+.dcf-repeater-field {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 15px;
+	margin-bottom: 10px;
+}
+
+.dcf-repeater-items {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.dcf-repeater-item {
+	background: #f9f9f9;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+/* Media Upload Styles */
+.dcf-media-upload {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.dcf-media-preview {
+	max-width: 150px;
+	max-height: 150px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.dcf-media-upload-button {
+	padding: 8px 15px;
+}
+
+/* Button Styles */
+.dcf-button {
+	display: inline-block;
+	padding: 8px 15px;
+	background: #0073aa;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.dcf-button:hover {
+	background: #005a87;
+	color: #fff;
+}
+
+.dcf-button-secondary {
+	background: #f0f0f0;
+	color: #333;
+}
+
+.dcf-button-secondary:hover {
+	background: #e0e0e0;
+	color: #333;
+}
+
+.dcf-button-danger {
+	background: #dc3232;
+	color: #fff;
+}
+
+.dcf-button-danger:hover {
+	background: #a00;
+	color: #fff;
+}
+
+/* Status Badge Styles */
+.dcf-status-badge {
+	display: inline-block;
+	padding: 3px 8px;
+	border-radius: 3px;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.dcf-status-active {
+	background: #46b450;
+	color: #fff;
+}
+
+.dcf-status-inactive {
+	background: #999;
+	color: #fff;
+}
+
+.dcf-status-draft {
+	background: #ffb900;
+	color: #fff;
+}
+
+/* Utility Classes */
+.dcf-text-center {
+	text-align: center;
+}
+
+.dcf-text-right {
+	text-align: right;
+}
+
+.dcf-mt-20 {
+	margin-top: 20px;
+}
+
+.dcf-mb-20 {
+	margin-bottom: 20px;
+}
+
+.dcf-hidden {
+	display: none;
+}
+
+/* Filter Styles */
+.dcf-filters {
+	background: #f9f9f9;
+	padding: 15px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	margin-bottom: 20px;
+}
+
+.dcf-filter-form {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.dcf-filter-select {
+	padding: 8px 12px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	min-width: 150px;
+}
+
+/* Form Actions */
+.dcf-form-actions {
+	margin-top: 20px;
+	padding-top: 20px;
+	border-top: 1px solid #ddd;
+	display: flex;
+	gap: 10px;
+}
+
+.dcf-form-actions button,
+.dcf-form-actions a {
+	padding: 10px 20px;
+}
+
+/* Items Toolbar */
+.dcf-items-toolbar {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 20px;
+	flex-wrap: wrap;
+}
+
+.dcf-items-toolbar button,
+.dcf-items-toolbar a {
+	padding: 10px 15px;
+}
+
+/* Item Content */
+.dcf-item-content {
+	display: none;
+	padding-top: 15px;
+	border-top: 1px solid #ddd;
+}
+
+.dcf-item-content.active {
+	display: block;
+}
+
+/* Item Form */
+.dcf-item-form {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 20px;
+}
+
+.dcf-item-form-actions {
+	grid-column: 1 / -1;
+	display: flex;
+	gap: 10px;
+	margin-top: 20px;
+}
+
+/* Group Info */
+.dcf-group-info {
+	background: #f9f9f9;
+	padding: 15px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	margin: 20px 0;
+}
+
+.dcf-group-info p {
+	margin: 5px 0;
+}
+
+/* Required Field Indicator */
+.required {
+	color: #dc3232;
+	font-weight: bold;
+}
+
+/* Description Text */
+.description {
+	display: block;
+	margin-top: 5px;
+	color: #666;
+	font-size: 13px;
+}
+
+/* Media Field */
+.dcf-media-field {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.dcf-media-preview {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.dcf-media-preview img,
+.dcf-media-preview video {
+	max-width: 150px;
+	max-height: 150px;
+	border-radius: 4px;
+}
+
+.dcf-media-remove-button {
+	align-self: flex-start;
+}
+
+/* Repeater Item */
+.dcf-repeater-item-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.dcf-repeater-handle {
+	cursor: move;
+	color: #999;
+	padding: 5px;
+}
+
+.dcf-repeater-item-content {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 15px;
+}
+
+/* Placeholder for sortable */
+.dcf-field-placeholder,
+.dcf-item-placeholder,
+.dcf-repeater-placeholder {
+	background: #f0f0f0;
+	border: 2px dashed #999;
+	border-radius: 4px;
+	height: 50px;
+	margin-bottom: 10px;
+}
+
+/* Disabled state */
+button:disabled,
+input:disabled,
+select:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}

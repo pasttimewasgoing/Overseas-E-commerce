@@ -1,0 +1,53 @@
+/**
+ * Frontend Styles
+ * 
+ * Core styles for DCF frontend rendering
+ */
+
+.dcf-widget {
+	position: relative;
+	width: 100%;
+}
+
+.dcf-widget-loading {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 200px;
+}
+
+.dcf-widget-error {
+	padding: 20px;
+	background-color: #f8d7da;
+	border: 1px solid #f5c6cb;
+	border-radius: 4px;
+	color: #721c24;
+}
+
+/* Common item styles */
+.dcf-item {
+	position: relative;
+}
+
+.dcf-item-image img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+.dcf-item-title {
+	margin: 0 0 10px;
+	font-size: 1.2em;
+	font-weight: 600;
+}
+
+.dcf-item-content {
+	margin: 0;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+	.dcf-item-title {
+		font-size: 1.1em;
+	}
+}

@@ -1,0 +1,116 @@
+/**
+ * Grid Layout Styles
+ *
+ * @package    Elementor_Dynamic_Content_Framework
+ * @subpackage Elementor_Dynamic_Content_Framework/assets/css/layouts
+ */
+
+/* Grid Wrapper */
+.dcf-grid-wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Grid Container */
+.dcf-grid {
+    display: grid;
+    width: 100%;
+}
+
+/* Grid Item */
+.dcf-grid-item {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Grid Item Content */
+.dcf-grid-item-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Image Styles */
+.dcf-grid-item-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.dcf-grid-item-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Gallery Styles */
+.dcf-grid-item-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+/* Video Styles */
+.dcf-grid-item-video {
+    width: 100%;
+}
+
+.dcf-grid-item-video video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Icon Styles */
+.dcf-grid-item-icon {
+    font-size: 2em;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.dcf-grid-item-icon i {
+    display: inline-block;
+}
+
+/* Text Field Styles */
+.dcf-grid-item-content > div[class^="dcf-grid-item-"] {
+    padding: 10px 0;
+}
+
+.dcf-grid-item-content > div[class^="dcf-grid-item-"] p {
+    margin: 0 0 10px 0;
+}
+
+.dcf-grid-item-content > div[class^="dcf-grid-item-"] p:last-child {
+    margin-bottom: 0;
+}
+
+/* Link Styles */
+.dcf-grid-item-content a {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.dcf-grid-item-content a:hover {
+    opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .dcf-grid-item-icon {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .dcf-grid-item-icon {
+        font-size: 1.2em;
+        padding: 15px 0;
+    }
+    
+    .dcf-grid-item-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 5px;
+    }
+}

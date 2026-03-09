@@ -1,0 +1,347 @@
+/**
+ * Popup Layout Styles
+ *
+ * Styles for the modal popup layout with thumbnails.
+ *
+ * @package Elementor_Dynamic_Content_Framework
+ */
+
+.dcf-popup-wrapper {
+    width: 100%;
+}
+
+/* Thumbnail Grid */
+.dcf-popup-grid {
+    width: 100%;
+}
+
+.dcf-popup-thumbnail {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.dcf-popup-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.dcf-popup-thumbnail-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dcf-popup-thumbnail-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.dcf-popup-thumbnail-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-weight: 600;
+}
+
+.dcf-popup-thumbnail-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.dcf-popup-thumbnail:hover .dcf-popup-thumbnail-overlay {
+    opacity: 1;
+}
+
+.dcf-popup-thumbnail-icon {
+    font-size: 3em;
+    color: white;
+    font-weight: 300;
+}
+
+/* Modal Styles */
+.dcf-popup-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.dcf-popup-modal.active {
+    display: flex;
+}
+
+.dcf-popup-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+}
+
+.dcf-popup-content-wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    max-height: 90vh;
+    z-index: 10000;
+}
+
+.dcf-popup-content {
+    position: relative;
+    background: white;
+    border-radius: 8px;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+.dcf-popup-item {
+    display: none;
+    padding: 40px;
+}
+
+.dcf-popup-item.active {
+    display: block;
+}
+
+.dcf-popup-item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Close Button */
+.dcf-popup-close {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #333;
+    transition: background 0.3s ease;
+    z-index: 10001;
+}
+
+.dcf-popup-close:hover {
+    background: #f5f5f5;
+}
+
+/* Navigation Buttons */
+.dcf-popup-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #333;
+    transition: background 0.3s ease;
+    z-index: 10001;
+}
+
+.dcf-popup-nav:hover {
+    background: #f5f5f5;
+}
+
+.dcf-popup-prev {
+    left: -70px;
+}
+
+.dcf-popup-next {
+    right: -70px;
+}
+
+/* Content Field Styles */
+.dcf-popup-item-image {
+    width: 100%;
+}
+
+.dcf-popup-item-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.dcf-popup-item-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.dcf-popup-item-video {
+    width: 100%;
+}
+
+.dcf-popup-item-video video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.dcf-popup-item-icon {
+    font-size: 3em;
+    color: #333;
+}
+
+.dcf-popup-item-content > div[class*="dcf-popup-item-"] {
+    line-height: 1.6;
+}
+
+.dcf-popup-item-content > div[class*="dcf-popup-item-"] p {
+    margin: 0 0 15px 0;
+}
+
+.dcf-popup-item-content > div[class*="dcf-popup-item-"] p:last-child {
+    margin-bottom: 0;
+}
+
+.dcf-popup-item-content a {
+    color: #0073aa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.dcf-popup-item-content a:hover {
+    color: #005177;
+    text-decoration: underline;
+}
+
+/* Animation Classes */
+.dcf-popup-modal[data-animation="fade"] .dcf-popup-content-wrapper {
+    animation: dcfFadeIn 0.3s ease;
+}
+
+.dcf-popup-modal[data-animation="slide"] .dcf-popup-content-wrapper {
+    animation: dcfSlideIn 0.3s ease;
+}
+
+.dcf-popup-modal[data-animation="zoom"] .dcf-popup-content-wrapper {
+    animation: dcfZoomIn 0.3s ease;
+}
+
+@keyframes dcfFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes dcfSlideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes dcfZoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .dcf-popup-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+    
+    .dcf-popup-prev {
+        left: -50px;
+    }
+    
+    .dcf-popup-next {
+        right: -50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dcf-popup-content-wrapper {
+        width: 95%;
+    }
+    
+    .dcf-popup-item {
+        padding: 20px;
+    }
+    
+    .dcf-popup-close {
+        top: 10px;
+        right: 10px;
+    }
+    
+    .dcf-popup-nav {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+    
+    .dcf-popup-prev {
+        left: 10px;
+    }
+    
+    .dcf-popup-next {
+        right: 10px;
+    }
+    
+    .dcf-popup-item-gallery {
+        grid-template-columns: 1fr;
+    }
+}

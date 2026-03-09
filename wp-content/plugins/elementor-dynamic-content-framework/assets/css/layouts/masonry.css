@@ -1,0 +1,227 @@
+/**
+ * Masonry Layout Styles
+ *
+ * @package    Elementor_Dynamic_Content_Framework
+ * @subpackage Elementor_Dynamic_Content_Framework/assets/css/layouts
+ */
+
+/* Masonry Wrapper */
+.dcf-masonry-wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Masonry Container */
+.dcf-masonry {
+    display: block;
+    width: 100%;
+}
+
+/* Masonry Item */
+.dcf-masonry-item {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dcf-masonry-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Masonry Item Content */
+.dcf-masonry-item-content {
+    padding: 0;
+}
+
+/* Image Styles */
+.dcf-masonry-item-image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.dcf-masonry-item-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Gallery Styles */
+.dcf-masonry-item-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 8px;
+    padding: 0;
+}
+
+.dcf-masonry-item-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Video Styles */
+.dcf-masonry-item-video {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.dcf-masonry-item-video video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Icon Styles */
+.dcf-masonry-item-icon {
+    padding: 20px;
+    text-align: center;
+    font-size: 48px;
+    color: #333;
+}
+
+.dcf-masonry-item-icon i,
+.dcf-masonry-item-icon .dcf-icon {
+    display: inline-block;
+}
+
+/* Text Field Styles */
+.dcf-masonry-item-content > div[class*="dcf-masonry-item-"] {
+    padding: 15px 20px;
+}
+
+.dcf-masonry-item-content > div[class*="dcf-masonry-item-"]:first-child {
+    padding-top: 20px;
+}
+
+.dcf-masonry-item-content > div[class*="dcf-masonry-item-"]:last-child {
+    padding-bottom: 20px;
+}
+
+/* Title/Heading Styles */
+.dcf-masonry-item-title,
+.dcf-masonry-item-heading {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+/* Description/Text Styles */
+.dcf-masonry-item-description,
+.dcf-masonry-item-text,
+.dcf-masonry-item-content {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    margin: 0;
+}
+
+.dcf-masonry-item-description p,
+.dcf-masonry-item-text p {
+    margin: 0 0 10px;
+}
+
+.dcf-masonry-item-description p:last-child,
+.dcf-masonry-item-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Link Styles */
+.dcf-masonry-item-content a {
+    color: #0073aa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.dcf-masonry-item-content a:hover {
+    color: #005177;
+    text-decoration: underline;
+}
+
+/* Button/CTA Styles */
+.dcf-masonry-item-button,
+.dcf-masonry-item-cta {
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.dcf-masonry-item-button a,
+.dcf-masonry-item-cta a {
+    display: inline-block;
+    padding: 10px 24px;
+    background: #0073aa;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.dcf-masonry-item-button a:hover,
+.dcf-masonry-item-cta a:hover {
+    background: #005177;
+    text-decoration: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .dcf-masonry-item-icon {
+        font-size: 40px;
+        padding: 15px;
+    }
+    
+    .dcf-masonry-item-title,
+    .dcf-masonry-item-heading {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dcf-masonry-item {
+        margin-bottom: 15px;
+    }
+    
+    .dcf-masonry-item-icon {
+        font-size: 36px;
+        padding: 12px;
+    }
+    
+    .dcf-masonry-item-title,
+    .dcf-masonry-item-heading {
+        font-size: 16px;
+    }
+    
+    .dcf-masonry-item-description,
+    .dcf-masonry-item-text {
+        font-size: 13px;
+    }
+    
+    .dcf-masonry-item-content > div[class*="dcf-masonry-item-"] {
+        padding: 12px 15px;
+    }
+}
+
+/* Loading State */
+.dcf-masonry-wrapper.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Empty State */
+.dcf-masonry-wrapper:empty::after {
+    content: attr(data-empty-message);
+    display: block;
+    padding: 40px;
+    text-align: center;
+    color: #999;
+    font-style: italic;
+}

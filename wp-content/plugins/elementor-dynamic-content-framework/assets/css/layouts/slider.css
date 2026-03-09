@@ -1,0 +1,236 @@
+/**
+ * Slider Layout Styles
+ *
+ * Styles for the DCF Slider layout using Swiper.js
+ *
+ * @package Elementor_Dynamic_Content_Framework
+ */
+
+/* Slider Wrapper */
+.dcf-slider-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    min-height: 400px; /* 确保有最小高度 */
+}
+
+/* Swiper Container */
+.dcf-slider-wrapper .swiper {
+    width: 100%;
+    height: 100%;
+    min-height: 400px; /* 确保有最小高度 */
+}
+
+/* Slide Content */
+.dcf-slide-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Slide Image */
+.dcf-slide-image {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.dcf-slide-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Slide Gallery */
+.dcf-slide-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.dcf-slide-gallery .dcf-slide-image {
+    margin-bottom: 0;
+}
+
+/* Slide Video */
+.dcf-slide-video {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.dcf-slide-video video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Text Fields */
+.dcf-slide-content > div[class^="dcf-slide-"] {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.dcf-slide-content > div[class^="dcf-slide-"]:last-child {
+    margin-bottom: 0;
+}
+
+/* Title Styling */
+.dcf-slide-title {
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+/* Subtitle Styling */
+.dcf-slide-subtitle {
+    font-size: 1.2em;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+/* Description Styling */
+.dcf-slide-description {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Link Styling */
+.dcf-slide-content a {
+    color: #0073aa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.dcf-slide-content a:hover {
+    color: #005177;
+    text-decoration: underline;
+}
+
+/* Navigation Buttons */
+.dcf-slider-wrapper .swiper-button-prev,
+.dcf-slider-wrapper .swiper-button-next {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.dcf-slider-wrapper .swiper-button-prev:hover,
+.dcf-slider-wrapper .swiper-button-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dcf-slider-wrapper .swiper-button-prev::after,
+.dcf-slider-wrapper .swiper-button-next::after {
+    font-size: 20px;
+}
+
+/* Pagination */
+.dcf-slider-wrapper .swiper-pagination {
+    bottom: 20px;
+}
+
+.dcf-slider-wrapper .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.dcf-slider-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: #0073aa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dcf-slide-content {
+        padding: 15px;
+    }
+
+    .dcf-slide-title {
+        font-size: 1.5em;
+    }
+
+    .dcf-slide-subtitle {
+        font-size: 1em;
+    }
+
+    .dcf-slide-description {
+        font-size: 0.9em;
+    }
+
+    .dcf-slider-wrapper .swiper-button-prev,
+    .dcf-slider-wrapper .swiper-button-next {
+        width: 36px;
+        height: 36px;
+    }
+
+    .dcf-slider-wrapper .swiper-button-prev::after,
+    .dcf-slider-wrapper .swiper-button-next::after {
+        font-size: 16px;
+    }
+
+    .dcf-slide-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dcf-slide-content {
+        padding: 10px;
+    }
+
+    .dcf-slide-title {
+        font-size: 1.2em;
+    }
+
+    .dcf-slide-subtitle {
+        font-size: 0.9em;
+    }
+
+    .dcf-slide-description {
+        font-size: 0.85em;
+    }
+
+    .dcf-slide-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Loading State */
+.dcf-slider-wrapper.loading {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dcf-slider-wrapper.loading::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #0073aa;
+    border-radius: 50%;
+    animation: dcf-spin 1s linear infinite;
+}
+
+@keyframes dcf-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

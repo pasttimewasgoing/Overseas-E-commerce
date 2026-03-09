@@ -1,0 +1,110 @@
+/**
+ * List Layout Styles
+ *
+ * Styles for the vertical list layout.
+ *
+ * @package Elementor_Dynamic_Content_Framework
+ */
+
+.dcf-list-wrapper {
+    width: 100%;
+}
+
+.dcf-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dcf-list-item {
+    position: relative;
+    width: 100%;
+}
+
+.dcf-list-item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Image styles */
+.dcf-list-item-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.dcf-list-item-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Gallery styles */
+.dcf-list-item-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.dcf-list-item-gallery .dcf-list-item-image {
+    flex: 1 1 calc(50% - 5px);
+    min-width: 200px;
+}
+
+/* Video styles */
+.dcf-list-item-video {
+    width: 100%;
+}
+
+.dcf-list-item-video video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Icon styles */
+.dcf-list-item-icon {
+    font-size: 2em;
+    color: #333;
+}
+
+.dcf-list-item-icon i {
+    display: inline-block;
+}
+
+/* Text field styles */
+.dcf-list-item-content > div[class*="dcf-list-item-"] {
+    line-height: 1.6;
+}
+
+.dcf-list-item-content > div[class*="dcf-list-item-"] p {
+    margin: 0 0 10px 0;
+}
+
+.dcf-list-item-content > div[class*="dcf-list-item-"] p:last-child {
+    margin-bottom: 0;
+}
+
+/* Link styles */
+.dcf-list-item-content a {
+    color: #0073aa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.dcf-list-item-content a:hover {
+    color: #005177;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dcf-list-item-content {
+        gap: 8px;
+    }
+    
+    .dcf-list-item-gallery .dcf-list-item-image {
+        flex: 1 1 100%;
+    }
+}
