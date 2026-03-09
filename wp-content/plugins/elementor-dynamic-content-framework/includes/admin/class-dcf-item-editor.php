@@ -170,11 +170,44 @@ class DCF_Item_Editor {
 		$item_data = isset( $item['data'] ) ? $item['data'] : array();
 		$sort_order = isset( $item['sort_order'] ) ? $item['sort_order'] : 0;
 
+		// Generate preview text from item data
+		$preview_text = '';
+		$preview_image = '';
+		
+		if ( ! empty( $item_data ) ) {
+			// Try to find title or first text field
+			foreach ( $item_data as $key => $value ) {
+				if ( empty( $preview_text ) && is_string( $value ) && ! empty( $value ) ) {
+					$preview_text = wp_trim_words( $value, 10, '...' );
+				}
+				
+				// Try to find image
+				if ( empty( $preview_image ) && is_array( $value ) && isset( $value['url'] ) ) {
+					$preview_image = $value['url'];
+				}
+			}
+		}
+		
+		if ( empty( $preview_text ) ) {
+			$preview_text = __( 'No content', 'elementor-dynamic-content-framework' );
+		}
+
 		?>
 		<div class="dcf-item" data-item-id="<?php echo esc_attr( $item_id ); ?>">
 			<div class="dcf-item-header">
 				<span class="dcf-item-handle">☰</span>
 				<span class="dcf-item-number">#<?php echo esc_html( $sort_order + 1 ); ?></span>
+				
+				<?php if ( $preview_image ) : ?>
+					<span class="dcf-item-preview-image">
+						<img src="<?php echo esc_url( $preview_image ); ?>" alt="">
+					</span>
+				<?php endif; ?>
+				
+				<span class="dcf-item-preview-text">
+					<?php echo esc_html( $preview_text ); ?>
+				</span>
+				
 				<button type="button" class="dcf-item-toggle button button-small">
 					<?php esc_html_e( 'Toggle', 'elementor-dynamic-content-framework' ); ?>
 				</button>
@@ -189,7 +222,7 @@ class DCF_Item_Editor {
 			</div>
 
 			<div class="dcf-item-content">
-				<form method="post" class="dcf-item-form" enctype="multipart/form-data">
+				<form method="post" action="<?php echo esc_url( admin_url( 'admin.php?page=dcf-items&group_id=' . $item['group_id'] ) ); ?>" class="dcf-item-form" enctype="multipart/form-data">
 					<?php wp_nonce_field( 'dcf_item_nonce', 'dcf_item_nonce' ); ?>
 					<input type="hidden" name="item_id" value="<?php echo esc_attr( $item_id ); ?>">
 					<input type="hidden" name="group_id" value="<?php echo esc_attr( $item['group_id'] ); ?>">

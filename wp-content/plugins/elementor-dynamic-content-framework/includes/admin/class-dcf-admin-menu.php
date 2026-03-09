@@ -48,7 +48,10 @@ class DCF_Admin_Menu {
 			wp_die( esc_html__( 'You must be logged in to access this page.', 'elementor-dynamic-content-framework' ) );
 		}
 
-		// Register and enqueue scripts and styles
+		// Enqueue WordPress media library FIRST
+		wp_enqueue_media();
+
+		// Register and enqueue styles
 		wp_register_style(
 			'dcf-admin',
 			DCF_PLUGIN_URL . 'assets/css/admin.css',
@@ -57,10 +60,11 @@ class DCF_Admin_Menu {
 		);
 		wp_enqueue_style( 'dcf-admin' );
 
+		// Register and enqueue scripts with proper dependencies
 		wp_register_script(
 			'dcf-item-editor',
 			DCF_PLUGIN_URL . 'assets/js/item-editor.js',
-			array( 'jquery', 'jquery-ui-sortable', 'media-upload', 'media-views' ),
+			array( 'jquery', 'jquery-ui-sortable' ),
 			DCF_VERSION . '.' . time(),
 			true
 		);
@@ -77,9 +81,6 @@ class DCF_Admin_Menu {
 		) );
 		
 		wp_enqueue_script( 'dcf-item-editor' );
-		
-		// Enqueue WordPress media library
-		wp_enqueue_media();
 
 		// Load admin header
 		require_once ABSPATH . 'wp-admin/admin-header.php';

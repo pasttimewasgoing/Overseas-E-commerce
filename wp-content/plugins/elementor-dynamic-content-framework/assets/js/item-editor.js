@@ -97,6 +97,23 @@
 				DCFItemEditor.handleItemMediaUpload($(this));
 			});
 
+			// Media remove button
+			$(document).on('click', '.dcf-media-remove-button', function(e) {
+				e.preventDefault();
+				const $button = $(this);
+				const $field = $button.siblings('input[type="hidden"]');
+				const $preview = $button.siblings('.dcf-media-preview');
+				
+				// Clear field value
+				$field.val('');
+				
+				// Clear preview
+				$preview.empty();
+				
+				// Hide remove button
+				$button.hide();
+			});
+
 			// Save items order
 			$('#dcf-save-items-order').on('click', () => this.saveItemsOrder());
 		},
@@ -206,16 +223,24 @@
 		/**
 		 * Handle media upload for item fields
 		 */
-		handleItemMediaUpload: function(button) {
-			const fieldId = button.data('field-id');
-			const mediaType = button.data('media-type') || 'image';
-			const multiple = button.data('multiple') || false;
+		handleItemMediaUpload: function($button) {
+			// Check if wp.media is available
+			if (typeof wp === 'undefined' || typeof wp.media === 'undefined') {
+				alert('WordPress 媒体库未加载。请刷新页面重试。');
+				return;
+			}
+
+			const mediaType = $button.data('media-type') || 'image';
+			const multiple = $button.data('multiple') || false;
+			
+			// Get the hidden input field (sibling of the button)
+			const $hiddenField = $button.siblings('input[type="hidden"]');
 
 			// Create media frame
 			const frame = wp.media({
-				title: button.data('title') || dcfAdmin.i18n.selectImage,
+				title: $button.data('title') || dcfAdmin.i18n.selectImage,
 				button: {
-					text: button.data('button-text') || dcfAdmin.i18n.selectFile
+					text: $button.data('button-text') || dcfAdmin.i18n.selectFile
 				},
 				multiple: multiple,
 				library: {
@@ -229,38 +254,42 @@
 					// Handle multiple selection (gallery)
 					const attachments = frame.state().get('selection').toJSON();
 					const ids = attachments.map(att => att.id).join(',');
-					$('#' + fieldId).val(ids);
+					$hiddenField.val(ids);
 					
 					// Update preview
-					const preview = button.siblings('.dcf-media-preview');
-					if (preview.length) {
-						preview.empty();
+					const $preview = $button.siblings('.dcf-media-preview');
+					if ($preview.length) {
+						$preview.empty();
 						attachments.forEach(att => {
-							preview.append('<img src="' + att.url + '" alt="">');
+							$preview.append('<img src="' + att.url + '" alt="">');
 						});
 					}
+					
+					// Show remove button
+					$button.siblings('.dcf-media-remove-button').show();
 				} else {
 					// Handle single selection
 					const attachment = frame.state().get('selection').first().toJSON();
-					$('#' + fieldId).val(attachment.id);
+					$hiddenField.val(attachment.id);
 					
 					// Update preview
-					const preview = button.siblings('.dcf-media-preview');
-					if (preview.length) {
+					const $preview = $button.siblings('.dcf-media-preview');
+					if ($preview.length) {
 						if (mediaType === 'image') {
-							preview.html('<img src="' + attachment.url + '" alt="">');
+							$preview.html('<img src="' + attachment.url + '" alt="">');
 						} else if (mediaType === 'video') {
-							preview.html('<video src="' + attachment.url + '" controls></video>');
+							$preview.html('<video src="' + attachment.url + '" controls></video>');
 						} else {
-							preview.html('<span>' + attachment.filename + '</span>');
+							$preview.html('<span>' + attachment.filename + '</span>');
 						}
 					}
+					
+					// Show remove button
+					$button.siblings('.dcf-media-remove-button').show();
 				}
-				
-				// Show remove button
-				button.siblings('.dcf-media-remove-button').show();
 			});
 
+			// Open the frame
 			frame.open();
 		},
 
@@ -311,7 +340,8 @@
 	 * Initialize on document ready
 	 */
 	$(document).ready(function() {
-		if ($('.dcf-item-editor').length) {
+		// Initialize if we're on any DCF admin page (item editor or new item form)
+		if ($('.dcf-item-editor').length || $('.dcf-item-form').length) {
 			DCFItemEditor.init();
 		}
 	});

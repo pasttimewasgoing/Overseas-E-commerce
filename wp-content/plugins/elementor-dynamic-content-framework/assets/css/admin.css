@@ -119,34 +119,116 @@
 
 .dcf-item {
 	background: #fff;
-	border: 1px solid #ddd;
-	border-radius: 4px;
-	padding: 15px;
-	margin-bottom: 10px;
+	border: 2px solid #e5e5e5;
+	border-radius: 8px;
+	padding: 0;
+	margin-bottom: 16px;
 	cursor: move;
 	position: relative;
+	transition: all 0.3s ease;
+	overflow: hidden;
 }
 
 .dcf-item:hover {
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	border-color: #2271b1;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .dcf-item-header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 10px;
+	padding: 16px 20px;
+	background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+	border-bottom: 1px solid #e5e5e5;
+	gap: 12px;
 }
 
 .dcf-item-handle {
 	cursor: move;
-	padding: 5px;
+	padding: 8px;
 	color: #999;
+	flex-shrink: 0;
+	font-size: 18px;
+	transition: color 0.2s ease;
+}
+
+.dcf-item-handle:hover {
+	color: #2271b1;
+}
+
+.dcf-item-number {
+	font-weight: 700;
+	color: #2271b1;
+	flex-shrink: 0;
+	min-width: 40px;
+	font-size: 16px;
+	background: white;
+	padding: 4px 12px;
+	border-radius: 12px;
+	border: 2px solid #2271b1;
+}
+
+.dcf-item-preview-image {
+	flex-shrink: 0;
+}
+
+.dcf-item-preview-image img {
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	border-radius: 8px;
+	border: 2px solid #fff;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.dcf-item-preview-text {
+	flex: 1;
+	color: #333;
+	font-size: 15px;
+	font-weight: 500;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	min-width: 0;
+}
+
+.dcf-item-toggle {
+	flex-shrink: 0;
+	background: #2271b1;
+	color: white;
+	border: none;
+	padding: 8px 16px;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	font-weight: 500;
+}
+
+.dcf-item-toggle:hover {
+	background: #135e96;
+	transform: translateY(-1px);
 }
 
 .dcf-item-actions {
 	display: flex;
-	gap: 5px;
+	gap: 8px;
+	flex-shrink: 0;
+}
+
+.dcf-item-actions button,
+.dcf-item-actions a {
+	padding: 8px 16px;
+	border-radius: 6px;
+	font-size: 14px;
+	font-weight: 500;
+	transition: all 0.2s ease;
+}
+
+.dcf-item-actions button:hover,
+.dcf-item-actions a:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 /* Repeater Field Styles */
@@ -324,12 +406,24 @@
 /* Item Content */
 .dcf-item-content {
 	display: none;
-	padding-top: 15px;
-	border-top: 1px solid #ddd;
+	padding: 24px;
+	background: white;
 }
 
 .dcf-item-content.active {
 	display: block;
+	animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 /* Item Form */
